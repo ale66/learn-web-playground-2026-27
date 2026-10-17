@@ -1,4 +1,69 @@
-p {
-    text-align-last: left;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+.counter-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #f4f4f4;
+}
+
+.counter-section h1 {
+    color: #222;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("imgs/torrevelasca.jpg");
+    background-position: center center;
+    background-size: cover;          
+    background-repeat: no-repeat;    
+    position: relative;            
+}
+
+.hero-image img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 45px;                    
+    width: auto;
+}
+
+.titoli h1 {
+    color: white; 
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    font-size: 30px;
+}
+
+.titoli h2 {
+    color: white;
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    font-size: 25px;
+}
+
+.titoli p {
+    position: absolute;
+    top: 105px;
+    right: 15px;
+    color: white; 
+}
+
+.titoli p a {
+    color: white; 
+}
+
+video {
+width:100vw;
+height:100vh;
+object-fit: cover; 
+display: block;
+}

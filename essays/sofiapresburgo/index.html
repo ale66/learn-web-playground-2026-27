@@ -1,32 +1,92 @@
 <!DOCTYPE html>
-<!-- Webcomm boilerplate -->
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Master COM & Counter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+  <!-- 1. Sezione Contatore -->
+  <div class="counter-section">
+    <h1>Count: <span id="count">0</span></h1>
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="reset()">Reset</button>
+  </div>
 
+  <!-- 2. Sezione Master COM -->
+  <div class="hero-image">
+    <img src="imgs/minerva-34.png" class="logo" alt="Logo Minerva">
 
-        <p>Create your landing page by typing up the following HTML/CSS code in here:</p>
+    <div class="titoli">
+      <h1>University of Milan</h1>
+      <h2>Master COM</h2>
+      <p>
+        <a href="https://www.unimi.it" target="_blank">UniMi</a> -
+        <a href="https://www.unimi.it/en/education/faculties-and-schools/political-economic-and-social-sciences" target="_blank">SPES</a> -
+        <a href="https://www.comune.milano.it/en/" target="_blank">Milano</a>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+      </p>
+    </div>
+  </div>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+  
+<video src="videos/students.mp4"
+       poster=src="videos/students.mp4"
+       preload="auto"
+       controls
+       autoplay
+       muted
+       loop>
+</video>
 
-        <script src="" async defer></script>
-    </body>
+<div>
+  <h3>Where to find us - SPES (Via Conservatorio)</h3>
+  <iframe 
+    src="https://www.google.com/maps?q=Facolt%C3%A0+di+Scienze+Politiche,+Economiche+e+Sociali+Via+Conservatorio+7+Milano&output=embed" 
+    width="600" 
+    height="350" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</div>
+
+<div>
+  <h3>YouTube Video</h3>
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/Z0oYyQ3YI9s" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+  </iframe>
+</div>
+
+  <!-- 3. Logica JavaScript -->
+  <script>
+    let count = 0;
+
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+
+    function decrement() {
+      count--;
+      updateDisplay();
+    }
+
+    function reset() {
+      count = 0;
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      document.getElementById('count').textContent = count;
+    }
+  </script>
+
+</body>
 </html>
