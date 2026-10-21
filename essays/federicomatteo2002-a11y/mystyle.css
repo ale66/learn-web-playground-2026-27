@@ -1,4 +1,106 @@
-p {
-    text-align-last: left;
+
+
+body { Color: white;
+       Background-color: lightblue;
+       margin: 0; } 
+
+.hero-image {
+  background-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Torre_Velasca,_Milan.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.site-header {
+  background-color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.site-header img {
+  width: 80px;
+  height: auto;
+}
+
+.button {
+           display: inline-block;
+           background-color: blue;
+           color: white;
+           padding: 10px 20px;
+           text-decoration: none;
+           border-radius: 5px;
+}
+
+.main-text {
+  color: black;
+  background-color: lightblue;
+  padding: 30px;
+  text-align: center;
+}
+
+.main-text h1 {
+  color: #333;
+}
+
+.main-text p {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+	float: none;
+	display: block;
+  }
+}
+
+.footer {
+          text-align: center;
+         padding: 3px;
+          color: white;
+          background-color: #555;
+} 
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
