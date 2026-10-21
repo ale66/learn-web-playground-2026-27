@@ -53,6 +53,17 @@ body { Color: white;
   border-radius: 5px;
 }
 
+.official-text {
+  float: left;
+  width: 60%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
 /* Style the navigation bar */
 .navbar {
   width: 100%;
