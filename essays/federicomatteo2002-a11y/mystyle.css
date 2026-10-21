@@ -68,6 +68,9 @@ body { Color: white;
   color: white;
   text-decoration: none;
   font-size: 17px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Navbar links on mouse-over */
