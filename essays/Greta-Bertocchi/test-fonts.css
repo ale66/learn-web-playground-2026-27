@@ -1,7 +1,109 @@
-h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero-content h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(174, 126, 81);
-    color:aqua
+    color: rgb(215, 209, 22);
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+    font-style: italic
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #ddd;
+    padding-bottom: 20px;
+    padding-left: 40px
+}
+
+/* Velatura scura per garantire la leggibilità del testo dell'Hero */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+/* Stile elegante per la scritta/pulsante Instagram */
+.instagram-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    color: #ffffff;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px; /* Bordo arrotondato moderno */
+    background-color: rgba(0, 0, 0, 0.3); /* Trasparenza leggera */
+    backdrop-filter: blur(4px); /* Effetto vetro opaco */
+    transition: all 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse */
+.instagram-btn:hover {
+    background-color: #ffffff;
+    color: #111111;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/*MAIN/
+
+.main /* Sezione Contenuto */
+.main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.main p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Stili per la lista di link */
+.links-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.resource-links {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-links li {
+    margin: 10px 0;
+}
+
+.resource-links a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.resource-links a:hover {
+    color: #003366;
+    text-decoration: underline;
 }
