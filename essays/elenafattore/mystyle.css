@@ -76,7 +76,6 @@ a:hover{
   font-size: 13px;
   color: #d0e1f9;
   font-style: oblique;
-  margin-top: 4px;
 }
 
 .nav-links {
@@ -99,4 +98,83 @@ a:hover{
 .nav-links a:hover {
   color: #90caf9; 
   text-decoration: underline;
+}
+
+/* Hero Section Container */
+.hero-section {
+  background-image: url('imgs/heroimage.jfif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position:relative;
+  padding: 80px 20px 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Content Box inside Hero */
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Titolo Grande del Corso */
+.hero-title {
+  font-size: 50px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+/* Sottotitolo */
+.hero-subtitle {
+  font-size: 19px;
+  color: #e0e6ed;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* Bottoni affiancati */
+.hero-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 25px;       /* Distanza dal bordo inferiore dell'immagine */
+  left: 30px;         /* Distanza dal bordo sinistro */
+  right: 30px;        /* Distanza dal bordo destro */
+  box-sizing: border-box;
+}
+
+.hero-button-primary {
+  background-color: #00a8e8;
+  color: #ffffff;
+  padding: 12px 26px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  margin-left: 0;
+  
+}
+
+.hero-button-primary:hover {
+  background-color: #0086ba;
+}
+
+.hero-button-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 12px 26px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-button-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
