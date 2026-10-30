@@ -3,7 +3,8 @@ body {
     margin-left: 0;
     padding: 0;
     margin-top: 0;
-    background-color:rgb(47, 54, 75);
+    margin-bottom: 0;
+    background-color:rgb(38, 39, 45);
     font-family: 'Times New Roman', Times, serif;
     color:rgba(235, 235, 202, 0.879);
     font-size: 19px;
@@ -13,19 +14,31 @@ body {
 .hero-image {
     width: 100vw;
     height: 100vh;
-    background-image: url("./torrevelasca.avif");
-    background-position: center;
-    background-size: cover; }
+    padding-bottom: 1em;
+    background-image: url("./torrevelascabw.jpg");
+    background-position: right-center;
+    background-size: cover;
+    background-attachment: fixed; }
 
+.sedecentrale {
+    float: left;
+    width: 23%;
+    margin-top: 3em;
+    padding-right: 3em;
+    padding-left: 3em;
+    text-align: right;
+    }
 
 .minerva-logo { 
     display: block;
-    margin-left: 0;
+    padding-left: 3em;
+    padding-top: 1em;
     width: 200px;
     height: 69px;
 }
-a {color:rgba(235, 235, 202, 0.879);}
-a:link {color: rgba(235, 235, 202, 0.879);
+
+a {color: rgba(235, 235, 202, 0.879)}
+a:link {color: rgba(46, 47, 48);
 text-decoration: none;}
 a:hover {
     color: rgba(235, 235, 202, 0.601);}
@@ -48,41 +61,36 @@ li {
 padding-right: 20px;
 padding-left: 1px;}
 
-h1 {text-align: center;
+.header-info {
+    float: right;
+    width:67%;
+    margin-top: 2em;
+}
+
+.title {
     color: rgba(235, 235, 202, 0.879);
     text-shadow: 2px 2px 4px #2b291790;
     font-family:'Times New Roman', Times, serif;
-    font-size: 100px;
+    font-size: 110px;
     font-weight: 550;
-    margin-top: 120px;
     margin-bottom: -80px;
 
 }
-.h11 {text-align: center;
-    color: rgba(235, 235, 202, 0.879);
-    text-shadow: 2px 2px 4px #2b291790;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 100px;
-    font-weight: 550;
-    margin-top: 50px;
-    margin-bottom: 20px;
 
-}
-
-h3 {text-align: center;
+.subtitle {
     margin-top: 80px;
     margin-bottom: -80px;
     color: rgba(235, 235, 202, 0.879);
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 40;
     letter-spacing: 3px;
 }
 
-h2 {text-align: center;
+.intro {text-align: center;
     color: rgba(235, 235, 202, 0.879);
     text-shadow: 2px 2px 4px #2b291790;
     font-family:'Times New Roman', Times, serif;
-    font-size: 60px;
+    font-size: 40px;
     font-style: italic;
     font-weight: 100;
     margin-top: -80px;
@@ -101,7 +109,7 @@ button {
     height: 80px;
     width: 250px;
     margin-top: 20px;
-    color:rgb(47, 54, 75);
+    color:rgb(46, 47, 48);
     font-size: 30px;
     font-family:'Times New Roman', Times, serif;
     background-color: rgba(235, 235, 202, 0.712);
@@ -127,7 +135,7 @@ button:hover {background-color:rgb(235, 235, 202)}
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
-    color:rgb(47, 54, 75);
+    color:rgb(46, 47, 48);
     font-size: 30px;
     font-family:'Times New Roman', Times, serif;
     background-color: rgba(235, 235, 202, 0.712);
@@ -136,5 +144,14 @@ button:hover {background-color:rgb(235, 235, 202)}
     cursor: pointer;
     animation: hover;
 }
+
 .button1:hover {background-color:rgb(235, 235, 202)}
 
+footer {
+    padding-top: .5em;
+    padding-left: 1.25em;
+    padding-bottom: .5em;
+    margin-right: 0px;
+    background-color: rgba(94, 99, 113, 0.744);
+    color:rgb(46, 47, 48);
+}
