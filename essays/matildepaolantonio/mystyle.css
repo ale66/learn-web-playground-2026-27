@@ -1,5 +1,175 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+:root {
+    --bg-dark: #1C2E3D;
+    --text-light: #ffffff;
+    --btn-bg: #E1ECEF;
+    --btn-text: #1C2E3D;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* HERO SECTION */
+.hero-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('imgs/torrevelasca.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Logo UniMi in alto a destra */
+.logo-link {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    z-index: 10;
+}
+
+.unimi-logo {
+    width: 160px;
+    height: auto;
+}
+
+/* Testi Centrali */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.notice {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+/* Bottoni stile Pillola */
+.btn-pill {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* SEZIONE MAPPA E VIDEO */
+.main-section {
+    background-color: var(--bg-dark);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.button-wrapper {
+    margin-bottom: 40px;
+}
+
+.btn-spes {
+    padding: 12px 50px;
+}
+
+.media-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.media-box {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #2a3f52;
+}
+
+/* FOOTER NAVIGAZIONE */
+.footer-nav {
+    background-color: var(--bg-dark);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+/* ================= BOTTONI CON EFFETTO HOVER ================= */
+.btn-pill {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    /* Transizione fluida per l'effetto di movimento e colore */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Quando si passa il mouse sui pulsanti (Pill) */
+.btn-pill:hover {
+    background-color: #b0c4de; /* Colore più scuro al passaggio */
+    color: #0d1b2a;
+    transform: translateY(-4px) scale(1.02); /* Movimento verso l'alto e leggero ingrandimento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Ombra più pronunciata */
+}
+
+/* Effetto di pressione quando si clicca */
+.btn-pill:active {
+    transform: translateY(-1px) scale(0.99);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= LINK DEL FOOTER CON EFFETTO HOVER ================= */
+.footer-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Quando si passa il mouse sui link in basso */
+.footer-nav a:hover {
+    color: #C5A059; /* Cambio colore in oro/accento */
+    transform: translateY(-2px); /* Leggero movimento verso l'alto */
+}

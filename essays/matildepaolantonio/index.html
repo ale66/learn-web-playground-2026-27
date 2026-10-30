@@ -1,32 +1,78 @@
 <!DOCTYPE html>
-<!-- Webcomm boilerplate -->
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>COM unimi - Comunicazione pubblica e d'impresa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+    <!-- Hero Section con sfondo Torre Velasca -->
+    <header class="hero-container">
+        
+        <!-- Logo UniMi in alto a destra -->
+        <a href="https://www.unimi.it" target="_blank" class="logo-link">
+            <img src="imgs/minerva-34.png" alt="UNIVERSITÀ DEGLI STUDI DI MILANO" class="unimi-logo">
+        </a>
 
+        <!-- Testi centrali sovrapposti all'immagine -->
+        <div class="hero-content">
+            <h1 class="main-title">COM unimi</h1>
+            <p class="subtitle">Comunicazione pubblica e d'impresa</p>
+            <p class="notice">Aperte le ammissioni per l'a.a. 2026/2027</p>
+            
+            <a href="#corso" class="btn-pill">Il corso in breve</a>
+        </div>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+    </header>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+    <!-- Sezione Informazioni e Media -->
+    <section class="main-section" id="corso">
+        
+        <div class="button-wrapper">
+            <a href="https://www.unimi.it/it/corsi/facolta-e-scuole/scienze-politiche-economiche-e-sociali" target="_blank" class="btn-pill btn-spes">Esplora SPES</a>
+        </div>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+        <!-- Layout a due colonne (Mappa a sinistra, Video a destra) -->
+        <div class="media-grid">
+            
+            <!-- Colonna Sinistra: Google Maps SPeS Via Conservatorio 7 -->
+            <div class="media-box">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.2384725345715!2d9.20017117688463!3d45.46416563380062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a345872de7%3A0xd945a5f1c21cbc74!2sVia%20Conservatorio%2C%207%2C%2020122%20Milano%20MI!5e0!3m2!1sit!2sit!4v1714488000000!5m2!1sit!2sit" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
 
-        <script src="" async defer></script>
-    </body>
+            <!-- Colonna Destra: Video YouTube funzionante per embedding -->
+<div class="media-box">
+    <iframe 
+        width="100%" 
+        height="100%" 
+        src="https://www.youtube.com/embed/Q25S92Z314k" 
+        title="Benvenuti in Statale" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+</div>
+        </div>
+
+    </section>
+
+    <!-- Footer con Menu di Navigazione -->
+    <footer class="footer-nav">
+        <a href="https://www.unimi.it/it/studiare/immatricolarsi-e-iscriversi" target="_blank">ISCRIVERSI</a>
+        <a href="https://www.unimi.it/it/corsi/facolta-e-scuole/scienze-politiche-economiche-e-sociali" target="_blank">INSEGNAMENTI</a>
+        <a href="https://eaonline.cdl.unimi.it/it/dopo-la-laurea" target="_blank">DOPO LA LAUREA</a>
+    </footer>
+
+</body>
 </html>
