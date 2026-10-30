@@ -1,7 +1,7 @@
 
 
 body { Color: white;
-       Background-color: lightblue;
+       Background-color: darkgrey;
        margin: 0; } 
 
 .hero-image {
@@ -14,7 +14,7 @@ body { Color: white;
 }
 
 .site-header {
-  background-color: white;
+  background-color: darkgrey;
   height: 100px;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@ body { Color: white;
 
 .button {
            display: inline-block;
-           background-color: blue;
+           background-color: darkgrey;
            color: white;
            padding: 10px 20px;
            text-decoration: none;
@@ -36,8 +36,8 @@ body { Color: white;
 }
 
 .main-text {
-  color: black;
-  background-color: lightblue;
+  color: white;
+  background-color: darkgrey;
   padding: 30px;
   text-align: center;
 }
@@ -47,8 +47,8 @@ body { Color: white;
 }
 
 .main-text p {
-  background-color: white;
-  color: black;
+  background-color: darkgrey;
+  color: white;
   padding: 15px;
   border-radius: 5px;
 }
@@ -56,8 +56,8 @@ body { Color: white;
 .official-text {
   float: left;
   width: 60%;
-  background-color: white;
-  color: black;
+  background-color: darkgrey;
+  color: white;
   padding: 20px;
   margin: 10px;
   border-radius: 5px;

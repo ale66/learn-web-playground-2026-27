@@ -33,7 +33,7 @@ In late October you should, ideally, have completed the following milestone
 
 - have a GH *student* account
 
-- (via instructor) own folder on `learn-web-playground-2026-27/essays/`
+- (via instructor's own folder) on `ale66.github.io/learn-web-playground-2026-27/essays/name.surname/`
 
 - have copy+pasted your own files there
 
@@ -42,3 +42,4 @@ In late October you should, ideally, have completed the following milestone
 - boxed up some official text from `https://com.cdl.unimi.it/en` and made it float in your project page
 
 - make a menu of navigation links and float it (details in past presentations)
+
