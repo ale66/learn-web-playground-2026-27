@@ -1,40 +1,49 @@
 <!DOCTYPE html>
-<!-- Webcomm boilerplate -->
-
-<html>
+<html lang="it">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>MA COM - Landing Page</title>
+        <meta name="description" content="Mock landing page for MA COM">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        
+        <!-- Collegamento al file CSS separato -->
+        <link rel="stylesheet" href="mystyle.css">
     </head>
     <body>
-        
- <!--provaaaaaaaaa
- provaaaaaaaaa
- provaaaaaaaaa
- provaaaaaaaaa
- provaaaaaaaaa
- provaaaaaaaaa
- provaaaaaaaaa
- -->
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+ 
+        <div class="hero-image">
+            <a href="https://www.unimi.it/it">
+                <img src="./imgs/minerva-34.png" alt="Minerva" title="Minerva Unimi Logo" class="minerva-logo">
+            </a>
+            <h1> COM Unimi</h1>
+            <h3> Comunicazione pubblica e d'impresa</h3>
+            <hr>
+            <h2>Aperte le ammissioni per l'a.a. 2026/2027</h2>
+            <button class="button" onclick="window.location.href='https://www.unimi.it/it/corsi/laurea-magistrale/comunicazione-pubblica-e-dimpresa-com'"> Il corso in breve </button>
+        </div>
 
+        <!-- MENU DI NAVIGAZIONE ISPIRATO AL CODICE DELLA COMPAGNA -->
+        <nav>
+            <ul>
+                <li><a href="https://com.cdl.unimi.it/it/iscriversi">Iscriversi</a></li>
+                <li><a href="https://com.cdl.unimi.it/it/insegnamenti">Insegnamenti</a></li>
+                <li><a href="https://com.cdl.unimi.it/it/dopo-la-laurea">Dopo la laurea</a></li>
+            </ul>
+        </nav>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+        <div class="maps-container">
+            <iframe class="iframe1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1988095341035!2d9.197811986554917!3d45.46579889649037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a345872de7%3A0xd945a5f1c21cbc74!2sFacolt%C3%A0%20di%20Scienze%20Politiche%2C%20Economiche%20e%20Sociali%20-%20Universit%C3%A0%20degli%20Studi%20di%20Milano!5e0!3m2!1sit!2sit!4v1791752938971!5m2!1sit!2sit" width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+        <hr class="hr1">
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+        <!-- FOOTER SEMANTICO AL POSTO DEL DIV -->
+        <footer>
+            Università degli Studi di Milano <br>
+            Via Festa del Perdono 7 - 20122 Milano <br>
+            Tel. +39 02 5032 5032 <br>
+        </footer>
 
-        <script src="" async defer></script>
     </body>
 </html>
