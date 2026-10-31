@@ -1,9 +1,3 @@
-/* ================= COLOR SCHEME (3 COLORI) =================
-   1. Primario:   #1C2E3D (Blu Scuro principale)
-   2. Secondario: #C5A059 (Oro / Dettagli e Hover)
-   3. Terziario:  #2B4255 (Blu-Grigio usato per il FOOTER)
-   ========================================================== */
-
    :root {
     --color-primary: #1C2E3D;
     --color-secondary: #C5A059;
@@ -26,7 +20,6 @@ body {
     color: var(--text-light);
 }
 
-/* ================= HERO SECTION ================= */
 .hero-container {
     position: relative;
     width: 100%;
@@ -40,7 +33,6 @@ body {
     text-align: center;
 }
 
-/* Navigazione Superiore */
 .top-nav {
     position: absolute;
     top: 25px;
@@ -145,7 +137,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* ================= BOTTONI STILE PILL ================= */
 .btn-pill {
     display: inline-block;
     background-color: var(--btn-bg);
@@ -170,7 +161,6 @@ body {
     transform: translateY(-1px) scale(0.99);
 }
 
-/* ================= SEZIONE VIDEO YOUTUBE SINGOLO ================= */
 .main-section {
     background-color: var(--color-primary);
     padding: 50px 20px;
