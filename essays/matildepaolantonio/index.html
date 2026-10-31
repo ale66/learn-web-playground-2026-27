@@ -9,15 +9,28 @@
 </head>
 <body>
 
-    <!-- Hero Section con sfondo Torre Velasca -->
     <header class="hero-container">
         
-        <!-- Logo UniMi in alto a destra -->
-        <a href="https://www.unimi.it" target="_blank" class="logo-link">
-            <img src="imgs/minerva-34.png" alt="UNIVERSITÀ DEGLI STUDI DI MILANO" class="unimi-logo">
-        </a>
+        <nav class="top-nav">
+            <div class="menu-dropdown">
+                <button class="hamburger-menu" id="menuBtn" aria-label="Apri Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="https://www.unimi.it" target="_blank">Home UniMi</a>
+                    <a href="https://spes.unimi.it" target="_blank">Facoltà SPeS</a>
+                    <a href="#corso">Il Corso</a>
+                    <a href="#news">Notizie & Avvisi</a>
+                </div>
+            </div>
 
-        <!-- Testi centrali sovrapposti all'immagine -->
+            <a href="https://www.unimi.it" target="_blank" class="logo-link">
+                <img src="imgs/minerva-34.png" alt="UNIVERSITÀ DEGLI STUDI DI MILANO" class="unimi-logo">
+            </a>
+        </nav>
+
         <div class="hero-content">
             <h1 class="main-title">COM unimi</h1>
             <p class="subtitle">Comunicazione pubblica e d'impresa</p>
@@ -28,51 +41,100 @@
 
     </header>
 
-    <!-- Sezione Informazioni e Media -->
     <section class="main-section" id="corso">
         
         <div class="button-wrapper">
             <a href="https://www.unimi.it/it/corsi/facolta-e-scuole/scienze-politiche-economiche-e-sociali" target="_blank" class="btn-pill btn-spes">Esplora SPES</a>
         </div>
 
-        <!-- Layout a due colonne (Mappa a sinistra, Video a destra) -->
-        <div class="media-grid">
-            
-            <!-- Colonna Sinistra: Google Maps SPeS Via Conservatorio 7 -->
-            <div class="media-box">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.2384725345715!2d9.20017117688463!3d45.46416563380062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a345872de7%3A0xd945a5f1c21cbc74!2sVia%20Conservatorio%2C%207%2C%2020122%20Milano%20MI!5e0!3m2!1sit!2sit!4v1714488000000!5m2!1sit!2sit" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
-            <!-- Colonna Destra: Video YouTube funzionante per embedding -->
-<div class="media-box">
-    <iframe 
-        width="100%" 
-        height="100%" 
-        src="https://www.youtube.com/embed/Q25S92Z314k" 
-        title="Benvenuti in Statale" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
-</div>
+        <div class="single-video-container">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/Q25S92Z314k" 
+                title="Benvenuti in Statale" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
         </div>
 
     </section>
 
-    <!-- Footer con Menu di Navigazione -->
-    <footer class="footer-nav">
-        <a href="https://www.unimi.it/it/studiare/immatricolarsi-e-iscriversi" target="_blank">ISCRIVERSI</a>
-        <a href="https://www.unimi.it/it/corsi/facolta-e-scuole/scienze-politiche-economiche-e-sociali" target="_blank">INSEGNAMENTI</a>
-        <a href="https://eaonline.cdl.unimi.it/it/dopo-la-laurea" target="_blank">DOPO LA LAUREA</a>
+    <section class="news-section" id="news">
+        <div class="news-grid">
+            
+            <article class="news-card">
+                <h3 class="news-title">Aperitivo di Benvenuto MA COM: Incontra compagni e tutor</h3>
+                <p class="news-date">Mon, 03-11-2026</p>
+                <p class="news-text">
+                    Sei una nuova matricola o vuoi semplicemente ampliare il tuo network? Il corso MA COM organizza un incontro informale nei cortili di Via Conservatorio per conoscersi, scambiarsi appunti e scoprire tutte le opportunità del nuovo anno accademico. Vi aspettiamo con musica e un piccolo rinfresco!
+                </p>
+                <a href="https://www.unimi.it" target="_blank" class="news-link">Iscriviti all'evento e scopri i dettagli</a>
+            </article>
+
+            <article class="news-card">
+                <h3 class="news-title">Convenzioni Universitarie: Teatri e Mostre a prezzo ridotto</h3>
+                <p class="news-date">sat, 10-31-2026</p>
+                <p class="news-text">
+                    Grazie agli accordi tra il Comune di Milano e l'Ateneo, con il badge universitario puoi accedere a tariffe agevolate nei principali musei, teatri e mostre d'arte della città. Un'ottima occasione per vivere la cultura milanese dopo le lezioni!
+                </p>
+                <a href="https://www.unimi.it" target="_blank" class="news-link">Consulta il programma e prenota il tuo posto</a>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="focus-section">
+        <h2 class="focus-title">Focus on</h2>
+        <div class="focus-container">
+            
+            <div class="pip-container">
+                <img src="imgs/campus.jpg" alt="Vita universitaria nei campus UniMi" class="pip-main-img">
+                <div class="pip-overlay-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.2384725345715!2d9.20017117688463!3d45.46416563380062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a345872de7%3A0xd945a5f1c21cbc74!2sVia%20Conservatorio%2C%207%2C%2020122%20Milano%20MI!5e0!3m2!1sit!2sit!4v1714488000000!5m2!1sit!2sit" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="focus-text">
+                <h3>Vivi l'esperienza universitaria in Statale</h3>
+                <p>
+                    Il corso MA COM fonde competenze teoriche e laboratori pratici per formare i professionisti della comunicazione del futuro. Scopri gli spazi di Via Conservatorio 7, le aule studio e tutte le attività organizzate per vivere al meglio la community universitaria a Milano.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer-container">
+        <nav class="footer-nav">
+            <a href="https://www.unimi.it/it/studiare/immatricolarsi-e-iscriversi" target="_blank">ISCRIVERSI</a>
+            <a href="https://www.unimi.it/it/corsi/facolta-e-scuole/scienze-politiche-economiche-e-sociali" target="_blank">INSEGNAMENTI</a>
+            <a href="https://eaonline.cdl.unimi.it/it/dopo-la-laurea" target="_blank">DOPO LA LAUREA</a>
+        </nav>
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function() {
+            dropdownMenu.classList.remove('show');
+        });
+    </script>
 
 </body>
 </html>
