@@ -1,5 +1,63 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+.hero-image {
+    background-image: url('imgs/torrevelasca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    width: 100vw;
+    height: 80vh; 
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start;    
+    text-align: left;    
+    
+   
+    padding: 40px;
+    box-sizing: border-box;
 }
 
+.top-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0066cd;
+}
+
+.top-bar img {
+    height: 40px; 
+    width: auto;
+    margin-right: 15px;
+}
+
+span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    font-family: "Georgia", Times, serif;
+}
+
+
+h1 {
+    font-family: "Georgia", Times, serif;
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: "Georgia", Times, serif;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+p {
+    font-family: "Georgia", Times, serif;
+    font-size: 1.2em;
+}
+
+.main {
+    padding: 30px;
+}
