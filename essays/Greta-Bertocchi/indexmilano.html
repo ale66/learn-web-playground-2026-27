@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Welcome to COMM faculty</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="milanostyle.css">
-        <link rel="stylesheet" href="test-fonts.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public and Corporate Communication (COM) - Università degli Studi di Milano</title>
+    <link rel="stylesheet" href="milanostyle.css">
+</head>
+<body>
 
         <!-- HEADER CON LOGO E NAVBAR ORIZZONTALE -->
         <header class="site-header">
@@ -25,9 +23,10 @@
             </nav>
         </header>
 
-        <!-- 1. HERO SECTION -->
-        <section id="hero-section">
+<!-- 1. HERO SECTION -->
+<section id="hero-section">
     <div class="hero-image">
+        <div class="hero-overlay"></div>
         <div class="hero-content-container">
             <div class="photo-main"> 
                 <img src="imgs/ragazze-fontana.jpg" alt="front-cover">
@@ -35,36 +34,56 @@
             <div class="hero-content">
                 <h1>Master programme in Public and Corporate Communication</h1>
                 <h2>Università degli Studi di Milano</h2>
+                <p>Join our master's programme in Public and Corporate Communication and take your career to the next level!</p>
                 <a href="https://instagram.com" target="_blank" class="instagram-btn">Follow us on Instagram</a>
             </div>
-                    
-                    <div class="clearfix"></div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 2. CONTENUTI PRINCIPALI (Due colonne) -->
+        <section id="main-wrapper">
+            <!-- COLONNA DI SINISTRA -->
+            <div class="left-column">
+                <div class="official-text-box">
+                    <h3>About the Master Course</h3>
+                    <p>The Master's degree in Corporate Communication provides advanced knowledge in the field of corporate communication and strategic management.</p>
+                </div>
+
+                <div class="official-text-box">
+                    <h3>Programme Overview</h3>
+                    <p>
+                        The Master's degree in <strong>Public and Corporate Communication (COM)</strong> provides advanced training in modern communication strategies, media management, corporate identity, and digital communication tools.
+                    </p>
+                    <span class="badge">In-person programme</span>
                 </div>
             </div>
-        </section>
 
-          
-            
-        </section>
+            <!-- COLONNA DI DESTRA (Media) -->
+            <div class="right-column">
+                <div class="official-text-box media-box">
+                    <h3>Media</h3>
+                    
+                    <div class="video-container">
+                        <p>Watch our introduction video:</p>
+                        <iframe src="https://www.youtube.com/embed/h0i4SaJierE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
 
-        <!-- 2. CONTENUTI PRINCIPALI -->
-        <main class="content-wrapper">
-            <div class="official-text-box">
-                <h3>About the Master Course</h3>
-                <p>The Master's degree in Corporate Communication provides advanced knowledge in the field of corporate communication and strategic management.</p>
+                    <div class="map-container">
+                        <p>Find us on the map:</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.0974797201166!2d9.202049528593903!3d45.46587645927525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a345872de7%3A0xd945a5f1c21cbc74!2sFacolt%C3%A0%20di%20Scienze%20Politiche%2C%20Economiche%20e%20Sociali%20-%20Universit%C3%A0%20degli%20Studi%20di%20Milano!5e0!3m2!1sit!2sit!4v1793608447090!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
             </div>
 
-            <div class="official-text-box">
-                <h3>Programme Overview</h3>
-                <p>
-                    The Master's degree in <strong>Public and Corporate Communication (COM)</strong> provides advanced training in modern communication strategies, media management, corporate identity, and digital communication tools.
-                </p>
-                <span class="badge">In-person programme</span>
-            </div>
-        </main>
+            <!-- Pulisce i float per chiudere correttamente il contenitore -->
+            <div class="clearfix"></div>
+        </section>
 
-        <!-- RISORSE ESSENZIALI -->
-        <section id="floating-links" class="floating-links-section">
+        <!-- RISORSE ESSENZIALI  -->
+        <section class="floating-links-section">
             <div class="links-selection">
                 <h3>Essential Resources</h3>
                 <ul class="resource-links">
@@ -76,6 +95,10 @@
             </div>
         </section>
 
-        <script src="" async defer></script>
-    </body>
+    <!-- 4. FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Università degli Studi di Milano</p>
+    </footer>
+
+</body>
 </html>
