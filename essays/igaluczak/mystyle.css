@@ -1,29 +1,8 @@
-.hero-image {
-    background-image: url('imgs/torrevelasca.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    width: 100vw;
-    height: 80vh; 
-    color: white;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: flex-start;    
-    text-align: left;    
-    
-   
-    padding: 40px;
-    box-sizing: border-box;
-}
-
 .top-bar {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #0066cd;
+    background-color: #e8b480;
 }
 
 .top-bar img {
@@ -37,6 +16,56 @@ span {
     font-weight: bold;
     color: white;
     font-family: "Georgia", Times, serif;
+}
+
+.hero-image {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    text-transform: uppercase;
+    background-color: #e8b480;
+    padding: .25em 0;
+}
+nav ul {
+    list-style-type: none;
+    padding-left: 1.25em;
+}
+nav li {
+    float: left;
+    padding-right: 1.5em;
+}
+
+
+.header {
+    background-image: url('imgs/tło.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+    padding: 50px 40px;
+    box-sizing: border-box;
+}
+
+.header-image img {
+    width: 320px;           
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+
+.header-info {
+    flex: 1;                 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    color: #222;
 }
 
 
