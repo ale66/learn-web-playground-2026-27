@@ -1,5 +1,92 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+.top-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e8b480;
 }
 
+.top-bar img {
+    height: 40px; 
+    width: auto;
+    margin-right: 15px;
+}
+
+span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    font-family: "Georgia", Times, serif;
+}
+
+.hero-image {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    text-transform: uppercase;
+    background-color: #e8b480;
+    padding: .25em 0;
+}
+nav ul {
+    list-style-type: none;
+    padding-left: 1.25em;
+}
+nav li {
+    float: left;
+    padding-right: 1.5em;
+}
+
+
+.header {
+    background-image: url('imgs/tło.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+    padding: 50px 40px;
+    box-sizing: border-box;
+}
+
+.header-image img {
+    width: 320px;           
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+
+.header-info {
+    flex: 1;                 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    color: #222;
+}
+
+
+h1 {
+    font-family: "Georgia", Times, serif;
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: "Georgia", Times, serif;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+p {
+    font-family: "Georgia", Times, serif;
+    font-size: 1.2em;
+}
+
+.main {
+    padding: 30px;
+}
