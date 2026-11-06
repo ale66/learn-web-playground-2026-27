@@ -1,5 +1,8 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+ 
+ .hero-image {
+ width: 100vw;
+    height: 100vh;
+    background-image: url(/images/torrevelasca.jpg);
+    background-position: center center;
+    background-size: cover;
 }
-
