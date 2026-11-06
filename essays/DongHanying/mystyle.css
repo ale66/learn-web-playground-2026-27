@@ -13,10 +13,41 @@ body {
 
 /* 将校徽固定/绝对定位在左上角 */
 .logo {
-    position: absolute;   /* 绝对定位 */
-    top: 15px;            /* 距离顶部 15px */
-    left: 15px;           /* 距离左侧 15px */
-    width: 60px;          /* 可以根据需要修改校徽的大小 */
+    width: 160px;
     height: auto;
-    z-index: 10;          /* 保证校徽悬浮在最上层 */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* 同时需要给 body 添加内边距，防止页面标题文字被绝对定位的校徽遮挡 */
+body {
+    padding-top: 100px;
+}
+.simple-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(228, 214, 159, 0.3);
+}
+
+/* 用 Flex 让 4 个图片横向居中排列 */
+.svg-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;            /* 图标之间的间距 */
+    margin-top: 15px;
+}
+
+/* 控制 SVG 图片的大小与交互 */
+.svg-social-links img {
+    width: 28px;          /* 矢量图显示宽度（按需调整） */
+    height: 28px;         /* 矢量图显示高度 */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* 鼠标悬停时的微动效果 */
+.svg-social-links a:hover img {
+    transform: scale(1.15); /* 鼠标移上去微放 1.15 倍 */
+    opacity: 0.8;           /* 略微变亮/改变透明度 */
 }
