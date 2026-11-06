@@ -5,27 +5,83 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Universit&agrave degli Studi di Milano: CORPORATE COMMUNICATION</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="test-fonts.css">
     </head>
     <body>
  
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+        <div class="hero-image">
+            <img src="./imgs/minerva-34.png" alt="logo unimi" class="minerva-34";>
+            
+        </div>        
+            
+        <h1>CORPORATE COMMUNICATION: WEB COMMUNICATION</h1>
 
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+        <div class="main">
+            <h2> Welcome to the Web Communication course!</h2>
+        </div>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+        <a href="#first" class="center"> Where to find us</a>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+        <h3>We are pleased to welcome all students to the Web Communication course, during which we will explore the fundamental principles of web communication and web development, gaining practical knowledge of HTML, CSS, and JavaScript.</h3>
+
+        <p>The aim of this course is to learn how to build a <span>webpage</span> by learning how to use the languages that make it up:
+            <ol>
+                <li><span> HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+            </ol>
+        </p>
+
+        <p>To give students a chance to get a clearer grasp of the course, we recommend visiting the <a href="https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2026/web-communication-0">course website</a> and watching a short <a href="https://youtu.be/TxcJ2drr554?si=g52A4fa8GzWpqhGz">beginner tutorial</a> on how to use programming languages.</p>
+
+
+            
+        <h4> WEB DEVELOPMENT ESSENTIALS </h4>
+        <div>
+            <p>Discover the fundamentals of web development. </p>
+        </div>
+
+        <div class="buttons">
+            <button onclick="showinfo('HTML')">HTML</button>
+            <button onclick="showinfo('CSS')">CSS</button>
+            <button onclick="showinfo('JavaScript')">JavaScript</button>
+        </div>
+        
+
+        <p id="info">Select a topic to learn more.</p>
+
+        <script>
+
+        function showinfo(topic) {
+            if (topic==="HTML") {
+                document.getElementById ("info") .textContent =
+                    "HTML provides the structure and content of a webpage.";
+            }
+
+            if (topic === "CSS") {
+               document.getElementById ("info") .textContent =
+                    "CSS controls the appearance, colors and layout of a website.";
+            }
+            
+            if (topic === "JavaScript") {
+               document.getElementById ("info") .textContent =
+                    "JavaScript adds interactivity and dynamic features to webpages.";
+            }
+        }  
+        
+        </script>
+
+        <br>
+        <br>
+    
+    
+    
+    <div id="first"> Università degli Studi di Milano <br> Via Conservatorio 7, 20122 Milano </div>
+
 
         <script src="" async defer></script>
     </body>
