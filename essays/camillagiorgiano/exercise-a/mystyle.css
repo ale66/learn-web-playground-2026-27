@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sfondo solo sfocato, senza velo */
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: -20px; /* evita i bordi chiari creati dal blur */
+    background-image: url("imgs/duomo.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+}
+
+/* Logo: in alto a destra */
+.logo {
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    width: 190px;
+    height: auto;
+}
+
+/* Foto uni: a sinistra, centrata in verticale */
+.hero-uni {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    width: 22%;
+    aspect-ratio: 2 / 3;
+}
+
+.uni {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Titolo: a destra della foto, allineato a sinistra */
+.hero-image h1 {
+    position: absolute;
+    top: 34%;
+    left: 36%;
+    width: 40%;
+    margin: 0;
+    color: black;
+    font-size: 64px;
+    text-align: left;
+}
+
+/* Sottotitolo: sotto il titolo, allineato a sinistra */
+.hero-image h2 {
+    position: absolute;
+    top: 58%;
+    left: 36%;
+    width: 40%;
+    margin: 0;
+    color: black;
+    font-size: 30px;
+    text-align: left;
+}
+
+/* Call to action: in basso al centro */
+.cta {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 18px 48px;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid black;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.cta:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Video: link largo quanto lo sfondo, proporzioni 16:9 */
+.video {
+    position: relative;
+    display: block; /* serve perché il link occupi tutta la larghezza */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+/* Cerchio del pulsante play */
+.video::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+}
+
+/* Triangolo del play */
+.video::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    border-style: solid;
+    border-width: 20px 0 20px 34px;
+    border-color: transparent transparent transparent white;
+}
+
+.video:hover::before {
+    background-color: rgba(200, 0, 0, 0.9);
+}

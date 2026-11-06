@@ -7,14 +7,8 @@
   <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
+  
 
-  <!-- 1. Sezione Contatore -->
-  <div class="counter-section">
-    <h1>Count: <span id="count">0</span></h1>
-    <button onclick="increment()">Increment</button>
-    <button onclick="decrement()">Decrement</button>
-    <button onclick="reset()">Reset</button>
-  </div>
 
   <!-- 2. Sezione Master COM -->
   <div class="hero-image">
@@ -64,29 +58,4 @@
   </iframe>
 </div>
 
-  <!-- 3. Logica JavaScript -->
-  <script>
-    let count = 0;
-
-    function increment() {
-      count++;
-      updateDisplay();
-    }
-
-    function decrement() {
-      count--;
-      updateDisplay();
-    }
-
-    function reset() {
-      count = 0;
-      updateDisplay();
-    }
-
-    function updateDisplay() {
-      document.getElementById('count').textContent = count;
-    }
-  </script>
-
-</body>
 </html>

@@ -1,5 +1,108 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+body {
+    margin: 0;
 }
 
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    transform: scale(1.1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 0 5%;
+}
+
+#uni {
+    width: 40%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content a {
+    color: whitesmoke;
+    text-decoration: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+    font-size: 75px;
+    color:white;
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Minerva {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 2;
+
+}
+
+.uni-photo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.uni-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.uni-photo a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    text-decoration: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.uni-photo h2 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.video-section {
+    width: 100%;
+    height: 100vh;
+}
+
+.video-section iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

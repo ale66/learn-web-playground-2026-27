@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <!-- Webcomm boilerplate -->
+<html>
+<head></head>
+<body>
 
+  <script>
+    let count = 0;
+    
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+    
+    function decrement() {
+      count--;
+      updateDisplay();
+    }
+    
+    function reset() {
+      count = 0;
+      updateDisplay();
+    }
+    
+    function updateDisplay() {
+      document.getElementById('count').textContent = count;
+    }
+  </script>
+</body>
+</html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,25 +35,22 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="mystyle.css">
     </head>
     <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
-
-
-        <p>Create your landing page by typing up the following HTML/CSS code in here:</p>
-
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
-
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
 
         <script src="" async defer></script>
-    </body>
+    
+    <div class="hero-image">
+        <img src="./imgs/minerva-34.png" class="minerva">
+        <h1>University of Milan</h1>
+        <h2>Learn with us</h2>
+    </div>
+    <div class="links">
+    <a href="https://www.unimi.it/it">UNIMI</a>
+    <a href="https://www.unimi.it/it/corsi/facolta-e-scuole/scienze-politiche-economiche-e-sociali">SPES</a>
+    <a href="https://www.comune.milano.it/en/home/-/asset_publisher/ePzf0B9j3CKD/content/74322166">City of Milan</a>
+    <a href="https://www.youtube.com/watch?v=8FEvW_pcnjU">Welcome International Students</a>
+    </div>
+  </body>
 </html>
