@@ -1,38 +1,65 @@
 p {
-    text-align-last: left;
+    text-align-last: center;
     text-style: oblique;
 }
 
-.meu-hero {
-  background-color: #0b2545;
-  color: white;
+body {
+  margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* Hero com a foto 1 de fundo */
+.meu-hero {
+  background-image:
+    linear-gradient(rgba(11, 37, 69, 0.6), rgba(11, 37, 69, 0.6)),
+    url('imgs/foto1.jpg.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 140px 20px;
 }
 
 .meu-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin: 0 0 10px 0;
 }
 
 .meu-hero p {
-  font-size: 1.2rem;
-  color: #cfd8e3;
+  font-size: 1.4rem;
+  margin: 0;
 }
 
-.minhas-fotos {
+/* Foto 2 de um lado, mapa do outro */
+.secao-info {
   display: flex;
-  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 30px 20px;
-  background-color: #f4f6f9;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.minhas-fotos img {
+.secao-info img,
+.secao-info iframe {
+  flex: 1 1 300px;
   width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
+  height: 350px;
   border: 3px solid #0b2545;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Rodapé */
+.meu-rodape {
+  background-color: #0b2545;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.meu-rodape p {
+  margin: 0;
 }

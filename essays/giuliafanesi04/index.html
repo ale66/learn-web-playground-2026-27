@@ -12,49 +12,31 @@
     </head>
     
     <body>
-    <div class="hero-image">
-        
-        <img src="./imgs/minerva-34.png" alt="Minerva 34" class="Minerva"> 
-        <a href="https://www.unimi.it/en" target="_blank"> 
-        <h1>MA COM</h1>
-    </a>
-    <a href="https://www.unimi.it/en" target="_blank"> 
-        <h2>Visit our uni!</h2>
-    </a>
+    <div class="header">
+      <div class="logo-container">
+        <img src="./imgs/logo-unimi.png" alt="Logo">
+      </div>
+
+      <div class="header-image">
+        <img src="./imgs/via_conservatorio.jpg" alt="Foto">
     </div>
 
+    <div class="header-info">
+        <p class="intro">Visit our uni!</p>
+        <div class="surtitle">MA COM</div>
+        <h1 class="title">The Web Designer</h1>
+        <h3 class="subtitle">A story of HTML, CSS, and the big city</h3>
+        
+    </div>
+
+    <script> 
+    document.title = "MA COM - Loaded on: " + new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(); 
+    </script> 
+
+</div>
+
+    
+
 </body>
-</html>
+</html> 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z5NoQg8LdDk?si=GMHrMuUBOKRTxJmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<head></head>
-<body>
-  <h1>Count: <span id="count">0</span></h1>
-  <button onclick="increment()">Increment</button>
-  <button onclick="decrement()">Decrement</button>
-  <button onclick="reset()">Reset</button>
-
-  <script>
-    let count = 0;
-    
-    function increment() {
-      count++;
-      updateDisplay();
-    }
-    
-    function decrement() {
-      count--;
-      updateDisplay();
-    }
-    
-    function reset() {
-      count = 0;
-      updateDisplay();
-    }
-    
-    function updateDisplay() {
-      document.getElementById('count').textContent = count;
-    }
-  </script>
-</body> 

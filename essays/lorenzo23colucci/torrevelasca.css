@@ -1,9 +1,4 @@
-/* ==========================================================================
-   COLOR SCHEME & DESIGN TOKENS
-   - Accent: #d90429 (Rosso vivace)
-   - Secondary: #1d3557 (Blu navy profondo)
-   - Tertiary: #f1faee (Bianco seta/neutro caldo)
-   ========================================================================== */
+
 :root {
   --color-accent: #d90429;
   --color-accent-hover: #b0031f;
@@ -20,7 +15,7 @@
   --shadow-strong: 0 15px 35px rgba(11, 21, 35, 0.4);
 }
 
-/* Reset essenziale */
+
 * {
   margin: 0;
   padding: 0;
@@ -39,9 +34,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================================================
-   HEADER MODERNO (Glassmorphism fisso)
-   ========================================================================== */
+
 .site-header {
   position: fixed;
   top: 0;
@@ -94,7 +87,7 @@ body {
   transition: color 0.25s ease;
 }
 
-/* Sottolineatura animata in hover */
+
 .main-nav a::after {
   content: '';
   position: absolute;
@@ -114,9 +107,7 @@ body {
   width: 100%;
 }
 
-/* ==========================================================================
-   HERO: TORRE VELASCA + WRITING ON PICTURE
-   ========================================================================== */
+
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -130,7 +121,7 @@ body {
   overflow: hidden;
 }
 
-/* Gradiente di fusione per un contrasto professionale e cinematografico */
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -157,7 +148,7 @@ body {
   align-items: center;
 }
 
-/* Kicker Tag moderno */
+
 .hero-tag {
   display: inline-block;
   font-size: 0.8rem;
@@ -174,7 +165,7 @@ body {
 }
 
 .main-title {
-  /* Tipografia fluida che si ridimensiona da 2.4rem a 4rem in base allo schermo */
+  
   font-size: clamp(2.3rem, 5vw, 3.8rem);
   font-weight: 800;
   letter-spacing: -1.2px;
@@ -192,7 +183,7 @@ body {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
 }
 
-/* Gruppo bottoni CTA */
+
 .cta-group {
   display: flex;
   gap: 1.2rem;
@@ -237,63 +228,98 @@ body {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   PICTURE IN PICTURE (Floating Card)
-   ========================================================================== */
-.pip-floating-card {
+
+.pip-map-card {
   position: absolute;
-  bottom: 2.5rem;
-  right: 3rem;
-  background: rgba(29, 53, 87, 0.82); /* Secondary color */
-  border: 1px solid rgba(241, 250, 238, 0.18);
-  border-radius: var(--radius-md);
-  padding: 0.8rem 1.3rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: var(--shadow-strong);
-  backdrop-filter: blur(10px);
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 220px;
+  background: rgba(29, 53, 87, 0.92); /* Secondary Color */
+  border: 1px solid rgba(241, 250, 238, 0.25);
+  border-radius: 10px;
+  padding: 0.6rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px);
-  transition: transform 0.3s ease;
+  z-index: 50;
+  transition: transform 0.2s ease;
+  
 }
 
-.pip-floating-card:hover {
-  transform: translateY(-3px);
+.pip-map-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
 }
 
-.pip-media {
-  background: rgba(11, 21, 35, 0.5);
-  padding: 0.4rem 0.6rem;
-  border-radius: var(--radius-sm);
+.pip-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  margin-bottom: 0.4rem;
 }
 
-.pip-image {
-  height: 32px;
-  width: auto;
+.pip-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-tertiary);
+  background: var(--color-accent);
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+}
+
+.pip-external-link {
+  font-size: 0.7rem;
+  color: var(--color-tertiary);
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.pip-external-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+
+.pip-map-frame {
+  width: 100%;
+  height: 95px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+  border: 1px solid #2a4d7d;
+  position: relative;
+}
+
+.pip-map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 140px;
+  margin-top: -10px;
+  border: none;
+  pointer-events: auto;
 }
 
 .pip-info {
-  display: flex;
-  flex-direction: column;
+  text-align: left;
 }
 
-.pip-title {
-  font-size: 0.85rem;
+.pip-name {
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-tertiary);
+  line-height: 1.2;
 }
 
-.pip-location {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
+.pip-address {
+  font-size: 0.65rem;
+  color: #dbe4ee;
+  line-height: 1.2;
 }
 
-/* ==========================================================================
-   CONTENT BANDS (Tertiary & Secondary)
-   ========================================================================== */
+
 .info-section {
   background-color: var(--color-tertiary); /* Tertiary color per lo sfondo */
   color: var(--color-secondary);
@@ -348,7 +374,7 @@ body {
   box-shadow: 0 18px 40px rgba(29, 53, 87, 0.12);
 }
 
-/* Numeratore moderno per card */
+
 .card-indicator {
   font-size: 0.9rem;
   font-weight: 800;
@@ -377,9 +403,7 @@ body {
   line-height: 1.65;
 }
 
-/* ==========================================================================
-   FOOTER MODERNO
-   ========================================================================== */
+
 .site-footer {
   background-color: var(--color-bg-dark);
   color: var(--color-text-muted);
@@ -403,15 +427,13 @@ body {
   opacity: 0.7;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (Media Queries)
-   ========================================================================== */
+
 @media (max-width: 992px) {
   .content-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pip-floating-card {
+  .pip-map-card {
     position: static;
     margin-top: 2.5rem;
   }
