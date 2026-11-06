@@ -87,18 +87,9 @@ nav a:hover {
     color: rgb(174, 126, 81);
 }
 
-article {
-    display: inline-block;
-    width: 75%;
-    background-color: white;
-}
-
-article p {
-    margin-bottom: 1em;
-}
-
 aside {
     display: inline-block;
+    position: right;
     vertical-align: top;
     width: 25%;
     background-color: #b4a7d6;
