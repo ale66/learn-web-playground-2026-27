@@ -1,82 +1,111 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Torre Velasca</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="mystyle.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
- 
-        <header class="top-bar">
-            <a href="https://www.unimi.it/">
-                <img src="imgs/minerva-34.png" alt="Minerva Logo" title="minerva logo">
-            </a>
-            <span>MA COM / Minerva</span>
-        </header>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Unimi</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="mystyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header class="top-bar">
+<a href="https://www.unimi.it/">
+<img src="imgs/minerva-34.png" alt="Minerva Logo" title="minerva logo">
+</a>
+<span>MA COM / Minerva</span>
+</header>
 
-        <div class="hero-image">
-            <h1>Welcome!</h1>
-            <h2>Enjoy Milan</h2>
-        </div>
 
-        <nav class="self-clear">
-    <a href="#">Home</a>
-    <a href="#">Offer</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact</a>
-        </nav>   
+<div class="hero-image">
+<h1>Welcome!</h1>
+<h2>Join Unimi</h2>
+</div>
 
-        <div class="header">
-            <div class="header-image">
-                <img src="imgs/duomo.jpg" alt="The Duomo">
-            </div>
-            <div class="header-info"> 
-                <div class="surtitle"> See the Cathedral!</div>
-                <h1 class="title">The Duomo</h1>
-                <h3 class="subtitle">Milan's Iconic Cathedral</h3>
-                <p class="intro">The Duomo di Milano is a magnificent cathedral located in the heart of Milan, Italy. It is one of the largest churches in the world and a stunning example of Gothic architecture. The construction of the cathedral began in 1386 and took nearly six centuries to complete, with its final details finished in 1965. The Duomo is renowned for its intricate façade, adorned with countless statues and spires, as well as its breathtaking interior, which features beautiful stained glass windows and impressive artworks. Visitors can also climb to the rooftop terraces for panoramic views of the city.</p>
-            </div>
-        </div>
 
-        <div class="main">
-            <p>Your Gateway to Milan</p>
-            <ul>
-                <li><a href="https://www.unimi.it/">University of Milan</a></li>
-                <li><a href="https://www.spes.unimi.it/">SPeS</a></li>
-                <li><a href="https://www.comune.milano.it/">City of Milan</a></li>
-            </ul>
-            <iframe width="500" height="345" src="https://www.youtube.com/embed/xQUY4q29WXA"></iframe>
-        </div>
+<nav class="self-clear">
+<a href="#">Home</a>
+<a href="#">Offer</a>
+<a href="#">About Us</a>
+<a href="#">Contact</a>
+</nav>
 
-        <h1>Count: <span id="count">0</span></h1>
-        <button onclick="increment()">Increment</button>
-        <button onclick="decrement()">Decrement</button>
-        <button onclick="reset()">Reset</button>
 
-        <script>
-            let count = 0;
-            
-            function increment() {
-              count++;
-              updateDisplay();
-            }
-            
-            function decrement() {
-              count--;
-              updateDisplay();
-            }
-            
-            function reset() {
-              count = 0;
-              updateDisplay();
-            }
-            
-            function updateDisplay() {
-              document.getElementById('count').textContent = count;
-            }
-        </script>
-    </body>
+<div class="header">
+<div class="header-image">
+<img src="imgs/unimi.jpg" alt="The Duomo">
+</div>
+<div class="header-info">
+<div class="surtitle"> See the Cathedral!</div>
+<h1 class="title">The Duomo</h1>
+<h3 class="subtitle">Milan's Iconic Cathedral</h3>
+<p class="intro">The Duomo di Milano is a magnificent cathedral located in the heart of Milan, Italy. It is one of the largest churches in the world and a stunning example of Gothic architecture. The construction of the cathedral began in 1386 and took nearly six centuries to complete, with its final details finished in 1965. The Duomo is renowned for its intricate façade, adorned with countless statues and spires, as well as its breathtaking interior, which features beautiful stained glass windows and impressive artworks. Visitors can also climb to the rooftop terraces for panoramic views of the city.</p>
+</div>
+</div>
+
+
+<div class="main">
+<p>Your Gateway to Milan</p>
+<ul>
+<li><a href="https://www.unimi.it/">University of Milan</a></li>
+<li><a href="https://www.spes.unimi.it/">SPeS</a></li>
+<li><a href="https://www.comune.milano.it/">City of Milan</a></li>
+</ul>
+</div>
+
+
+<aside
+class="aside-left">
+<h3>Watch what's waiting for you in Universita degli Studi di Milano</h3>
+<p>
+<iframe width="500" height="345" src="https://www.youtube.com/embed/xQUY4q29WXA"></iframe>
+</p>
+</aside>
+<aside class="aside-right">
+<h3>See other student's experiences!</h3>
+<p>
+<iframe width="500" height="345" src="https://www.youtube.com/embed/xQUY4q29WXA"></iframe>
+</p>
+</aside>
+
+
+
+
+<h1>Count: <span id="count">0</span></h1>
+<button onclick="increment()">Increment</button>
+<button onclick="decrement()">Decrement</button>
+<button onclick="reset()">Reset</button>
+
+
+<script>
+let count = 0;
+function increment() {
+count++;
+updateDisplay();
+}
+function decrement() {
+count--;
+updateDisplay();
+}
+function reset() {
+count = 0;
+updateDisplay();
+}
+function updateDisplay() {
+document.getElementById('count').textContent = count;
+}
+</script>
+
+
+<footer class="self-clear">
+<p>
+Find us here:
+<li><a href="https://www.unimi.it/">University of Milan</a></li>
+<li><a href="https://www.spes.unimi.it/">SPeS</a></li>
+<li><a href="https://www.comune.milano.it/">City of Milan</a></li>
+</p>
+</footer>
+
+
+</body>
 </html>
