@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #FAF8F5;
+    line-height: 1.6;
+}
+
+/* --- HEADER IN ALTO (LOGO + NAV) --- */
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo-wrapper .minerva-logo {
+    width: 75px;
+    height: auto;
+}
+
+.navigation-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    transition: color 0.3s ease;
+}
+
+.navigation-menu a:hover {
+    color: #C85A32; /* Accent Color Terracotta */
+    text-decoration: underline;
+}
+
+/* --- HERO SECTION PRINCIPALE --- */
+.hero-image {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-image::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url('imgs/torrevelasca.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 38, 59, 0.65); /* Blu Notte semitrasparente */
+    z-index: 1;
+}
+
+.hero-content-container {
+    position: relative;
+    z-index: 2;
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.photo-main {
+    float: left;
+    width: 40%;
+    padding-right: 30px;
+}
+
+.photo-main img {
+    width: 110%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: block;
+}
+
+
+.hero-content {
+    float: left;
+    width: 60%;
+    color: #ffffff;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-bottom: 24px;
+    opacity: 0.9;
+    margin-left: 50px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.85;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.instagram-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background-color: #C85A32; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.instagram-btn:hover {
+    background-color: #A84725;
+}
+
+/* Clearfix per chiudere correttamente i float */
+.clearfix {
+    clear: both;
+}
+
+/* --- CONTENITORE PRINCIPALE A DUE COLONNE --- */
+#main-wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    overflow: hidden; /* Fondamentale per contenere i float ed evitare sovrapposizioni! */
+}
+
+/* Colonna di sinistra (i due box di testo) */
+.left-column {
+    float: left;
+    width: 48%;
+}
+
+/* Colonna di destra (il box con video e mappa) */
+.right-column {
+    float: right;
+    width: 48%;
+}
+
+/* Stile dei singoli box */
+.official-text-box {
+    background-color: rgba(18, 184, 226, 0.411);
+    border-left: 4px solid #1B263B;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    margin-bottom: 20px; /* Spazio verticale tra i box a sinistra */
+}
+
+.official-text-box h3 {
+    margin-top: 0;
+    color: #1B263B;
+    margin-bottom: 15px;
+}
+
+/* Dimensioni corrette per video e mappa dentro il box media */
+.media-box iframe {
+    width: 100%;
+    height: 180px;
+    border: 0;
+    border-radius: 4px;
+    display: block;
+    margin-top: 10px;
+}
+
+.video-container p,
+.map-container p {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1B263B;
+}
+
+/* --- 3. RISORSE ESSENZIALI (SOTTO E CENTRATA) --- */
+.floating-links-section {
+    clear: both; /* Esce dal flusso dei float */
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.floating-links-section {
+    clear: both; /* Forza la sezione ad andare sotto ai float precedenti */
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.floating-links-section h3 {
+    color: #1B263B;
+    margin-bottom: 15px;
+}
+
+.resource-links {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-links li {
+    margin-bottom: 8px;
+}
+
+.resource-links a {
+    color: #1B263B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resource-links a:hover {
+    color: #C85A32;
+    text-decoration: underline;
+}
+
+/* Utility clearfix per sicurezza */
+.clearfix {
+    clear: both;
+}
+
+/* --- 4. FOOTER --- */
+.site-footer {
+    background-color: #1B263B; /* Blu Notte strutturale */
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #C85A32; /* Dettaglio in Terracotta Accent */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #C85A32; /* Accent Terracotta al passaggio del mouse */
+    text-decoration: underline;
+}

@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif, Arial;
+}
+
+
+.hero-image::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(imgs/01.\ Dipartimento.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px) brightness(0.7); 
+    transform: scale(1.05); 
+    z-index: -1;
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 30px;
+    float: left;
+}
+
+.hero-text {
+    clear: both;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    color: wheat;
+}
+
+.hero-text h1 {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+     color: wheat;
+}
+
+.hero-text h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+     color: wheat;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+    width: 85%;
+    max-width: 1200px;
+ margin-top: 80px;
+ margin-bottom: 60px;
+ margin-left: 20px;
+ margin-right: auto;
+}
+
+.header-image {
+width: 50%;
+  flex-shrink: 0;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.header-info {
+  flex: 2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+    color: rgb(233, 190, 133);
+    margin-top: 30px;
+}
+
+.header-info .surtitle {
+  position: static;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: wheat;
+    letter-spacing: 2px;
+    text-transform:uppercase;
+    text-shadow: 0 2px 4px rgb(0, 0, 0, 0.6);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.header-info .title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.header-info .intro {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: #ffffff;
+    text-shadow: #ffcc00;
+    font-weight: 400;
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+    margin-bottom: 15px;
+    white-space: normal;
+}
+
+nav {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 28px;
+    border: 2px solid rgba (245, 222, 179, 0.5);
+    border-radius: 30px;
+    background: rgba (0, 0, 0, 0.35);
+    backdrop-filter: blur (4px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15 px rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover {
+    color: #ffcc00;
+    background: wheat;
+    border-color: wheat;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(245, 222, 179, 0.4);
+}

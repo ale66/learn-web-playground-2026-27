@@ -1,0 +1,35 @@
+<-- Source of the code: Web design playground W3C --!>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+body {
+    max-width: 50em;
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.4;
+}
+header {
+    padding:  .5em 0 .1em 1em;
+}
+header h1 {
+    display: inline-block;
+    padding-left: .5em;
+    font-size: 2.5em;
+}
+nav {
+    padding: .5em;
+    color: #222;
+    text-transform: uppercase;
+}
+nav ul {
+    list-style-type: none;
+    padding-left: .5em;
+}
+nav li {
+    display: inline-block;
+    padding-right: 1.5em;
+}
