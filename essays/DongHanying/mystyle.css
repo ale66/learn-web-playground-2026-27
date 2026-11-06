@@ -1,5 +1,22 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+/* 设置背景图（Torre Velasca）全屏覆盖 */
+body {
+    background-image: url("./imgs/torrevelasca.jpg"); /* 如果图片是png或avif，请改成对应的后缀名 */
+    background-size: cover;          /* 图片按比例缩放并铺满屏幕 */
+    background-position: center;     /* 图片居中对齐 */
+    background-repeat: no-repeat;    /* 防止图片重复排列 */
+    background-attachment: fixed;    /* 页面滚动时背景固定 */
+    
+    position: relative;              /* 辅助子元素绝对定位 */
+    margin: 0;
+    padding: 20px;
 }
 
+/* 将校徽固定/绝对定位在左上角 */
+.logo {
+    position: absolute;   /* 绝对定位 */
+    top: 15px;            /* 距离顶部 15px */
+    left: 15px;           /* 距离左侧 15px */
+    width: 60px;          /* 可以根据需要修改校徽的大小 */
+    height: auto;
+    z-index: 10;          /* 保证校徽悬浮在最上层 */
+}
