@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>Master Programme</title>
     <style>
+
+        body {
+            margin: 0;
+        }
+
         .header {
             position: relative;
             padding: 20px;
-            min-height: 500px;
+            min-height: 450px;
             width: 100%;
             overflow: hidden;
         }
@@ -15,12 +20,14 @@
         .header::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: -10px;
+            left: -10px;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
             background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./imgs/milan.png');
             background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             filter: blur(3px);
             z-index: -1;
         }
@@ -32,24 +39,55 @@
             width: 150px;
             z-index: 10;
         }
-
-        .header-image img {
-            width:250px;
+        
+        .header-image {
             float: left;
+            width: 250px;
             margin-right: 20px;
             margin-top: 5em;
         }
-
+        
+        .header-image img {
+            width: 100%;
+        }
+        
         .header-info {
             float: left;
             width: 550px;
-            margin-top: 6em;
+            margin-top: 5em;
             color: white;
         }
 
-        .intro {
-            clear: both;
+        .header-content {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: auto;
         }
+
+
+        .explore-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background-color: white;
+            color: #333333;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .media-section {
+            background-color: #f2f2f2;
+            padding: 30px;
+            text-align: center;
+            color: #333333;
+        }
+        
+        .media-section iframe {
+            display: block;
+            margin: 20px auto;
+        }
+
     </style>
 </head>
 <body>
@@ -57,23 +95,63 @@
 <div class="header">
     <img src="./imgs/minerva-34.png" class="uni-logo" alt="Minerva Logo">
 
-    <div class="header-image">
-        <img src="./imgs/unimi.jpeg" alt="UniMI Front Cover">
-    </div>
-    
-    <div class="header-info">
-        <div class="surtitle">Master Programme </div>
-        <h1 class="title">Public and Corporate Communication </h1>
-        <h3 class="subtitle">
-            Bridging media, digital society, and strategic corporate relations in the heart of Milan.
-        </h3>
-        <p class="intro">
-            Navigating the modern digital ecosystem requires more than just tools. It demands a deep understanding of media, public relations, and corporate identity. Join an international academic community designed to shape the future communicators of global enterprises and institutions. Explore our curriculum and start your journey today.
-        </p>
+    <div class="header-content">
+
+        <div class="header-image">
+            <img src="./imgs/unimi.jpeg" alt="UniMI Front Cover">
+        </div>
+
+        <div class="header-info">
+            <div class="surtitle">Master Programme</div>
+            <h1 class="title">Public and Corporate Communication</h1>
+            <h3 class="subtitle">
+                Bridging media, digital society, and strategic corporate relations in the heart of Milan.
+            </h3>
+            <p class="intro">
+                Navigating the modern digital ecosystem requires more than just tools. It demands a deep understanding of media, public relations, and corporate identity. Join an international academic community designed to shape the future communicators of global enterprises and institutions. Explore our curriculum and start your journey today.
+            </p>
+
+            <a href="#about-programme" class="explore-button">
+                Explore the Programme
+            </a>
+
+        </div>
     </div>
 </div>
+
 <script>
-    document.title = "Public and Corporate Communication - University of Milan";
-    </script>
-</body>
-</html>
+    document.title = "Master Programme - Public and Corporate Communication";
+</script>
+
+<div class="media-section">
+
+    <h2>Welcome to the University of Milan!</h2>
+
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/XHCMwpWE4kw?si=qXA-gRUUOFQO0TqL"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+
+    <h2>Find us!</h2>
+
+    <p>Facoltà di Scienze Politiche, Economiche e Sociali</p>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.198805831896!2d9.200107976810482!3d45.46579897107392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a345872de7%3A0xd945a5f1c21cbc74!2sFaculty%20of%20Political%2C%20Economic%20and%20Social%20Sciences%20-%20University%20of%20Milan!5e0!3m2!1spt-BR!2sit!4v1793991715289!5m2!1spt-BR!2sit"
+        width="300"
+        height="150"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+
+</div>
+    </body>
+    </html>
