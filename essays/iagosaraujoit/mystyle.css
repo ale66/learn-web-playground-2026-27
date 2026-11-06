@@ -3,3 +3,36 @@ p {
     text-style: oblique;
 }
 
+.meu-hero {
+  background-color: #0b2545;
+  color: white;
+  font-family: 'Poppins', Arial, sans-serif;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.meu-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.meu-hero p {
+  font-size: 1.2rem;
+  color: #cfd8e3;
+}
+
+.minhas-fotos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  background-color: #f4f6f9;
+}
+
+.minhas-fotos img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 3px solid #0b2545;
+}

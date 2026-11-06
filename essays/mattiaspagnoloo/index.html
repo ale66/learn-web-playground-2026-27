@@ -8,25 +8,69 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./test-fonts.css">
     </head>
-    <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
 
+        <div class="hero-image">
+<a href="./imgs/minerva-34.png">
+    <img src="./imgs/minerva-34.png" alt="Minerva">
+</a>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+            <h1><strong>Public And Corporate Communication</strong></h1>
+    <h2><em>Are you ready to study COM?</em></h2>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+<iframe width="560";
+ height="315";
+  src="https://www.youtube.com/embed/2p3zZoraK9g?si=7sL9C5IGVrawuO7j&amp;start=22" title="YouTube video player";
+   frameborder="2";
+    allow="accelerometer; 
+    autoplay; 
+    clipboard-write; 
+    encrypted-media; 
+    gyroscope; 
+    picture-in-picture; 
+    web-share";
+    referrerpolicy="strict-origin-when-cross-origin";
+    allowfullscreen></iframe>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+</div>
 
+<ol>Reasons why you should choose COM</ol>
+  <li>It is in Milan</li>
+  <li>It is in San Babila</li>
+  <li>You have Duomo close to you</li>
+  <li>There is Torre Velasca</li>
+  <li>Guess!</li>
+        
+        
+
+<h1>Count! How much are you excited to join??: <span id="count">0</span></h1>
+  <button onclick="increment()">Increment</button>
+  <button onclick="decrement()">Decrement</button>
+  <button onclick="reset()">Reset</button>
+
+  <script>
+    let count = 0;
+    
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+    
+    function decrement() {
+      count--;
+      updateDisplay();
+    }
+    
+    function reset() {
+      count = 0;
+      updateDisplay();
+    }
+    
+    function updateDisplay() {
+      document.getElementById('count').textContent = count;
+    }
+  </script>
         <script src="" async defer></script>
     </body>
 </html>

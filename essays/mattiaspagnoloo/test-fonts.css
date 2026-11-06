@@ -1,7 +1,45 @@
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-family: 'Times New Roman', Times, serif;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(174, 126, 81);
-    color:aqua
+    font-family: "Playlist Script";
+    color: rgb(255, 222, 251);
+    font-size: 45px;
+    font-weight: bold;
 }
+h2 {
+    font-family: "Geneva";
+    color: rgb(229, 201, 175);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+ol {
+    font-family: "Geneva";
+    color: rgb(229, 201, 175);
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.hero-image {
+    position: relative; 
+    width: 100vw;
+    height: 100vh;
+    background-image: url("imgs/torrevelasca.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-image > a { 
+    position: absolute;
+    top: 20px;        
+    left: 20px;      
+    z-index: 10;     
+}
+.hero-image img { 
+    width: 150px;  
+    height: auto;     
+    display: block;
+}
+
