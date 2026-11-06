@@ -17,8 +17,10 @@ p {
 }
 
 .meu-hero p {
-  font-size: 1.2rem;
-  color: #cfd8e3;
+  font-size: 1.4rem !important;
+  color: #cfd8e3 !important;
+  text-align: center !important;
+  margin: 0 auto !important;
 }
 
 .minhas-fotos {
@@ -35,4 +37,10 @@ p {
   max-width: 400px;
   border-radius: 8px;
   border: 3px solid #0b2545;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222;
 }
