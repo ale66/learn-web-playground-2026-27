@@ -1,5 +1,135 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+/* ----- Impostazioni generali ----- */
+body {
+    margin: 0;                              /* toglie il bordo bianco intorno alla pagina */
+    background-color: rgb(192, 194, 173);
+    font-family: Helvetica, Arial, sans-serif;
 }
 
+p {
+    font-style: oblique;
+}
+
+/* ----- Header con menu ----- */
+header {
+    height: 60px;
+    background-color: rgb(74, 77, 58);      /* verde oliva scuro, in tinta con lo sfondo */
+    display: flex;
+    justify-content: space-between;         /* logo a sinistra, menu a destra */
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: rgb(207, 195, 199);              /* stesso colore del titolo */
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ----- Immagine principale (hero) ----- */
+.hero-image {
+    width: 100%;
+    height: calc(100vh - 60px);             /* altezza schermo meno l'header */
+    background-image: url("imgs/Università-UniMi-lancia-Unimission.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;              /* riquadro a destra (oppure 'center' per il centro) */
+    align-items: flex-start;                /* riquadro in alto */
+    padding-top: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+/* ----- Riquadro con titolo, sottotitolo e pulsante ----- */
+.text-box {
+    text-align: right;
+}
+
+.text-box h1 {
+    color: rgb(207, 195, 199);
+    font-size: 70px;
+    margin-top: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);   /* ombra: il testo si legge meglio sulla foto */
+}
+
+.subtitle {
+    color: rgb(207, 195, 199);
+    font-size: 24px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ----- Pulsante ----- */
+.pulsante {
+    display: inline-block;
+    background-color: rgb(74, 77, 58);
+    color: rgb(207, 195, 199);
+    text-decoration: none;
+    padding: 12px 28px;
+    margin-top: 10px;
+}
+
+.pulsante:hover {
+    background-color: rgb(50, 52, 39);      /* un po' più scuro al passaggio del mouse */
+}
+
+/* ----- Logo Minerva (nell'header) ----- */
+.Minerva {
+    height: 44px;                           /* l'header è alto 60px, quindi il logo deve stare dentro */
+    width: auto;
+}
+
+/* ----- Video ----- */
+.video {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.video iframe {
+    max-width: 100%;                        /* su telefono il video non esce dallo schermo */
+}
+
+/* ----- Footer ----- */
+footer {
+    background-color: rgb(74, 77, 58);
+    color: rgb(207, 195, 199);
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-style: normal;                     /* nel footer il testo non è obliquo */
+}
+
+/* ----- Schermi piccoli (telefono) ----- */
+@media (max-width: 700px) {
+    header {
+        padding: 0 15px;
+    }
+
+    nav a {
+        margin-left: 12px;
+        font-size: 13px;
+    }
+
+    .hero-image {
+        padding-top: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .text-box h1 {
+        font-size: 36px;
+    }
+
+    .Minerva {
+        height: 36px;
+    }
+}
