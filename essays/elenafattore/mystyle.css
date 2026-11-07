@@ -330,7 +330,76 @@ a:hover{
   border: 0;
 }
 
+/* Footer Layout a Tutta Larghezza */
+.simple-footer {
+  background-color: #001D3D; /* Blu Notte */
+  color: #f4f6f8;            /* Grigio Chiaro */
+  padding: 30px 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
 
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Separa perfettamente sinistra, centro e destra */
+  align-items: center;
+}
 
+/* Colonna Sinistra (Incollata a sinistra) */
+.footer-left {
+  text-align: left;
+}
 
+.footer-title {
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  font-size: 15px;
+}
 
+.footer-left p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #f4f6f8;
+}
+
+/* Colonna Centrale (Centrata) */
+.footer-center {
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #f4f6f8;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Colonna Destra (Incollata a destra) */
+.footer-right {
+  text-align: right;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+}
