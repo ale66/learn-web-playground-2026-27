@@ -1,5 +1,53 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+/* 设置背景图（Torre Velasca）全屏覆盖 */
+body {
+    background-image: url("./imgs/torrevelasca.jpg"); /* 如果图片是png或avif，请改成对应的后缀名 */
+    background-size: cover;          /* 图片按比例缩放并铺满屏幕 */
+    background-position: center;     /* 图片居中对齐 */
+    background-repeat: no-repeat;    /* 防止图片重复排列 */
+    background-attachment: fixed;    /* 页面滚动时背景固定 */
+    
+    position: relative;              /* 辅助子元素绝对定位 */
+    margin: 0;
+    padding: 20px;
 }
 
+/* 将校徽固定/绝对定位在左上角 */
+.logo {
+    width: 160px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* 同时需要给 body 添加内边距，防止页面标题文字被绝对定位的校徽遮挡 */
+body {
+    padding-top: 100px;
+}
+.simple-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(228, 214, 159, 0.3);
+}
+
+/* 用 Flex 让 4 个图片横向居中排列 */
+.svg-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;            /* 图标之间的间距 */
+    margin-top: 15px;
+}
+
+/* 控制 SVG 图片的大小与交互 */
+.svg-social-links img {
+    width: 28px;          /* 矢量图显示宽度（按需调整） */
+    height: 28px;         /* 矢量图显示高度 */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* 鼠标悬停时的微动效果 */
+.svg-social-links a:hover img {
+    transform: scale(1.15); /* 鼠标移上去微放 1.15 倍 */
+    opacity: 0.8;           /* 略微变亮/改变透明度 */
+}

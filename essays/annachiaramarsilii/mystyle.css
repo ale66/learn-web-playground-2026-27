@@ -1,10 +1,16 @@
+/* Palette Colori:
+   1. Blu Scuro: #1a365d
+   2. Bianco Panna (Sfondo): #f4f6f8
+   3. Ocra/Oro (Accento): #d9a05b
+*/
+
 /* Reset base */
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #fdfdfd; 
-    color: #333;
+    background-color: #f4f6f8; /* Colore 2: Sfondo chiaro */
+    color: #1a365d; /* Colore 1: Testo blu scuro */
 }
 
 /* 1. SEZIONE HERO */
@@ -19,7 +25,7 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: white; /* Bianco puro mantenuto solo qui per contrasto sull'immagine */
     position: relative; 
 }
 
@@ -43,7 +49,7 @@ body, html {
     font-size: 1.8rem;
     margin: 15px 0;
     font-weight: 400;
-    color: #f0c300; 
+    color: #d9a05b; /* Colore 3: Accento ocra */
 }
 
 .hero-image h3 {
@@ -54,14 +60,14 @@ body, html {
 
 .hero-image hr {
     width: 150px;
-    border: 2px solid #f0c300;
+    border: 2px solid #d9a05b; /* Colore 3: Accento ocra */
     margin: 20px 0;
 }
 
 /* 2. STILE DEI BOTTONI */
 .button {
-    background-color: #f0c300;
-    color: #111;
+    background-color: #d9a05b; /* Colore 3: Sfondo ocra */
+    color: #ffffff;
     border: none;
     padding: 15px 35px;
     font-size: 1.1rem;
@@ -72,12 +78,12 @@ body, html {
 }
 
 .button:hover {
-    background-color: #ffd700;
+    background-color: #c78d46; /* Versione leggermente più scura dell'ocra per l'hover */
 }
 
 /* 3. MENU DI NAVIGAZIONE */
 nav {
-    background-color: #222; 
+    background-color: #1a365d; /* Colore 1: Sfondo blu scuro */
     padding: 20px 0;
 }
 
@@ -100,39 +106,55 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f0c300;
+    color: #d9a05b; /* Colore 3: Hover ocra */
 }
 
-/* 4. CONTENITORE MAPPA */
-.maps-container {
+/* 4. CONTENITORE VIDEO E MAPPA */
+.video-maps-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 60px 20px 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto; 
+    gap: 30px; /* Spazio vuoto tra il video e la mappa */
+    margin-top: 60px;
+    margin-bottom: 60px;
+    flex-wrap: wrap; /* Fa andare a capo gli elementi se lo schermo è piccolo */
 }
 
 iframe {
-    width: 100%;
-    max-width: 800px;
-    height: 450px;
     border: none;
+    /* Le dimensioni le prende in automatico dal file HTML */
 }
 
 /* 5. FOOTER E SEPARATORI */
 .hr1 {
     width: 80%;
     border: 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #1a365d; /* Colore 1: Linea blu scuro */
     margin: 0 auto 30px auto;
 }
 
 footer {
     text-align: center;
     padding: 30px 20px;
-    background-color: #f8f9fa;
-    color: #555;
+    background-color: #1a365d; /* Colore 1: Sfondo blu scuro */
+    color: #f4f6f8; /* Colore 2: Testo panna */
     line-height: 1.6;
     font-size: 0.95rem;
+}
+
+/* Reminder visivo del colour scheme della palette nel footer */
+footer::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 12px;
+    margin: 25px auto 0 auto;
+    
+    background: linear-gradient(to right, 
+        #1a365d 33.3%, 
+        #f4f6f8 33.3%, #f4f6f8 66.6%, 
+        #d9a05b 66.6%
+    );
+    
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
 }

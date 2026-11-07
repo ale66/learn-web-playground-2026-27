@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Master Programme</title>
+    <style>
+        .header {
+            position: relative;
+            padding: 20px;
+            min-height: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./imgs/milan.png');
+            background-position: center;
+            filter: blur(3px);
+            z-index: -1;
+        }
+
+        .uni-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+            z-index: 10;
+        }
+
+        .header-image img {
+            width:250px;
+            float: left;
+            margin-right: 20px;
+            margin-top: 5em;
+        }
+
+        .header-info {
+            float: left;
+            width: 550px;
+            margin-top: 6em;
+            color: white;
+        }
+
+        .intro {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="./imgs/minerva-34.png" class="uni-logo" alt="Minerva Logo">
+
+    <div class="header-image">
+        <img src="./imgs/unimi.jpeg" alt="UniMI Front Cover">
+    </div>
+    
+    <div class="header-info">
+        <div class="surtitle">Master Programme </div>
+        <h1 class="title">Public and Corporate Communication </h1>
+        <h3 class="subtitle">
+            Bridging media, digital society, and strategic corporate relations in the heart of Milan.
+        </h3>
+        <p class="intro">
+            Navigating the modern digital ecosystem requires more than just tools. It demands a deep understanding of media, public relations, and corporate identity. Join an international academic community designed to shape the future communicators of global enterprises and institutions. Explore our curriculum and start your journey today.
+        </p>
+    </div>
+</div>
+<script>
+    document.title = "Public and Corporate Communication - University of Milan";
+    </script>
+</body>
+</html>

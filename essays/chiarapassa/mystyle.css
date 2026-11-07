@@ -1,3 +1,93 @@
+
+p {
+    text-align-last: left;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("./imgs/milano.jpg");
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 25px 40px;
+    text-align: left;
+}
+
+.logo {
+    width: 100px;
+}
+
+main {
+    padding: 130px 20px;
+}
+
+h1 {
+    font-size: 76px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+button {
+    background-color: rgba(20, 30, 50, 0.85);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 14px 25px;
+    margin: 8px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #c5a46d;
+    color: #142033;
+    transform: translateY(-4px);
+}
+nav {
+    position:static;
+    top: 35px;px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 14px 28px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    display: inline-block;
+    font-size: 16px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(197, 164, 109, 0.8);
+    color: white;
+    transform: translateY(-4px);
+}
+
 p {
     text-align-last: left;
 }
