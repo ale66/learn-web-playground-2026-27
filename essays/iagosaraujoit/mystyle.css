@@ -73,9 +73,13 @@ body {
 
 .caixa-texto {
   flex: 1 1 300px;
+  align-self: flex-start;
+  position: sticky;
+  top: 70px;
   background-color: white;
   padding: 25px;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .caixa-texto h2 {
