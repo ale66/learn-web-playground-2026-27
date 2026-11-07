@@ -1,7 +1,12 @@
+*{
+box-sizing:border-box
+}
 
 p {
  text-align-last: justify;
 }
+
+
 h1 {text-align: center;
 color: antiquewhite;
 font-size: 50px;

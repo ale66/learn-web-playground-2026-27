@@ -3,11 +3,51 @@ p {
     text-style: oblique;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  html {
+  font-size: 16px;
+}
+
+}html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
   color: #222;
-  background-color: #ffffff;
+  background-color: #2b2b2b;
+}
+
+/* Menu flutuante */
+.menu-flutuante {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 14px 20px;
+  background-color: rgba(11, 37, 69, 0.95);
+}
+
+.menu-flutuante a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-flutuante a:hover {
+  color: #8fb8ff;
 }
 
 /* Hero com a foto 1 de fundo */
@@ -19,27 +59,67 @@ body {
   background-position: center;
   color: white;
   text-align: center;
-  padding: 140px 20px;
+  padding: 160px 20px 140px 20px;
 }
 
 .meu-hero h1 {
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 7vw, 4rem);
   margin: 0 0 10px 0;
 }
 
 .meu-hero p {
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
   margin: 0;
 }
 
-/* Foto 2 de um lado, mapa do outro */
+/* About: caixa de texto + vídeo */
+.secao-about {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px 20px 20px;
+  scroll-margin-top: 50px;
+}
+
+.caixa-texto {
+  flex: 1 1 300px;
+  align-self: flex-start;
+  position: sticky;
+  top: 70px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.caixa-texto h2 {
+  margin-top: 0;
+  color: #0b2545;
+}
+
+.caixa-texto .fonte {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.video {
+  flex: 1 1 300px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+/* Foto 2 sem moldura + mapa */
 .secao-info {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  padding: 40px 20px;
   max-width: 1100px;
   margin: 0 auto;
+  padding: 20px 20px 60px 20px;
+  scroll-margin-top: 50px;
 }
 
 .secao-info img,
@@ -47,8 +127,7 @@ body {
   flex: 1 1 300px;
   width: 100%;
   height: 350px;
-  border: 3px solid #0b2545;
-  border-radius: 8px;
+  border: none;
   object-fit: cover;
 }
 
@@ -62,4 +141,41 @@ body {
 
 .meu-rodape p {
   margin: 0;
+}
+/* Telas pequenas (celular) */
+@media (max-width: 600px) {
+  .meu-hero {
+    padding: 110px 16px 80px 16px;
+  }
+
+  .meu-hero h1 {
+    overflow-wrap: break-word;
+  }
+
+  .meu-hero p {
+    font-size: 1.1rem;
+  }
+
+  .menu-flutuante {
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .secao-about {
+    padding-top: 90px;
+  }
+
+  .secao-info img,
+  .secao-info iframe {
+    height: 260px;
+  }
+}
+.meu-hero {
+  width: 100%;
+}
+
+html, body {
+  overflow-x: hidden;
 }
