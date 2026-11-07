@@ -2,44 +2,67 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
+  background-color:  whitesmoke;
 }
 
 
+/* Header Container */
 .header {
-  background-color: #001D3D; 
-  padding: 10px 20px;
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001D3D;
+  padding: 10px 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001D3D;
+  padding: 10px 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo (Sinistra) */
+.logo-link {
+  display: inline-flex;
   align-items: center;
 }
 
-
 .header-logo {
-  height: 45px; 
+  height: 45px;
   width: auto;
 }
 
-.header-button {
-  background-color: #001D3D; 
+/* Contenitore Link (Destra) */
+.header-right-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-right-links a {
   color: #ffffff;
-  padding: 8px 18px;
   text-decoration: none;
-  border: 1px white solid;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: all 0.1s ease;
-  box-shadow: 0 2px 0 white;
+  font-size: 14px;
 }
 
-.header-button:active{
-    transform:translateY(4px);
-    box-shadow: 0 2px 0 #627d99;
-    border-color: #627d99;
+.header-right-links a:hover {
+  text-decoration: underline;
 }
-
-.header-button:hover{
-    border-color:#627d99;}
 
 a{
     color:white;
@@ -180,4 +203,134 @@ a:hover{
 .hero-button-secondary:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* News Section Layout */
+.news-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+.news-section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #001D3D;                     /* Colore 1: Blu Notte */
+  margin: 0 0 35px 0;
+  font-weight: bold;
+}
+.news-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Single Article Card (Stile del professore) */
+.news-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f4f6f8;             /* Colore 3: Grigio Chiaro per lo sfondo */
+  border-left: 6px solid #001D3D;       /* Colore 1: Blu Notte per il bordo a sinistra */
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-title {
+  font-size: 20px;
+  color: #004080;                       /* Colore 2: Secondo Blu per il titolo */
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.news-date {
+  font-size: 13px;
+  color: #666666;
+  font-style: italic;
+  margin: 0 0 15px 0;
+}
+
+.news-text {
+  font-size: 15px;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  flex-grow: 1;                         /* Mantiene i link in basso allineati */
+}
+
+.news-text strong {
+  color: #001D3D;
+}
+
+/* Link a piè di articolo */
+.news-link {
+  color: #004080 !important;             /* Colore 2: Secondo Blu */
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 0 !important;            /* Annulla il margin-left dei link generici */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.news-link:hover {
+  color: #001D3D !important;
+  text-decoration: underline;
+}
+
+/* SFONDO DELLA SEZIONE */
+.media-location-section {
+  background-color: #f4f6f8; /* Grigio chiaro */
+  padding: 40px 20px;
+}
+
+/* METTE LE DUE SCATOLE AFFIANCATE */
+.media-location-container {
+  display: flex;             /* Mette video e mappa vicini sulla stessa riga */
+  gap: 30px;                 /* Spazio vuoto tra le due scatole */
+  max-width: 1100px;
+  margin: 0 auto;            /* Centra tutto nella pagina */
+}
+
+/* LE DUE SCATOLE (BIANCHE CON UN'OMBRA LEGGERA) */
+.media-box, .location-box {
+  flex: 1;                   /* Ognuna occupa esattamente metà spazio */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* TITOLI E TESTI */
+.section-subtitle {
+  color: #001D3D;            /* Blu Notte UniMi */
+  font-size: 22px;
+}
+
+.visit-message {
+  color: #004080;            /* Secondo Blu / Accent */
+  font-weight: bold;
+}
+
+/* FORMATO RETTANGOLARE (16:9) PER VIDEO E MAPPA */
+.video-wrapper, .map-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;    /* Forza le proporzioni classiche dei video */
+  height: 0;
+}
+
+.video-wrapper iframe, .map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+
 

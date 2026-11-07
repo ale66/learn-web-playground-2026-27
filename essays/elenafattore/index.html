@@ -11,18 +11,21 @@
         <link rel="stylesheet" href="mystyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
-    <body>
-      <header class="header">
+  <body>
+    <header class="header">
+    <!-- Logo a Sinistra -->
+    <a href="https://www.unimi.it/it" class="logo-link">
+      <img src="imgs/minerva-34.png" alt="Università degli Studi di Milano" class="header-logo">
+    </a>
 
-    <!-- Logo Image -->
-    <img src="imgs/minerva-34.png" alt="Università degli Studi di Milano Logo" class="header-logo">
-    <a href="https://cas.unimi.it/login?service=https%3A%2F%2Funimia.unimi.it%2Fportal%2Fserver.pt">Unimia</a>
-    <a href="https://www.unimi.it/it/studiare/servizi-gli-studenti/segreterie-informastudenti">Segreterie</a>
-    <a href="https://ariel.unimi.it/">Ariel</a>
-    
-    <!-- Action Button -->
-    <a href="#apply" class="header-button">Apply Now</a>
+    <!-- Link a Destra -->
+    <div class="header-right-links">
+      <a href="https://cas.unimi.it/login?service=https%3A%2F%2Funimia.unimi.it">Unimia</a>
+      <a href="https://www.unimi.it/it/studiare/servizi-gli-studenti/segreterie">Student Services</a>
+      <a href="https://ariel.unimi.it/">Ariel</a>
+    </div>
   </header>
+  
 
   <!-- Secondary Navigation Bar -->
    <nav class="main-nav">
@@ -56,69 +59,77 @@
     </div>
   </section>
  
-  <section class="reasonwhy">
-    <h2 class="reasonwhy-title">Why Choose COM?</h2>  
+  <section class="news-section">
+    <h2 class="news-section-title">The Latest News</h2>
+    <div class="news-container">
     
-    <div class="cards-container">
+      <article class="news-card">
+        <h3 class="news-title">Welcome Day & Networking Event for New Students</h3>
+        <p class="news-date">Fri, 20-11-2026</p>
+        <p class="news-text">
+          Join us for the official COM Welcome Day! Connect with fellow first-year students, meet professors, and participate in interactive group activities designed to expand your professional network from day one.
+        </p>
+        <a href="#" class="news-link"><i class="fa-solid fa-arrow-right"></i> Register for the event</a>
+      </article>
+
+    
+      <article class="news-card">
+        <h3 class="news-title">Admission Ranking Lists Released for A.Y. 2026/2027</h3>
+        <p class="news-date">Mon, 16-11-2026</p>
+        <p class="news-text">
+          The official admission ranking lists for the Master's Degree in Public and Corporate Communication have been published. Admitted candidates must complete their online enrollment by the deadline.
+        </p>
+        <a href="#" class="news-link"><i class="fa-solid fa-arrow-right"></i> Check your ranking status</a>
+      </article>
+
+    </div>
+  </section>
+  <!-- Media & Location Section -->
+  <section class="media-location-section">
+    <div class="media-location-container">
       
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <i class="fa-solid fa-flask card-icon"></i>
-            <h3>Hands-on Laboratories</h3>
-            <span class="hover-hint">Hover to discover</span>
-          </div>
-          <div class="card-back">
-            <p>Gain direct market experience and earn credits through interactive labs led by industry experts. Master practical skills in digital strategy, influencer marketing, data visualization, and crisis management.</p>
-          </div>
+      <!-- Blocco Video YouTube -->
+      <div class="media-box">
+        <h2 class="section-subtitle">Discover Our Campus</h2>
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/FLAF-eb1Pz8" 
+            title="Studiare alla Statale di Milano - Orientamento" 
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
 
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <i class="fa-solid fa-handshake card-icon"></i>
-            <h3>Strong Professional Network</h3>
-            <span class="hover-hint">Hover to discover</span>
-          </div>
-          <div class="card-back">
-            <p>Benefit from our close ties with leading companies, communication agencies, and public institutions, opening doors to high-impact internships and career placements.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <i class="fa-solid fa-globe card-icon"></i>
-            <h3>Global Opportunities</h3>
-            <span class="hover-hint">Hover to discover</span>
-          </div>
-          <div class="card-back">
-            <p>Expand your horizons with extensive international mobility programs, including Erasmus+ partnerships and exclusive exchange agreements with prestigious global institutions like Doshisha University in Tokyo.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="card">
-        <div class="card-inner">
-          <div class="card-front">
-            <i class="fa-solid fa-city card-icon"></i>
-            <h3>Strategic Location</h3>
-            <span class="hover-hint">Hover to discover</span>
-          </div>
-          <div class="card-back">
-            <p>Study in Milan, Italy’s undisputed capital of media, marketing, and corporate innovation, providing an unmatched environment for networking and professional growth.</p>
-          </div>
+      <!-- Blocco Mappa e Messaggio -->
+      <div class="location-box">
+        <h2 class="section-subtitle">Visit Us</h2>
+        <p class="visit-message">
+          Vieni a trovarci ed esplora la sede del corso!
+        </p>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.243572839211!2d9.201412076839515!3d45.462862933732085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ab1d13f987%3A0x6b64d0089ff52136!2sVia%20Conservatorio%2C%207%2C%2020122%20Milano%20MI!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
 
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
-  </body>
-</html>
