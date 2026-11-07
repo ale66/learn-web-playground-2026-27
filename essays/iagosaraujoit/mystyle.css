@@ -42,7 +42,7 @@ body {
 .meu-hero {
   background-image:
     linear-gradient(rgba(11, 37, 69, 0.6), rgba(11, 37, 69, 0.6)),
-    url('imgs/foto1.jpg');
+    url('imgs/foto1.jpg.jpeg');
   background-size: cover;
   background-position: center;
   color: white;
