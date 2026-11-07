@@ -46,19 +46,5 @@
     <p>Created by Iago Araujo</p>
   </footer>
 
-  <script>
-    const caixa = document.querySelector('.caixa-texto');
-    const video = document.querySelector('.video');
-
-    const observador = new IntersectionObserver(function (entradas) {
-      if (entradas[0].isIntersecting) {
-        caixa.classList.add('escondida');
-        observador.disconnect();
-      }
-    }, { threshold: 0.2 });
-
-    observador.observe(video);
-  </script>
-
 </body>
 </html>

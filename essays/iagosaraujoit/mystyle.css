@@ -65,7 +65,7 @@ body {
   margin: 0;
 }
 
-/* About: vídeo (a caixa de texto flutua por cima) */
+/* About: caixa de texto acima do vídeo */
 .secao-about {
   max-width: 1100px;
   margin: 0 auto;
@@ -73,38 +73,19 @@ body {
   scroll-margin-top: 50px;
 }
 
-.video {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-}
-
-/* Caixa de texto flutuante */
 .caixa-texto {
-  position: fixed;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
-  width: min(560px, 90vw);
-  max-height: 45vh;
-  overflow-y: auto;
-  z-index: 900;
   background-color: #3d3d3d;
   color: #eeeeee;
-  padding: 20px 24px;
+  padding: 25px 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
-  font-size: 0.95rem;
+  margin-bottom: 20px;
   line-height: 1.6;
   text-align: center;
-  transition: opacity 0.4s ease;
 }
 
 .caixa-texto h2 {
   margin-top: 0;
   color: #8fb8ff;
-  font-size: 1.15rem;
 }
 
 .caixa-texto p {
@@ -112,21 +93,20 @@ body {
 }
 
 .caixa-texto .fonte {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #bbbbbb;
+  margin-bottom: 0;
 }
 
 .caixa-texto a {
   color: #8fb8ff;
 }
 
-/* Some quando o vídeo aparece (só em telas grandes) */
-@media (min-width: 601px) {
-  .caixa-texto.escondida {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
+.video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
 }
 
 /* Foto 2 sem moldura + mapa */
@@ -182,13 +162,8 @@ body {
     padding-top: 90px;
   }
 
-  /* No celular a caixa volta para o fluxo normal da página */
   .caixa-texto {
-    position: static;
-    transform: none;
-    width: 100%;
-    max-height: none;
-    margin-bottom: 16px;
+    padding: 20px;
   }
 
   .secao-info img,
