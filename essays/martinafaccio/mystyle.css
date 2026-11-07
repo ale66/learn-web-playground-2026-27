@@ -1,11 +1,29 @@
+/* ---------- Base ---------- */
+
+html {
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Hero ---------- */
 
 .hero-image {
     position: relative;
     width: 100%;
     height: 100vh;
+    height: 100svh;
     overflow: hidden;
 }
 
@@ -31,8 +49,10 @@ body {
 
 #uni {
     width: 40%;
-    max-width: 500px;
-    border-radius: 12px;
+    max-width: 31.25rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -43,34 +63,27 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 75px;
-    color:white;
+    font-size: 4.7rem;
+    color: white;
     margin: 0;
 }
 
-.hero-content h2 {
-    font-size: 100px;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .Minerva {
-    width: 200px;
+    width: 12.5rem;
     height: auto;
     position: absolute;
-    top: 20px;
-    left: 10px;
+    top: 1.25rem;
+    left: 0.625rem;
     z-index: 2;
-
 }
+
+/* ---------- Foto a schermo intero + bottone ---------- */
 
 .uni-photo {
     position: relative;
     width: 100%;
     height: 100vh;
+    height: 100svh;
 }
 
 .uni-photo img {
@@ -80,24 +93,33 @@ body {
     object-fit: cover;
 }
 
-.uni-photo a {
+.uni-photo .btn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: whitesmoke;
-    text-decoration: none;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    font-size: 2.25rem;
+    padding: 0.67em 1.8em;
+    color: white;
+    background: #1a56db;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, background 0.2s;
 }
 
-.uni-photo h2 {
-    font-size: 50px;
-    margin: 0;
+.uni-photo .btn:hover {
+    background: #1445b0;
+    transform: translate(-50%, -50%) scale(1.05);
 }
+
+/* ---------- Video ---------- */
 
 .video-section {
     width: 100%;
     height: 100vh;
+    height: 100svh;
 }
 
 .video-section iframe {
@@ -105,4 +127,31 @@ body {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* ---------- Schermi stretti (telefoni) ---------- */
+
+@media (max-width: 700px) {
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    #uni {
+        width: 60%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .Minerva {
+        width: 7.5rem;
+    }
+
+    .uni-photo .btn {
+        font-size: 1.5rem;
+    }
 }
