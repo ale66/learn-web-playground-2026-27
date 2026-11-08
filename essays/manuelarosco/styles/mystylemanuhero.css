@@ -1,9 +1,11 @@
+* {
+    box-sizing: border-box;
+   
+    }
+
 body {
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0;
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
     background-color:rgb(38, 39, 45);
     font-family: 'Times New Roman', Times, serif;
     color:rgba(235, 235, 202, 0.879);
@@ -12,95 +14,99 @@ body {
     }
 
 .hero-image {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20px 3%;
     padding-bottom: 1em;
     background-image: url("../imgs/torrevelascabw.jpg");
-    background-position: right-center;
+    background-position: center;
     background-size: cover;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+    overflow: hidden }
 
 .sedecentrale {
+    display: block;
+    padding:0;
     float: left;
     width: 24%;
-    margin-top: 3.75em;
-    padding-right: 3em;
-    padding-left: 3em;
-    text-align: right;
+    max-width: 350px;
+    height: auto;
+    margin: 60px 3% 0;
     }
 
 .minerva-logo { 
     display: block;
-    padding-left: 3em;
-    padding-top: 1em;
-    width: 200px;
-    height: 69px;
-}
+    padding: 0
+    margin: 0 auto;
+    width: min(200px, 40%);
+    height: auto;
+   }
 
 a {color: rgba(228, 214, 159, 0.879)}
 a:link {color: rgba(228, 214, 159);
-text-decoration: none;}
+        text-decoration: none;}
 a:hover {
     color: rgba(228, 214, 159, 0.601);}
 
 
 li {
     display: inline-block;
-padding-right: 30px;
-padding-left: 1px;}
+    padding-right: 30px;
+    padding-left: 1px;}
 
 nav {border: thin solid rgba(228, 214, 159);
     padding-top: .1em;
     padding-bottom: .1em;
-text-transform: uppercase;
-text-align: center;
-list-style-type: none;
-margin-top: 50px;
-margin-bottom: 50px;
-margin-left: 15px;
-margin-right: 15px}
+    text-transform: uppercase;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px}
 
 .header-info {
     float: right;
-    width:68%;
-    margin-top: 0.5em;
+    width: 68%;
+    margin-top: 20px;
 }
 
 .title {
     color: rgb(228, 214, 159);
     text-shadow: 2px 2px 4px #2b291790;
     font-family:'Times New Roman', Times, serif;
-    font-size: 115px;
     font-weight: 550;
-    margin-bottom: -80px;
+    margin-bottom: 15px;
 
 }
 
 .subtitle {
-    margin-top: 80px;
-    margin-bottom: -80px;
+    margin-top: 0;
+    margin-bottom: 30px;
     color: rgba(228, 214, 159);
     font-size: 41px;
-    font-weight: 40;
+    font-weight: 400;
     letter-spacing: 3px;
 }
 
-.intro {text-align: center;
+.intro {
     color: rgba(228, 214, 159);
     text-shadow: 2px 2px 4px #2b291790;
     font-family:'Times New Roman', Times, serif;
     font-size: 45px;
     font-style: italic;
     font-weight: 100;
-    margin-top: -80px;
+    margin-top: 30px;
 }
 
-hr { margin: 100px;
+hr { margin: 30px auto;
     color: rgba(228, 214, 159);
 }
 
-.hr1 {margin-top: 70px;
-      margin-bottom: 50px;}
+.hr1 {  margin: 30px;
+        color: rgba(228, 214, 159); 
+}
 
 button {
     display: block;
@@ -122,9 +128,12 @@ button:hover {background-color:rgb(228, 214, 159)}
 
 .video-maps-container {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-top: 60px;
+    margin-top: 60px auto 0;
+    padding: 0 3%
     flex-wrap: wrap;
 }
 
@@ -150,4 +159,86 @@ button:hover {background-color:rgb(228, 214, 159)}
 footer {
     padding-bottom: 1.5em;
     color:rgba(228, 214, 159);
+}
+
+@media screen and (max-width: 1200px) {
+    .sedecentrale {
+        display: none;
+    }
+}
+.header-info {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+.title {
+    font-size: 100px;
+}
+
+.subtitle {font-size: 30px;}
+.intro {font-size: 30px;}
+
+.button {width: 190px;
+        height: 50px;
+        font-size: 25px;
+        margin-top: 70px}
+.button1 {width: 190px;
+        height: 50px;
+        font-size: 25px;
+        margin-top: 70px}   
+
+
+@media (min-width: 1201px) {
+    .title {
+        font-size: 115px;
+    }
+    .intro {
+        text-align: center;
+       
+    }
+
+.button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 250px;
+    margin-top: 20px;
+    font-size: 30px;
+    border-radius: 60px;
+    
+    }
+
+
+.button1{
+    display: block;
+    height: 80px;
+    width: 250px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    border-radius: 60px;
+    
+}
+
+}
+
+@media (max-width: 600px) {
+
+    .video-maps-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .video-maps-container iframe {
+        width: 75%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 16 / 9
+    }
+
 }
