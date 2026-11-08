@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
     <meta charset="UTF-8">
     <title>Master Programme</title>
     <style>
+    
+    * {
+    box-sizing: border-box;
+    }
 
         body {
             margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         .header {
@@ -24,7 +36,7 @@
             left: -10px;
             width: calc(100% + 20px);
             height: calc(100% + 20px);
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./imgs/milan.png');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./imgs/citymilan.webp');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -86,7 +98,116 @@
         .media-section iframe {
             display: block;
             margin: 20px auto;
+            max-width: 100%;
         }
+        
+        .youtube-video {
+            width: 560px;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+        }
+    
+       .navigation-section {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 20px;
+        background-color: white;
+        }
+        
+    .navigation-item {
+        width: 30%;
+        max-width: 270px;
+        text-align: center;
+        text-decoration: none;
+        color: #333333;
+        }
+
+    .navigation-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+
+    .navigation-item h2 {
+        margin-top: 15px;
+        }
+
+@media (max-width: 600px) {
+
+    .navigation-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-item {
+        width: 80%;
+    }
+
+    .header {
+        min-height: auto;
+    }
+
+    .uni-logo {
+        width: 110px;
+    }
+
+    .header-content {
+        width: 100%;
+    }
+
+    .header-image {
+        float: none;
+        width: 100%;
+        max-width: 250px;
+        margin: 110px auto 25px;
+    }
+
+    .header-info {
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+
+}
+
+.footer {
+    background-color: #333333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-info h3 {
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 20px;
+}
 
     </style>
 </head>
@@ -119,6 +240,26 @@
     </div>
 </div>
 
+
+<div class="navigation-section">
+
+    <a href="https://com.cdl.unimi.it/en/programme/about-com" class="navigation-item">
+        <img src="./imgs/about-us.png" alt="About the Programme">
+        <h2>About</h2>
+    </a>
+
+    <a href="https://www.unimi.it/en/education/master-programme/public-and-corporate-communication-com" class="navigation-item">
+        <img src="./imgs/curriculum.jpg" alt="Programme Curriculum">
+        <h2>Curriculum</h2>
+    </a>
+
+    <a href="https://www.unimi.it/en/study/student-life" class="navigation-item">
+        <img src="./imgs/student-life.jpg" alt="Student Life">
+        <h2>Student Life</h2>
+    </a>
+
+</div>
+
 <script>
     document.title = "Master Programme - Public and Corporate Communication";
 </script>
@@ -128,6 +269,7 @@
     <h2>Welcome to the University of Milan!</h2>
 
     <iframe
+        class="youtube-video"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/XHCMwpWE4kw?si=qXA-gRUUOFQO0TqL"
@@ -153,5 +295,41 @@
     </iframe>
 
 </div>
+
+
+<footer class="footer">
+
+    <div class="footer-info">
+        <h3>Università degli Studi di Milano</h3>
+        <p>Via Festa del Perdono 7 - 20122 Milano</p>
+        <a href="https://www.unimi.it/en" target="_blank" rel="noopener">
+            Visit the University website
+        </a>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://www.instagram.com/unimi_lastatale/" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="./imgs/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://www.linkedin.com/school/university-of-milan/home/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="./imgs/linkedin.svg" alt="LinkedIn">
+        </a>
+
+        <a href="https://www.youtube.com/@UnimiVideo" target="_blank" rel="noopener" aria-label="YouTube">
+            <img src="./imgs/youtube.svg" alt="YouTube">
+        </a>
+
+        <a href="https://www.facebook.com/statale?locale=it_IT" target="_blank" rel="noopener" aria-label="Facebook">
+            <img src="./imgs/facebook.svg" alt="Facebook">
+        </a>
+    </div>
+
+    <p class="copyright">
+        © 2026 University of Milan - Public and Corporate Communication
+    </p>
+
+</footer>
+
     </body>
     </html>
