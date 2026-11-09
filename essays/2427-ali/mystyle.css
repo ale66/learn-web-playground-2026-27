@@ -1,5 +1,6 @@
 *{
 box-sizing:border-box
+<<<<<<< HEAD
 }
 
 p {
@@ -7,26 +8,41 @@ p {
 }
 
 
+=======
+}
+
+>>>>>>> 26e7922a83c172f2f6132d57f5c86a7aeebb323e
 h1 {text-align: center;
 color: antiquewhite;
-font-size: 50px;
-padding-top: 0em;
+font-size: 3rem;
+padding-top: 0rem;
+font-family: 'Impact', 'Arial Black', sans-serif;
 }
 
 h2{text-align: center;
 color: brown;
-font-size: 25px;
+font-size: 1.5rem;
+}
+
+
+h3{
+   text-align: center;
+   color: brown;
+   font-size: 1.5rem;
+   font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
 }
 
 .hero-image { 
     width: 100%;
     min-height: 100vh;
+    max-width: 100%;
+    height: auto;
     background-image: url("../2427-ali/imgs/images.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 3em;
-    font-size: 10px;
+    font-size: 0.6rem;
     text-align: left;
     position: relative;
     float: none;
@@ -77,6 +93,7 @@ nav a{
     display: inline-block;
     text-align-last:justify ;
 }
+
 .header-image{
     float: left;
     max-width: 350px;
@@ -88,7 +105,7 @@ nav a{
 }
 /*riguarda l'immagine chiamata appelli e cambia la dimensione*/
 .header-image img {
-    width: 400px;
+    width: 400;
     max-width: 100%;
     height: auto;
     display: block;
@@ -137,7 +154,7 @@ nav a{
     align-self: flex-start;
     background-color: brown;
     color: antiquewhite;
-    font-size: 11px;
+    font-size: 0.7rem;
     font-weight: bold;
     text-transform: uppercase;
     padding: 4px 10px;
@@ -147,7 +164,7 @@ nav a{
 /* Titolo */
 .news-card h2 {
     color: brown;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 15px 0 10px 0;
     text-align: left; /* Sovrascrive la centratura del tuo h2 generale */
 }
@@ -155,10 +172,10 @@ nav a{
 /* Testo */
 .news-card p {
     color: #444;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: left !important;
 }
 
 /* Pulsante */
@@ -171,7 +188,7 @@ nav a{
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 0.8rem;
     transition: background-color 0.2s ease;
     align-self: center;
 }
@@ -179,3 +196,4 @@ nav a{
 .news-btn:hover {
     background-color: #5a1515;
 }
+

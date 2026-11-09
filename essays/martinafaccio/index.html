@@ -1,80 +1,44 @@
 <!DOCTYPE html>
 <!-- Webcomm boilerplate -->
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CORPORATE COMMUNICATION</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="mystyle.css">
-    </head>
-    
-    <body>
-  <div class="hero-image">
-    <div class="hero-bg"></div>
-    <a href="https://www.unimi.it/en" target="_blank" rel="noopener">
-      <img src="./imgs/minerva-34.png" alt="Minerva 34" class="Minerva">
-    </a>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CORPORATE COMMUNICATION</title>
+    <meta name="description" content="Corporate Communication - Università degli Studi di Milano">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
 
-    <div class="hero-content">
-        <img id="uni" alt="Università">
-        <a href="https://www.unimi.it/it/corsi/laurea-magistrale/comunicazione-pubblica-e-dimpresa-com" target="_blank" rel="noopener">
-            <h1>CORPORATE COMMUNICATION</h1>
-        
+<body>
+    <div class="hero-image">
+        <div class="hero-bg"></div>
+
+        <a href="https://www.unimi.it/en" target="_blank" rel="noopener">
+            <img src="./imgs/minerva-34.png" alt="Minerva 34" class="Minerva">
         </a>
+
+        <div class="hero-content">
+            <img id="uni" alt="Università">
+            <a href="https://www.unimi.it/it/corsi/laurea-magistrale/comunicazione-pubblica-e-dimpresa-com" target="_blank" rel="noopener">
+                <h1>CORPORATE COMMUNICATION</h1>
+            </a>
+        </div>
     </div>
-</div>
 
-<section class="uni-photo">
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flastatalenews.unimi.it%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fparagraph_image%2Fpublic%2Fimage%2Fcover%2Ffoto%2520cover%2520(11)-min.png%3Fh%3D8621808d%26itok%3DEmS_eCtY&f=1&nofb=1&ipt=248d5b2312ccb7bcc349a337348bd1a9dd4b861f0275ed9e205213e9842e48dc&ipo=images" alt="Università degli Studi di Milano">
-    <a href="https://com.cdl.unimi.it/it" target="_blank" rel="noopener">
-        <h2>Visit our UNI!</h2>
-    </a>
-</section>
+    <section class="uni-photo">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flastatalenews.unimi.it%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fparagraph_image%2Fpublic%2Fimage%2Fcover%2Ffoto%2520cover%2520(11)-min.png%3Fh%3D8621808d%26itok%3DEmS_eCtY&f=1&nofb=1&ipt=248d5b2312ccb7bcc349a337348bd1a9dd4b861f0275ed9e205213e9842e48dc&ipo=images" alt="Università degli Studi di Milano">
+        <button class="btn" onclick="window.open('https://com.cdl.unimi.it/it', '_blank')">Visit our UNI!</button>
+    </section>
 
-<section class="video-section">
-    <iframe src="https://www.youtube.com/embed/QiTe6l3aYIo"
-        title="Video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
-</section>
+    <section class="video-section">
+        <iframe src="https://www.youtube.com/embed/QiTe6l3aYIo"
+            title="Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+    </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
-
-<head></head>
-<body>
-  <h1>Count: <span id="count">0</span></h1>
-  <button onclick="increment()">Increment</button>
-  <button onclick="decrement()">Decrement</button>
-  <button onclick="reset()">Reset</button>
-
-  <script>
-    let count = 0;
-    
-    function increment() {
-      count++;
-      updateDisplay();
-    }
-    
-    function decrement() {
-      count--;
-      updateDisplay();
-    }
-    
-    function reset() {
-      count = 0;
-      updateDisplay();
-    }
-    
-    function updateDisplay() {
-      document.getElementById('count').textContent = count;
-    }
-  </script>
-
-<script src="script.js"></script>
-
-</body> 
