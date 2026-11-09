@@ -367,8 +367,16 @@ a:hover{
 /* Colonna Centrale (Centrata) */
 .footer-center {
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  gap:12px;
 }
 
+.footer-icons img{
+  filter:invert(100%);
+  width: 20px;
+  
+}
 .footer-links {
   display: flex;
   justify-content: center;
