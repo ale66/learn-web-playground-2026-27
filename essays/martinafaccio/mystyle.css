@@ -64,8 +64,8 @@ img {
 
 .hero-content h1 {
     font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
-    font-weight: 700;
-    font-size: clamp(2.25rem, 6vw, 7rem);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 4vw, 4.5rem);    
     letter-spacing: 0.03em;
     line-height: 1.05;
     color: #f7c948;
@@ -73,6 +73,12 @@ img {
     paint-order: stroke fill;
     text-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.45);
     margin: 0;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .hero-content .subtitle {
@@ -113,14 +119,18 @@ img {
 }
 
 .visit-link {
-    font-family: Baskerville, 'Baskerville Old Face', Palatino, Georgia, serif;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-size: clamp(2.25rem, 5.5vw, 4.5rem);
-    font-style: italic;
+    font-style: normal;
     font-weight: 400;
     letter-spacing: 0.03em;
     color: #f7c948;
     text-decoration: none;
     text-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.visit-link em {
+    font-style: italic;
 }
 
 .visit-link:hover {
@@ -143,7 +153,66 @@ img {
     height: 100%;
     border: 0;
 }
+/* ---------- Testo del corso ---------- */
 
+.about {
+    padding: 4rem 1.5rem;
+    background: #1f3049; /* stesso blu della sezione video */
+    text-align: center;
+}
+
+.about h2,
+.curricula h2 {
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    color: #f7c948;
+    margin: 0 0 1.5rem;
+}
+
+.about p {
+    max-width: 40rem;
+    margin: 0 auto;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #fff8e7;
+}
+
+/* ---------- Scegli il curriculum ---------- */
+
+.curricula {
+    padding: 4rem 1.5rem 5rem;
+    background: #1f3049; /* stesso blu della sezione video */
+    text-align: center;
+}
+
+.curricula-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.curriculum {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: 0.2rem solid #f7c948;
+    border-radius: 0.75rem;
+    background: #f7c948;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.curriculum h3 {
+    margin: 0;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+    line-height: 1.25;
+    color: #1f3049;
+}
 /* ---------- Schermi stretti (telefoni) ---------- */
 
 @media (max-width: 700px) {
@@ -166,5 +235,19 @@ img {
 
     .uni-photo .btn {
         font-size: 1.5rem;
+    }
+
+        .hero-text {
+        align-items: center;
+    }
+
+        .curricula-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .curriculum {
+        width: 100%;
+        max-width: 16rem;
     }
 }
