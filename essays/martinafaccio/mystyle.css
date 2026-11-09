@@ -155,9 +155,11 @@ img {
 }
 /* ---------- Testo del corso ---------- */
 
+/* ---------- Testo del corso ---------- */
+
 .about {
     padding: 4rem 1.5rem;
-    background: #1f3049; /* stesso blu della sezione video */
+    background: #f7c948;
     text-align: center;
 }
 
@@ -165,7 +167,7 @@ img {
 .curricula h2 {
     font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-size: clamp(1.75rem, 4vw, 3rem);
-    color: #f7c948;
+    color: #1f3049;
     margin: 0 0 1.5rem;
 }
 
@@ -175,14 +177,14 @@ img {
     font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-size: 1.15rem;
     line-height: 1.7;
-    color: #fff8e7;
+    color: #1f3049;
 }
 
 /* ---------- Scegli il curriculum ---------- */
 
 .curricula {
     padding: 4rem 1.5rem 5rem;
-    background: #1f3049; /* stesso blu della sezione video */
+    background: #f7c948;
     text-align: center;
 }
 
@@ -200,10 +202,9 @@ img {
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    border: 0.2rem solid #f7c948;
     border-radius: 0.75rem;
-    background: #f7c948;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background: #1f3049;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .curriculum h3 {
@@ -211,8 +212,11 @@ img {
     font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
     font-size: clamp(1.25rem, 2.2vw, 1.75rem);
     line-height: 1.25;
-    color: #1f3049;
+    color: #f7c948;
 }
+
+/* ---------- Scegli il curriculum ---------- */
+
 /* ---------- Schermi stretti (telefoni) ---------- */
 
 @media (max-width: 700px) {
