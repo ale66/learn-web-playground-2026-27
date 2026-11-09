@@ -9,21 +9,41 @@
 </head>
 <body>
 
-  <header class="meu-hero">
+  <nav class="menu-flutuante">
+    <a href="#home">Home</a>
+    <a href="#about">About the Course</a>
+    <a href="#map">Map</a>
+    <a href="https://com.cdl.unimi.it/en" target="_blank">Official Website</a>
+  </nav>
+
+  <header class="meu-hero" id="home">
     <h1>Corporate Communication</h1>
     <p>Welcome to the Course</p>
   </header>
 
-  <section class="secao-info">
+  <section class="secao-about" id="about">
+    <div class="caixa-texto">
+      <h2>About the Course</h2>
+      <p>The MA in COM offers a range of specialisations in the professional fields of public and corporate communications, marketing, advertising and political communications. The educational and cultural project of the course aims to provide an interdisciplinary training with a strong link to the industry and advanced tertiary sectors in the Italian and international contexts, and to public and political organisations.</p>
+      <p class="fonte">Source: <a href="https://com.cdl.unimi.it/en" target="_blank">com.cdl.unimi.it</a></p>
+    </div>
+    <iframe class="video"
+      src="https://www.youtube.com/embed/okfz59wQJnw"
+      title="Video about the course"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+  </section>
+
+  <section class="secao-info" id="map">
     <img src="imgs/foto2.jpg.jpeg" alt="Minha segunda foto">
     <iframe
       src="https://maps.google.com/maps?q=Universit%C3%A0+degli+Studi+di+Milano&output=embed"
       loading="lazy"
-      title="Unimi Localization"></iframe>
+      title="Localização da Unimi"></iframe>
   </section>
 
   <footer class="meu-rodape">
-    <p>Made by Iago Araujo</p>
+    <p>Created by Iago Araujo</p>
   </footer>
 
 </body>
