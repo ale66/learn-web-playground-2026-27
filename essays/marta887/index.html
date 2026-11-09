@@ -1,32 +1,84 @@
+
 <!DOCTYPE html>
-<!-- Webcomm boilerplate -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA COM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+    
+    <div class="hero-image">
+        
+        
+        <header>
+            <img src="./imgs/minerva-34.png" class="logo" alt="UNIMI Logo">
+        </header>
+
+        
+        <div class="hero-text">
+            <p class="subtitle-top">Welcome to the University of Milan!</p>
+            <h1>Comunicazione pubblica e d'impresa</h1>
+            <h2>Ready to discover the city of Milan beyond the surface?</h2>
+        </div>
+
+       
+        <div class="header">
+            <div class="header-image">
+                <img src="imgs/studenti.jpg" alt="Studenti">
+            </div>
+            <div class="header-info">
+              <p class="intro">
+                  Explore new perspectives and shape your future with us.
+                </p>
+                <div class="surtitle">COMING SOON!</div>
+               
+            </div>
+        </div>
 
 
-        <p>Create your landing page by typing up the following HTML/CSS code in here:</p>
+        <nav>
+            <a href="https://www.unimi.it/it">UNIMI</a>
+            <a href="https://www.comune.milano.it/">Comune di Milano</a>
+            <a href="https://www.unimi.it/it/corsi/facolta-e-scuole/scienze-politiche-economiche-e-sociali">SPES</a>
+        </nav>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+       </div>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+<div class="cards-container">
+    
+    <div class="info-card">
+        <span class="card-badge">LOCATION</span>
+        <h3>How to Reach us</h3>
+        <p>The course takes place at the campus in Via Conservatorio, 7, 20122 Milan MI</p>
+        <div class="map-box">
+            <img src="imgs/mappa.jpg" alt="University of Milan Map">
+        </div>
+        <a href="https://maps.google.com" target="_blank" class="card-btn">Open in Google Maps</a>
+    </div>
 
-        <script src="" async defer></script>
-    </body>
-</html>
+    
+    <div class="info-card">
+        <span class="card-badge">ADMISSION</span>
+        <h3>Requirements & Application</h3>
+        <p>Check entry requirements, deadlines and mandatory documents to enroll.</p> 
+        <div class="map-box">
+            <img src="imgs/ammissioni.png" alt="Admissions">
+        </div>
+        <a href="https://com.cdl.unimi.it/it/iscriversi" target="_blank" class="card-btn">Read Requirements</a>
+    </div>
+
+   
+    <div class="info-card">
+        <span class="card-badge">CONTACTS</span>
+        <h3>Student Support</h3>
+        <p>Have questions about the program? Contact our academic advisors office.</p>
+        <div class="map-box">
+            <img src="imgs/informa.png" alt="Informa Studenti">
+        </div>
+        <a href="https://com.cdl.unimi.it/it/il-corso/referenti-e-contatti" target="_blank" class="card-btn">Contact us</a>
+    </div>
+</div>

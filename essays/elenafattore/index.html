@@ -5,28 +5,157 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <title>COM - Università degli Studi di Milano</title>
+        <link rel="stylesheet" href="mystyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
-    <body>
+  <body>
+    <header class="header">
+    <!-- Logo a Sinistra -->
+    <a href="https://www.unimi.it/it" class="logo-link">
+      <img src="imgs/minerva-34.png" alt="Università degli Studi di Milano" class="header-logo">
+    </a>
+
+    <!-- Link a Destra -->
+    <div class="header-right-links">
+      <a href="https://cas.unimi.it/login?service=https%3A%2F%2Funimia.unimi.it">Unimia</a>
+      <a href="https://www.unimi.it/it/studiare/servizi-gli-studenti/segreterie">Student Services</a>
+      <a href="https://ariel.unimi.it/">Ariel</a>
+    </div>
+  </header>
+  
+
+  <!-- Secondary Navigation Bar -->
+   <nav class="main-nav">
+     <div class="nav-title-box">
+       <h1 class="nav-title">Public and Corporate Communication (COM)</h1>
+       <span class="nav-subtitle">Master's Degree Program</span>
+     </div>
+
+     <!-- Navigation Menu Links -->
+      <ul class="nav-links">
+        <li><a href="https://com.cdl.unimi.it/it/il-corso">The Course</a></li>
+        <li><a href="https://com.cdl.unimi.it/it/iscriversi">How to Apply</a></li>
+        <li><a href="https://com.cdl.unimi.it/it/insegnamenti">Courses</a></li>
+        <li><a href="https://com.cdl.unimi.it/it/studiare">Studying</a></li>
+        <li><a href="https://com.cdl.unimi.it/it/dopo-la-laurea">After Graduation</a></li>
+      </ul>
+   </nav>
+   
+   <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Public and Corporate Communication</h1>
+      <p class="hero-subtitle">
+        Master the strategies of contemporary media, corporate branding, and public affairs at the University of Milan.
+      </p>
+      
+      <!-- Primary Action Buttons -->
+      <div class="hero-buttons">
+        <a href="#apply" class="hero-button-primary">How to Apply</a>
+        <a href="#about" class="hero-button-secondary">Explore Program</a>
+      </div>
+    </div>
+  </section>
  
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+  <section class="news-section">
+    <h2 class="news-section-title">The Latest News</h2>
+    <div class="news-container">
+    
+      <article class="news-card">
+        <h3 class="news-title">Welcome Day & Networking Event for New Students</h3>
+        <p class="news-date">Fri, 20-11-2026</p>
+        <p class="news-text">
+          Join us for the official COM Welcome Day! Connect with fellow first-year students, meet professors, and participate in interactive group activities designed to expand your professional network from day one.
+        </p>
+        <a href="#" class="news-link"><i class="fa-solid fa-arrow-right"></i> Register for the event</a>
+      </article>
 
+    
+      <article class="news-card">
+        <h3 class="news-title">Admission Ranking Lists Released for A.Y. 2026/2027</h3>
+        <p class="news-date">Mon, 16-11-2026</p>
+        <p class="news-text">
+          The official admission ranking lists for the Master's Degree in Public and Corporate Communication have been published. Admitted candidates must complete their online enrollment by the deadline.
+        </p>
+        <a href="#" class="news-link"><i class="fa-solid fa-arrow-right"></i> Check your ranking status</a>
+      </article>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+    </div>
+  </section>
+  <!-- Media & Location Section -->
+  <section class="media-location-section">
+    <div class="media-location-container">
+      
+      <!-- Blocco Video YouTube -->
+      <div class="media-box">
+        <h2 class="section-subtitle">Discover Our Campus</h2>
+        <div class="video-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/FLAF-eb1Pz8" 
+            title="Studiare alla Statale di Milano - Orientamento" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+      <!-- Blocco Mappa e Messaggio -->
+      <div class="location-box">
+        <h2 class="section-subtitle">Visit Us</h2>
+        <p class="visit-message">
+          Vieni a trovarci ed esplora la sede del corso!
+        </p>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.243572839211!2d9.201412076839515!3d45.462862933732085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ab1d13f987%3A0x6b64d0089ff52136!2sVia%20Conservatorio%2C%207%2C%2020122%20Milano%20MI!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+    </div>
+  </section>
 
-        <script src="" async defer></script>
-    </body>
+  <!-- Simple & Organized Footer (A Tutta Larghezza) -->
+  <footer class="simple-footer">
+    <div class="footer-container">
+      
+      <!-- Sinistra: Indirizzo e Contatti -->
+      <div class="footer-left">
+        <p class="footer-title">Università degli Studi di Milano</p>
+        <p>Via Conservatorio 7, 20122 Milano</p>
+        <p>Tel. +39 02 5032 5032</p>
+      </div>
+      
+      
+      <!-- Centro: Link utilità e Copyright -->
+      <div class="footer-center">
+       
+        <div class="footer-icons">
+           <a href="https://www.instagram.com/theuniversity_milan/"><img src="icons/instagram.svg"></a>
+           <a href="https://www.facebook.com/statale/?locale=it_IT"><img src="icons/facebook.svg"></a>
+           <a href="https://github.com/elenafattore"><img src="icons/github.svg"></a>
+           <a href="https://www.youtube.com/user/UnimiVideo"><img src="icons/youtube.svg"></a>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy & Cookies</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Contacts</a>
+        </div>
+        <p class="copyright">© 2026 UniMi - Public and Corporate Communication</p>
+      </div>
+
+      <!-- Destra: Logo Minerva -->
+      <div class="footer-right">
+        <img src="imgs/minerva-34.png" alt="Logo Minerva UniMi" class="footer-logo">
+      </div>
+
+    </div>
+  </footer>
+  
+
+</body>
 </html>

@@ -1,69 +1,173 @@
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-.counter-section {
-    padding: 20px;
-    margin-bottom: 20px;
-    background: #f4f4f4;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #202833;
+    background: #ffffff;
 }
 
-.counter-section h1 {
-    color: #222;
-    font-size: 28px;
-    margin-bottom: 10px;
-}
+
 
 .hero-image {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("imgs/torrevelasca.jpg");
-    background-position: center center;
-    background-size: cover;          
-    background-repeat: no-repeat;    
-    position: relative;            
+    background-image: url("imgs/atrio uni conservatorio.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 300px;
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    color: white;
 }
 
-.hero-image img {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    height: 45px;                    
-    width: auto;
+
+
+.logo {
+    width: 110px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+
+
+.titoli {
+    text-align: left;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 .titoli h1 {
-    color: white; 
-    position: absolute;
-    top: 30px;
-    right: 15px;
-    font-size: 30px;
+    font-size: 32px;
+    margin: 0 0 10px 0;
 }
 
 .titoli h2 {
-    color: white;
-    position: absolute;
-    top: 70px;
-    right: 15px;
-    font-size: 25px;
+    font-size: 24px;
+    margin: 0 0 15px 0;
 }
 
 .titoli p {
-    position: absolute;
-    top: 105px;
-    right: 15px;
-    color: white; 
+    margin: 0;
 }
 
-.titoli p a {
-    color: white; 
+.titoli a {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
 }
 
-video {
-width:100vw;
-height:100vh;
-object-fit: cover; 
-display: block;
+.titoli a:hover {
+    text-decoration: underline;
+}
+
+
+
+.menu {
+    background-color: #0e223d;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 50px;
+
+    display: flex;
+    gap: 35px;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 18px 0;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #d8b56d;
+}
+
+
+
+
+main {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 36px 24px;
+}
+
+.intro,
+.media-placeholder {
+    padding: 22px 0;
+}
+
+
+
+
+@media (max-width: 650px) {
+
+    .hero-image {
+        min-height: 260px;
+        padding: 30px 22px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 85px;
+    }
+
+    .titoli h1 {
+        font-size: 26px;
+    }
+
+    .titoli h2 {
+        font-size: 20px;
+    }
+
+    .menu ul {
+        padding: 0 22px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        padding: 14px 0;
+        font-size: 14px;
+    }
+
+}
+
+/* VIDEO STUDENTI */
+.student-video {
+    padding: 45px 0;
+    text-align: center;
+}
+
+.student-video h2 {
+    color: #0e223d;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.student-video p {
+    color: #555555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.student-video video {
+    width: 100%;
+    max-width: 850px;
+    border-radius: 4px;
 }

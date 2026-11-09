@@ -1,0 +1,22 @@
+name: Index essays
+on:
+  push:
+    paths: ['essays/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build essays/index.json
+        run: |
+          cd essays
+          ls -d */ | sed 's#/##' | jq -R . | jq -s . > index.json
+      - name: Commit if changed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add essays/index.json
+          git diff --cached --quiet || (git commit -m "Update essays index" && git push)

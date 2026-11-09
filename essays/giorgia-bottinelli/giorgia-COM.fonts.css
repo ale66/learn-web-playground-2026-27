@@ -1,0 +1,97 @@
+h1 {
+    font-family: "Lucida Bright", Georgia, serif;
+    color: rgb(174, 126, 81);
+    color:rgb(20, 20, 18);
+    font-size: 60px; 
+    float: right;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 650px;
+}
+
+h2 {
+    font-family: "Lucida Bright", Georgia, serif;
+    color: rgb(174, 126, 81);
+    color:rgb(20, 20, 18);
+    font-size: 25px; 
+    padding-right: 10px;
+    padding-top: 0%;
+    text-align: right;
+}
+
+.hero-image {
+    background-size: cover;
+    background-image: url(./imgs/statale.jpg);
+    background-position: center;
+    background-position: top;
+    width: 99vw;
+    height: 110vh;
+    padding: 0%;
+    padding-top: 10px;
+    background-repeat: no-repeat;
+    border-bottom: solid;
+    border-bottom-color: black;
+}
+
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: rgb(174, 126, 81);
+    color:rgb(20, 20, 18);  
+	margin: 0; 
+	padding: 0;
+	}
+
+.main {
+    padding-top: 0%;
+    background-color: rgba(255, 255, 255, 0.688);
+    display: flex;
+    align-items: stretch;
+}
+
+.header {
+    border-bottom: solid;
+    border-bottom-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: rgba(255, 255, 255, 0.703);;
+    height: 100px;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 50%;
+    height: auto;
+    padding-top: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(20, 20, 18);
+    font-family: "Lucida Bright", Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: rgb(174, 126, 81);
+}
+
+aside {
+    display: inline-block;
+    position: right;
+    vertical-align: top;
+    width: 25%;
+    background-color: #b4a7d6;
+
+}

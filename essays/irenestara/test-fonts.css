@@ -1,0 +1,81 @@
+h1 {
+    color: #002b5c;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+h2 {
+    color: #1d6fb8;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    }
+
+.hero-image {
+
+    background-image: url("imgs/torrevelasca.jpg");
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    height: 200vh;
+    width: 100%;
+    
+
+.head {
+    background-image: url("imgs/minerva-34.png");
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+    
+}
+  
+}
+h3 {
+    color: #495057;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-family: sans-serif;
+    font-size: 15pt;
+    color: rgb(14, 3, 12);
+    color:rgb(4, 2, 12);
+    text-align: center;
+    
+}
+
+.main {
+    max-width: 800px;
+    margin: -40px auto 40px auto; 
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin: 10px 0; 
+    color: rgb(150, 0, 0);
+    font-weight: bold; 
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+    text-align: center;
+    }

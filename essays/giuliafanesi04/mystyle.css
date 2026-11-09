@@ -1,5 +1,396 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; 
 }
 
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./imgs/background-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px); 
+    transform: scale(1.1); 
+    z-index: 1; 
+} 
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* MENU FLUTTUANTE */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(29, 43, 80, 0.9);
+  z-index: 100;
+}
+
+.logo-container img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+} 
+
+.header-image {
+    position: relative;
+    z-index: 10;
+    float: left;
+    width: 55%;
+    margin-top: 20em; 
+    padding-left: 2em;
+    box-sizing: border-box;
+} 
+
+.header-image img {
+   width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.header-info {
+    position: relative;
+    z-index: 10;
+    float: right;
+    width: 45%;
+    margin-top: 20em; 
+    padding-right: 3em;
+    color: white;
+    box-sizing: border-box;
+}
+
+.surtitle {
+    font-size: 2.0em;
+    color: #1d2b50;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 1.5em;
+    margin: 0.2em 0;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+
+.intro {
+    line-height: 1.5;
+    margin-bottom: 1em;
+}  
+
+/* SEZIONE DISCOVER MORE */
+.discover {
+  background: #e9edf5;
+  color: #1d2b50;
+  padding: 2.5em 2em;
+  overflow: hidden;          /* contiene i float */
+  scroll-margin-top: 60px;   /* evita che la navbar copra il titolo quando clicchi il link */
+}
+
+.discover-image {
+  float: left;
+  width: 45%;
+}
+
+.discover-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+.discover-text {
+  float: right;
+  width: 50%;
+  margin-top: 4em;
+}
+
+.discover-text h2 {
+  font-size: 2em;
+  margin: 0 0 0.5em;
+}
+
+.discover-text p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  display: block;
+  background: #1d2b50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1em 1.5em;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background: #7f93b4;
+} 
+
+
+/* SEZIONE LATEST ARTICLES */
+.articles {
+  background: #7f93b4;
+  padding: 2em;
+  overflow: hidden;          /* contiene i float */
+  scroll-margin-top: 60px;
+}
+
+.articles h2 {
+  color: white;
+  font-size: 2em;
+  margin: 0 0 0.75em;
+}
+
+.card {
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
+  box-sizing: border-box;
+  background: #e9edf5;
+  color: #1d2b50;
+  padding: 1.2em;
+  border-radius: 12px;
+}
+
+.card:last-of-type {
+  margin-right: 0;
+}
+
+.card-icon {
+  display: block;
+  font-size: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.card h3 a {
+  color: #1d2b50;
+  text-decoration: none;
+}
+
+.card h3 a:hover {
+  text-decoration: underline;
+} 
+
+/* SEZIONE WHERE TO FIND US */
+.where {
+  background: #e9edf5;
+  color: #1d2b50;
+  padding: 2.5em 2em;
+  overflow: hidden;          /* contiene i float */
+  scroll-margin-top: 60px;
+}
+
+.where h2 {
+  font-size: 2em;
+  margin: 0 0 0.75em;
+}
+
+.where-info {
+  float: left;
+  width: 38%;
+  box-sizing: border-box;
+}
+
+.where-info h3 {
+  margin: 0 0 0.5em;
+  font-size: 1.3em;
+}
+
+.where-info p {
+  line-height: 1.5;
+  margin: 0 0 0.8em;
+}
+
+.where-info .btn {
+  margin-top: 1.2em;
+}
+
+.where-map {
+  float: right;
+  width: 58%;
+}
+
+.where-map iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: 16px;
+}
+
+ /* FOOTER */
+.footer {
+  background: #1d2b50;
+  color: white;
+  text-align: center;
+  padding: 2em 1em 2.5em;
+}
+
+.footer h2 {
+  font-size: 2em;
+  margin: 0 0 1em;
+}
+
+.social-links {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.social-links span {
+  margin: 0 0.5em;
+} 
+
+.social-links i {
+  font-size: 1.3em;
+  margin-right: 0.3em;
+  vertical-align: middle;
+} 
+
+.footer-contacts {
+  margin-top: 1.5em;
+}
+
+.footer-contacts p {
+  margin: 0.4em 0;
+}
+
+.footer-contacts a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contacts a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.footer-contacts i {
+  margin-right: 0.4em;
+}
+
+/* PULSANTE NELL'HERO */
+.popup-open {
+  display: inline-block;
+  background: white;
+  color: #1d2b50;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8em 1.5em;
+  border-radius: 10px;
+  margin-top: 0.5em;
+}
+
+.popup-open:hover {
+  background: #ffd700;
+}
+
+/* POP-UP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup:target {
+  display: flex;
+}
+
+.popup-content {
+  position: relative;
+  background: white;
+  color: #1d2b50;
+  width: 90%;
+  max-width: 480px;
+  padding: 2em;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.popup-content h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+}
+
+.popup-content p {
+  line-height: 1.5;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 2em;
+  color: #1d2b50;
+  text-decoration: none;
+}

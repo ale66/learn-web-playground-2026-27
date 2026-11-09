@@ -1,32 +1,70 @@
 <!DOCTYPE html>
 <!-- Webcomm boilerplate -->
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CORPORATE COMMUNICATION</title>
+    <meta name="description" content="Corporate Communication - Università degli Studi di Milano">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+    <div class="hero-image">
+        <div class="hero-bg"></div>
+
+        <a href="https://www.unimi.it/en" target="_blank" rel="noopener">
+            <img src="./imgs/minerva-34.png" alt="Minerva 34" class="Minerva">
+        </a>
+
+                <div class="hero-content">
+            <img id="uni" alt="Università">
+
+            <div class="hero-text">
+                <a href="https://www.unimi.it/it/corsi/laurea-magistrale/comunicazione-pubblica-e-dimpresa-com" target="_blank" rel="noopener">
+                    <h1>CORPORATE COMMUNICATION</h1>
+                </a>
+                <a href="https://com.cdl.unimi.it/it" target="_blank" rel="noopener">
+                    <p class="subtitle">Laurea magistrale in Comunicazione pubblica e d'impresa</p>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+   <section class="video-section">
+<a class="visit-link" href="https://com.cdl.unimi.it/it" target="_blank" rel="noopener">Visit our <em>UNI</em>!</a>
+    <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/U05p8FzkdyU"            title="Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+    </div>
+</section>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+    <section class="about">
+        <h2>Comunicazione pubblica e d'impresa</h2>
+               <p>
+            The master's degree in Public and Corporate Communication at the Università degli Studi di Milano lasts two years and is worth 120 credits. It offers advanced training in the communication of companies, institutions and organisations, combining theory, techniques and the strategic use of information. Classes are held in Milan, admission is limited, and courses are taught in Italian and English.
+        </p>
+    </section>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+    <section class="curricula">
+        <h2>Choose your curriculum</h2>
+        <div class="curricula-grid">
+            <div class="curriculum">
+                <h3>Comunicazione e marketing</h3>
+            </div>
+            <div class="curriculum">
+                <h3>Corporate communication</h3>
+            </div>
+            <div class="curriculum">
+                <h3>Digital media, data and society</h3>
+            </div>
+        </div>
+    </section>
 
-        <script src="" async defer></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
