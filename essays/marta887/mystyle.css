@@ -157,19 +157,19 @@ nav a:hover {
     box-shadow: 0 6px 20px rgba(245, 222, 179, 0.4);
 }
 
-.location-container {
-    display: flex;
-    justify-content: center;
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     width: 90%;
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 1050px;
+    margin: 40px auto;
 }
 
-.location-card {
+.info-card {
     background-color: rgba(245, 245, 245, 0.95);
     border-radius: 20px;
-    padding: 30px;
-    width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -177,8 +177,8 @@ nav a:hover {
     text-align: left;
 }
 
-.location-badge {
-    background-color: #8b1d24;
+.card-badge {
+    background-color: #bc8b21;
     color: white;
     font-size: 0.75rem;
     font-weight: 700;
@@ -188,27 +188,32 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-.location-card h3 {
-    color: #8b1d24;
+.info-card h3 {
+    color: #bc8b21;
     font-family: serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin: 0 0 10px 0;
 }
 
-.location-card p {
+.info-card p {
     color: #444444;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 20px;
+    flex-grow: 1; 
 }
 
 .map-box {
     width: 100%;
-    height: 200px;
+    height: 160px;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fcfcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .map-box img {
@@ -218,8 +223,12 @@ nav a:hover {
 }
 
 
-.location-btn {
-    background-color: #8b1d24;
+.info-card:nth-child(3) .map-box img {
+    object-fit: contain;
+}
+
+.card-btn {
+    background-color: #bc8b21;
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
@@ -227,8 +236,9 @@ nav a:hover {
     padding: 10px 22px;
     border-radius: 15px;
     transition: background-color 0.3s ease;
+    margin-top: auto;
 }
 
-.location-btn:hover {
-    background-color: #6a141a;
+.card-btn:hover {
+    background-color: #9e7319; 
 }
