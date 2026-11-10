@@ -369,3 +369,113 @@ a{
     line-height: 1.6;
     color: var(--text);
 }
+
+/* --- SEZIONE FOOTER --- */
+.site-footer {
+    background-color: var(--secondary); 
+    color: var(--primary); 
+    padding: 40px 5%;
+    border-top: 5px solid var(--primary); 
+}
+
+/* Riga superiore (Link utili) */
+.footer-top {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(18, 53, 91, 0.2); /* Linea sottile blu trasparente */
+    font-size: 15px;
+}
+
+.footer-top a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-top a:hover {
+    color: var(--accent); 
+    text-decoration: underline;
+}
+
+.separator {
+    color: var(--primary);
+    opacity: 0.5;
+}
+
+/* Corpo centrale a 3 colonne */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1 1 250px;
+}
+
+/* Colonna sinistra: Indirizzo */
+.address-col p {
+    margin: 5px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text); 
+}
+
+.pec-link {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.pec-link:hover {
+    color: var(--accent);
+}
+
+/* Colonna centrale: Social */
+.social-col {
+    text-align: center;
+}
+
+.social-col h4 {
+    margin: 0 0 15px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-icons a {
+    color: var(--primary); 
+    font-size: 26px;
+    transition: all 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: var(--accent); 
+    transform: translateY(-4px); 
+}
+
+/* Colonna destra: Logo */
+.logo-col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+}
+
+.footer-logo {
+    width: 100%;
+    max-width: 240px; 
+    height: auto;     
+    display: block;
+}
