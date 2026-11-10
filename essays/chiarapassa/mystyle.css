@@ -3,16 +3,19 @@ p {
     text-align-last: left;
 }
 
-body {
+
+    body {
     margin: 0;
     min-height: 100vh;
-    background-image: url("./imgs/milano.jpg");
+    background-image: url("./imgs/cortile.jpg");
     background-size: cover;
-    background-position: center 50%;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     text-align: center;
+}
 }
 
 header {
@@ -92,3 +95,80 @@ p {
     text-align-last: left;
 }
 
+
+/* UNIVERSITY SECTION */
+
+.university-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    margin: 70px 40px;
+    padding: 40px;
+    background: rgba(20, 30, 50, 0.65);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+}
+
+.university-text {
+    flex: 1;
+    text-align: left;
+    max-width: 400px;
+}
+
+.university-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.university-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+}
+
+.university-images {
+    flex: 1;
+    position: relative;
+    min-height: 340px;
+}
+
+.image-main {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.image-small {
+    position: absolute;
+    width: 75%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    right: 0;
+    top: 20%;
+    border: 4px solid white;
+    z-index: 2;
+}
+/* UNIVERSITY IMAGES */
+
+.university-images {
+    flex: 1;
+    position: relative;
+    min-height: 340px;
+}
+
+.image-small {
+    position: absolute;
+    width: 65%;
+    height: 220px;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    border: 3px solid white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
