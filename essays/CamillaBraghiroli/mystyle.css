@@ -58,8 +58,14 @@ hr{
 }
 
 @media (min-width:750px) {
-    h1 { font-size: 11rem;}
+    title-block h1{ font-size: 11rem;}
     btn {font-size: 2rem;}
+    social a {font-size: 1.50rem;}
+    side-menu a {font-size: 1.50rem;}
+    banda-beige h2 {font-size: 2.25rem;}
+    banda-beige2 h2 {font-size: 2.25rem;}
+    article-box p {font-size: 1.25rem;}
+    article-box h3 {font-size: 1.75rem;}
 }
 
 
@@ -109,7 +115,7 @@ hr{
     display: grid;
     place-items: center;
     color: #c8102e;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid #c8102e;
@@ -269,16 +275,26 @@ background: #e8dcc4;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    text-align: center; 
 }
 
 .article-box h3 {
     margin-top: 0;
+    margin-bottom: 18px;
     color: #8b3a2b;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.50rem;
 }
 
 .article-box p {
     line-height: 1.6;
+    font-size: 1rem;
+    margin: 0 0 25px 0; /*spazio tra testo e bottone */
+    text-align: center;
+    text-align-last: center;
 }
 
 .article-button {
@@ -288,6 +304,7 @@ background: #e8dcc4;
     padding: 10px 18px;
     text-decoration: none;
     border-radius: 4px;
+    margin-top: auto; /* bottone sempre in fondo al box */
 }
 
 .articles-container {
