@@ -1,4 +1,8 @@
 /* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
 
 html {
     font-size: 16px;
@@ -226,8 +230,6 @@ img {
         text-align: center;
         gap: 1.5rem;
     }
-    
-       
 
     #uni {
         width: 60%;
@@ -254,4 +256,99 @@ img {
         width: 100%;
         max-width: 16rem;
     }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        margin: 0 auto 1rem;
+    }
+}
+/* don't normally show these elements */
+.quotation {
+    display: none;
+    padding-right: 1.67%;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    background: #1f3049;
+    color: #fff8e7;
+    font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    border-top: 0.3rem solid #f7c948;
+    padding: 3.5rem 1.5rem 1.5rem;
+}
+
+.footer-container {
+    max-width: 60rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(247, 201, 72, 0.3);
+}
+
+.footer-logo {
+    width: 9rem;
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.footer-uni {
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #f7c948;
+    margin: 0 0 0.35rem;
+}
+
+.footer-dept,
+.footer-address,
+.footer-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 0.4rem;
+    color: #fff8e7;
+}
+
+.site-footer h4 {
+    font-size: 1.25rem;
+    color: #f7c948;
+    margin: 0 0 1rem;
+    letter-spacing: 0.02em;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: #fff8e7;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #f7c948;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    max-width: 60rem;
+    margin: 1.5rem auto 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 248, 231, 0.75);
 }
