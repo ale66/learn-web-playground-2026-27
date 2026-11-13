@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 /* --- COLOR SCHEME & VARIABILI --- */
 :root {
   --color-dark: #0b1a2b;       /* Gradazione Scura */

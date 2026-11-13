@@ -1,9 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
+* { /*START*/
     box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;   /* good: follows the browser setting */
+}
+
+/*set the font size and then work on rem to make it responsive*/
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
@@ -13,26 +16,77 @@ body {
 
 /* --- HEADER IN ALTO (LOGO + NAV) --- */
 .site-header {
-    position: absolute;
+    position: sticky; /* — This positions the element at a specific place within the element’s parent or ancestor, while removing the element from the page flow.*/
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 1.25rem 3.125rem; /* 20px 50px SPAZIATURA FISSA DEL LAYOUT DELL'HEADER*/
+    background-color: rgba(27, 38, 59, 0.85); /* Blu Notte semitrasparente */
 }
 
+.logos-container {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem; /* 20px DISTANZA FISSA FRA LOGHI*/
+    }
+
 .logo-wrapper .minerva-logo {
-    width: 75px;
+    width: 6.25rem; /* 100px DIMENSIONE FISSA DEL LOGO INDIPENDENTEMENTE DA TESTO*/
+    height: auto;
+}
+
+.spes-logo-wrapper .spes-logo {
+    width: 6.25rem; /* 100px */
+    height: auto;
+    display: block;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* 10px */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.25rem; /* 20px RAGGIO DEL BORDO GEOMETRICO*/
+    padding: 0.375rem 0.875rem; /* 6px 14px PADDING STRUTTURALE SEARCH VOX*/
+    width: 16.25rem; /* 260px LARGHEZZA FISSA COMPONENTE*/
+}
+
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #333;
+    width: 100%;
+}
+
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.search-bar button img {
+    width: 1rem; /* 16px */
     height: auto;
 }
 
 .navigation-menu ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 1.875rem; /* 30px DISTANZA FISSA TRA I LINK */
     margin: 0;
     padding: 0;
 }
@@ -50,9 +104,59 @@ body {
     text-decoration: underline;
 }
 
+   
+.photo-main img {
+        max-width: 100%;
+        height: auto;
+    }
+
+.hamburger {
+    display: none; /* Nascosto di default su desktop */
+    background: transparent; /* Sfondo trasparente per un look pulito */
+    border: none;
+    cursor: pointer; /* La manina al passaggio del mouse */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.875rem;   /* 30px convertiti in rem */
+    height: 1.375rem;  /* 22px convertiti in rem */
+    z-index: 1001; /* Sempre sopra agli altri elementi quando appare. 
+    Z-index è la tridimentsionalità degli elementi: numeri interi come 1,2,3 (per sovrapposizione locale nello stesso conenitore) o negativi per mandare elemento dietro a tutto
+    funziona solo su elementi posizionati quindi relative sticky fixed absolute, su static no
+    perchè viene ignorato. Numeri alti
+    Si usano per gli elementi globali che devono stare sempre 
+    e comunque sopra qualsiasi altra cosa nella pagina,
+     indipendentemente da dove si trovano nel codice HTML. 
+     È il caso tipico dei menu a tendina fissi, delle finestre modali (popup) o, 
+     nel tuo caso, del pulsante hamburger e della barra di navigazione mobile.*/
+    }
+
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 0.1875rem; /* Circa 3px */
+    background-color: #ffffff;
+
+@media (max-width: 1250px) { /*se lo schermo è più piccolo di 1250 px*/
+.navigation-menu {
+        display: flex;
+        flex-direction: column;
+        float: right;
+        background-color: #f8f9fa; 
+        padding: 1.25rem; /* 20px */
+    }
+}
+
+.hamburger{
+        display: flex;
+    }
+}
+
+
+
 /* --- HERO SECTION PRINCIPALE --- */
 .hero-image {
-    position: relative;
+    position: relative; /*this works as anchor for the parent element so tat it is a reference position in space, after that any child element inside with position absolute will know exacctly where to position itself in the boundaries instead of using as reference the entire webpage*/  
     width: 100vw;
     min-height: 100vh;
     overflow: hidden;
@@ -60,13 +164,13 @@ body {
     align-items: center;
 }
 
-.hero-image::before {
+.hero-image::before { /*pseudo-elemento necessario perché se avessi messo una background image direttamente nella hero-section eliminando la classe hero-image avrei avuto sfocato sia foto delle ragazze che foto di sfondo, siccome uso blur sfocato sullo sfondo devo mantenerli separai--*/
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    top: -0.625rem; /* -10px */
+    left: -0.625rem; /* -10px */
+    right: -0.625rem; /* -10px */
+    bottom: -0.625rem; /* -10px */
     background-image: url('imgs/torrevelasca.jpg');
     background-size: cover;
     background-position: center;
@@ -89,76 +193,124 @@ body {
     position: relative;
     z-index: 2;
     width: 85%;
-    max-width: 1100px;
+    max-width: 68.75rem; /* 1100px LIMITE MASSIMO STRUTTURALE*/
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 6.25rem; /* 100px SPAZIATURA VERTICALE LAYOUT*/
 }
 
 .photo-main {
     float: left;
     width: 40%;
-    padding-right: 30px;
+    padding-right: 1.875rem; /* 30px SPAZIATURA FISSA COLONNA*/
+    cursor: pointer;
 }
 
 .photo-main img {
     width: 110%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.4); /* 4px 15px */
     display: block;
 }
 
+.mybutton {
+    display: inline-block;
+    padding: 0.625rem 1.25rem; /* 10px 20px Il padding si adatta 
+    proporzionalmente se cambi la grandezza del testo del bottone*/
+    margin-top: 0.9375rem; 
+    margin-bottom: 0.9375rem; 
+    margin-left: 1.875rem; 
+    background-color: #C85A32; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem; /* REM di base per il testo */
+    border-radius: 0.3em; /* EM: Anche i bordi arrotondati seguono la scala del bottone */
+}
+
+.mybutton:hover {
+    background-color: #A84725;
+    cursor: pointer;
+}
 
 .hero-content {
     float: left;
     width: 60%;
     color: #ffffff;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 0.625rem; /* 10px */
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .hero-content h1 {
-    font-size: 2.6rem;
-    line-height: 1.2;
-    margin-bottom: 12px;
+    font-size: 2.6rem; /* REM: Dimensione fissa rispetto alla radice */
+line-height: 1.2;
+    margin-bottom: 0.75rem; 
     font-weight: bold;
-    padding-left: 10px;
-    margin-left: 10px;
+    padding-left: 0.625rem; 
+    margin-left: 0.625rem; 
 }
 
 .hero-content h2 {
-    font-size: 1.3rem;
+    font-size: 1.3rem; 
     font-weight: normal;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem; 
     opacity: 0.9;
-    margin-left: 50px;
+    margin-left: 3.125rem; 
 }
 
 .hero-content p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1rem; 
+    font-style: italic;
+    margin-bottom: 1.25rem; 
     opacity: 0.85;
-    padding-left: 10px;
-    margin-left: 10px;
+    padding-left: 0.625rem; 
+    margin-left: 0.625rem; 
+    margin-top: 1.875rem; 
+}
+
+.section-divider {
+    border: none;                 
+    height: 0.25rem;               
+    background-color: #FFFFFF;  
+    max-width: 75rem; 
+    margin-left: 1.875rem; 
+    margin-right: 3.125rem; 
 }
 
 .instagram-btn {
     display: inline-block;
-    padding: 12px 28px;
-    margin-left: 30px;
-    margin-top: 30px;
+    padding: 0.5em 1em; /*Il pericolo del "Compound Font-Size" con gli em
+
+Se tu usassi gli em per definire la dimensione del testo (font-size: 0.85em;), quel valore diventerebbe relativo al font-size dell'elemento padre (il contenitore in cui si trova il bottone).
+
+    Questo significa che se un giorno inserisci quel bottone dentro un blocco che ha un testo più grande o più piccolo, la dimensione del testo del bottone cambierebbe a cascata, moltiplicandosi in modo imprevedibile.
+
+    Peggio ancora: se all'interno del bottone inserissi un'icona o un tag <span> con un altro em, le dimensioni si sommerebbero creando un effetto "matrioska" difficile da controllare.
+
+Perché il rem è perfetto qui:
+
+Usando font-size: 0.85rem;, rompi questa catena di ereditarietà. Stai dicendo al browser:
+
+    "Non m'interessa dove si trova questo bottone, in quale sezione è annidato o quale sia il font-size del suo contenitore: la grandezza di questo testo deve basarsi sempre e solo sulla radice (html)".
+
+In questo modo il testo del bottone rimane perfettamente stabile e indipendente ovunque venga posizionato nella pagina.*/
+    margin-left: 1.875rem; 
+    margin-top: 1.875rem; 
     background-color: #C85A32; 
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-size: 1rem; /* REM di base */
+    border-radius: 0.25em; /* EM proporzionale */
+    transition: background-color 0.3s ease, font-size 0.3s ease;
 }
 
 .instagram-btn:hover {
     background-color: #A84725;
+    font-size: 1.1rem;
 }
 
 /* Clearfix per chiudere correttamente i float */
@@ -168,85 +320,70 @@ body {
 
 /* --- CONTENITORE PRINCIPALE A DUE COLONNE --- */
 #main-wrapper {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 30px;
+    max-width: 75rem; /* REM: Struttura globale */
+    margin: 3.125rem auto; 
+    padding: 1.875rem; 
     background-color: #f6f6f6;
-    border-radius: 8px;
-    overflow: hidden; /* Fondamentale per contenere i float ed evitare sovrapposizioni! */
+    border-radius: 0.5rem; 
+    overflow: hidden; 
 }
 
-/* Colonna di sinistra (i due box di testo) */
 .left-column {
     float: left;
     width: 48%;
 }
 
-/* Colonna di destra (il box con video e mappa) */
 .right-column {
     float: right;
     width: 48%;
 }
 
-/* Stile dei singoli box */
 .official-text-box {
     background-color: rgba(18, 184, 226, 0.411);
     border-left: 4px solid #1B263B;
-    padding: 25px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 4px;
-    margin-bottom: 20px; /* Spazio verticale tra i box a sinistra */
+    padding: 1.5625rem; /* REM */
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1); 
+    border-radius: 0.25rem; 
+    margin-bottom: 1.25rem; 
 }
 
 .official-text-box h3 {
     margin-top: 0;
     color: #1B263B;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem; 
 }
 
-/* Dimensioni corrette per video e mappa dentro il box media */
 .media-box iframe {
     width: 100%;
-    height: 180px;
+    height: 11.25rem; /* REM */
     border: 0;
-    border-radius: 4px;
+    border-radius: 0.25rem; 
     display: block;
-    margin-top: 10px;
+    margin-top: 0.625rem; 
 }
 
 .video-container p,
 .map-container p {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem; 
     font-weight: bold;
     color: #1B263B;
 }
 
-/* --- 3. RISORSE ESSENZIALI (SOTTO E CENTRATA) --- */
+/* --- 3. RISORSE ESSENZIALI --- */
 .floating-links-section {
-    clear: both; /* Esce dal flusso dei float */
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
+    clear: both; 
+    max-width: 37.5rem; /* REM */
+    margin: 2.5rem auto; 
+    padding: 1.5625rem; 
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
+    border-radius: 0.5rem; 
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.floating-links-section {
-    clear: both; /* Forza la sezione ad andare sotto ai float precedenti */
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08); 
 }
 
 .floating-links-section h3 {
     color: #1B263B;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem; 
 }
 
 .resource-links {
@@ -255,7 +392,7 @@ body {
 }
 
 .resource-links li {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem; 
 }
 
 .resource-links a {
@@ -269,50 +406,142 @@ body {
     text-decoration: underline;
 }
 
-/* Utility clearfix per sicurezza */
-.clearfix {
-    clear: both;
-}
-
 /* --- 4. FOOTER --- */
 .site-footer {
-    background-color: #1B263B; /* Blu Notte strutturale */
+    background-color: #1B263B; 
     color: #ffffff;
-    padding: 40px 20px;
+    padding: 2.5rem 1.25rem; /* REM */
     text-align: center;
-    border-top: 4px solid #C85A32; /* Dettaglio in Terracotta Accent */
+    border-top: 4px solid #C85A32; 
+    margin-top: 3.125rem; 
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-content p {
-    margin-bottom: 15px;
+.site-footer p {
+    margin-bottom: 0.9375rem; 
     font-size: 0.9rem;
     opacity: 0.9;
 }
 
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem; /* REM */
+    margin-top: 0.9375rem; 
 }
 
-.footer-links li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.footer-links a {
+.social-media-buttons a {
     color: #ffffff;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    /* EM: Anche sui bottoni social il padding è legato alla dimensione del testo */
+    padding: 0.5em 1em; 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.25em; 
+    transition: all 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: #C85A32; /* Accent Terracotta al passaggio del mouse */
-    text-decoration: underline;
+.social-media-buttons a:hover {
+    background-color: #C85A32; 
+    border-color: #C85A32;
+    color: #ffffff;
+    text-decoration: none;
 }
+/*
+.hero-image::before {
+Crea uno pseudo-elemento "virtuale" che viene inserito automaticamente dal browser subito prima del contenuto dell'elemento con la classe .hero-image, senza bisogno di scriverlo nell'HTML.
+
+content: "";
+È una regola obbligatoria per gli pseudo-elementi. Dice al browser di generare questo elemento vuoto affinché le proprietà successive possano esistere e mostrarsi a schermo.
+
+position: absolute;
+Toglie l'elemento dal flusso normale della pagina e lo posiziona in modo assoluto rispetto al suo contenitore genitore (.hero-image, che ha position: relative). In questo modo si adatta perfettamente alle dimensioni del blocco principale.
+
+inset: -10px;
+È una scorciatoia moderna che imposta contemporaneamente top, right, bottom e left a -10px. Estende l'immagine leggermente fuori dai bordi (di 10 pixel in tutte le direzioni). Questo trucco serve a evitare che i bordi dell'immagine si vedano tagliati o creino aloni bianchi quando viene applicata la sfocatura.
+
+background-image: url('imgs/torrevelasca.jpg');
+Carica e imposta l'immagine della Torre Velasca come sfondo di questo elemento virtuale.
+
+background-size: cover;
+Forza l'immagine di sfondo a coprire interamente lo spazio disponibile, ingrandendola o rimpicciolandola proporzionalmente se necessario.
+
+background-position: center;
+Centra perfettamente l'immagine all'interno dell'area, facendo in modo che il punto focale rimanga al centro.
+
+background-repeat: no-repeat;
+Impedisce all'immagine di ripetersi a mosaico nel caso in cui lo schermo sia più grande dell'immagine stessa.
+
+filter: blur(5px);
+Applica un effetto di sfocatura di 5 pixel all'immagine di sfondo. È il motivo per cui usiamo il ::before: sfocando solo questo livello virtuale, lo sfondo risulta sfumato, mentre i testi e le foto in primo piano (che si trovano su un altro livello) rimangono perfettamente nitidi e leggibili.
+
+z-index: 0;
+Definisce la "profondità" o l'ordine di sovrapposizione. Mette questo sfondo sullo strato più basso (livello 0), facendo in modo che gli altri elementi della sezione (come l'overlay scuro o il testo) con un z-index superiore gli si posizionino sopra
+*/
+
+/*guarda esercizio 14.3
+Per capire la soluzione del libro, devi comprendere come funziona l'unità di misura rem (che significa Root EM).
+Il testo dell'esercizio ti chiede di convertire i caratteri in unità relative rem per rendere il font responsive. Di default, la stragrande maggioranza dei browser imposta la dimensione del font radice (html) a 16px.
+Dato che nel tuo CSS iniziale hai impostato * { font-size: 100%; }, la dimensione di base del tuo documento è esattamente 16px.
+Per convertire i pixel (px) in rem, si usa questa formula matematica semplicissima:
+\(\text{Valore\ in\ rem}=\frac{\text{Valore\ in\ px}}{\text{Dimensione\ radice\ (16px)}}\)
+
+Come ha calcolato il libro i nuovi valori?
+
+Analizziamo i singoli elementi convertiti dal libro passo dopo passo:
+
+1. .site-title (Titolo del sito)
+
+• CSS Iniziale: 20px
+• Calcolo: \(20 \div 16 = \mathbf{1.25}\)
+• Soluzione del libro: font-size: 1.25rem;
+
+2. li (Voci della lista)
+
+• CSS Iniziale: 12px
+• Calcolo: \(12 \div 16 = \mathbf{0.75}\)
+• Soluzione del libro: font-size: .75rem; (che equivale a 0.75rem)
+
+3. h2 o article h2 (Titoli secondari)
+
+• CSS Iniziale: 24px
+• Calcolo: \(24 \div 16 = \mathbf{1.5}\)
+• Soluzione del libro: font-size: 1.5rem;
+(Nota: nel tuo CSS iniziale c'era scritto h2 { font-size: 24px; }. Il libro ha usato un selettore più specifico article h2, ma il calcolo è lo stesso).
+
+4. h3 (Sottotitoli)
+
+• CSS Iniziale: 20px
+• Calcolo: \(20 \div 16 = \mathbf{1.25}\)
+• Soluzione del libro: font-size: 1.25rem;
+
+La conversione dentro la Media Query (@media)
+
+Sotto i 1250px (o in questo caso a partire dai 480px del tuo codice), lo schermo diventa più grande, quindi i caratteri aumentano di dimensione. Il libro ha applicato la stessa identica formula:
+
+1. .site-title (Dentro la media query)
+
+• CSS Iniziale: 40px
+• Calcolo: \(40 \div 16 = \mathbf{2.5}\)
+• Soluzione del libro: font-size: 2.5rem;
+
+2. li (Dentro la media query)
+
+• CSS Iniziale: 16px
+• Calcolo: \(16 \div 16 = \mathbf{1}\)
+• Soluzione del libro: font-size: 1rem;
+
+3. article h1 (Dentro la media query)
+
+• CSS Iniziale: 32px
+• Calcolo: \(32 \div 16 = \mathbf{2}\)
+• Soluzione del libro: font-size: 2rem;
+
+Perché si fa questa cosa? Perché è "Responsive"?
+
+Se usi i px, la dimensione è bloccata. Se un utente ipovedente cambia le impostazioni del proprio browser per avere testi più grandi (ad esempio imposta la dimensione base a 24px invece di 16px), una scritta in 20px rimarrà minuscola e illegibile per lui.
+Usando i rem:
+• Se l'utente ha la base a 16px, 1.25rem diventa 20px.
+• Se l'utente cambia la base a 24px, 1.25rem diventa automaticamente 30px (\(24 \times 1.25\)).
+Il testo si adatta (risponde) dinamicamente alle esigenze dell'utente e del dispositivo.
+Ti è chiaro questo metodo di calcolo basato sui 16px? Se vuoi, posso mostrarti un trucco CSS molto usato dai programmatori (chiamato trucco del 62.5%) che rende il calcolo dei rem immediato senza dover fare divisioni. Vuoi vederlo*/
