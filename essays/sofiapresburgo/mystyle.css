@@ -171,3 +171,84 @@ main {
     max-width: 850px;
     border-radius: 4px;
 }
+/* STEP 6 - ADMISSIONS */
+
+.admissions {
+    background-color: #f4f5f7;
+    padding: 65px 30px;
+    margin-top: 30px;
+}
+
+.admissions-content {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.admissions h2 {
+    color: #0e223d;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.admissions-intro {
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+}
+
+.admissions-grid {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.admission-card {
+    background-color: white;
+    padding: 25px;
+    flex: 1;
+    border-top: 3px solid #a88746;
+    text-align: left;
+}
+
+.admission-card h3 {
+    color: #0e223d;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.admission-card p {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.admissions-button {
+    display: inline-block;
+    background-color: #0e223d;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.admissions-button:hover {
+    background-color: #a88746;
+}
+
+/* ADMISSIONS - MOBILE */
+
+@media screen and (max-width: 700px) {
+
+    .admissions-grid {
+        flex-direction: column;
+    }
+
+    .admission-card {
+        text-align: center;
+    }
+
+}
