@@ -1,5 +1,336 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+* {
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
 }
 
+p {
+    text-align-last: left;
+}
+
+hr{
+    color:#8b3a2b;
+}
+
+.hero-image {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 100%;
+    height: auto;
+}
+
+.hero-image::before {
+  content: "";                  /* obbligatorio, altrimenti il pseudo-elemento non esiste */
+  position: absolute;
+  inset: 0;
+  background-image: url(./imgs/cagranda.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  transform: scale(1.1);        /* nasconde i bordi chiari del blur */
+  z-index: -1;                  /* dietro al contenuto */
+}
+
+.studenti {
+    display: block;
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+.title-block h1 {
+    margin: 0;
+    font-size: 9rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: 2px rgba(195, 190, 190, 0.95);
+    text-shadow: 0 4px 24px rgba(155, 155, 155, 0.6);
+    text-align: center;         /* era left */
+    padding: 20px 0 0;   
+    padding-top: 80px;       /* tolti padding-left/right e il padding-top di 85px */
+}
+
+@media (min-width:750px) {
+    title-block h1{ font-size: 11rem;}
+    btn {font-size: 2rem;}
+    social a {font-size: 1.50rem;}
+    side-menu a {font-size: 1.50rem;}
+    banda-beige h2 {font-size: 2.25rem;}
+    banda-beige2 h2 {font-size: 2.25rem;}
+    article-box p {font-size: 1.25rem;}
+    article-box h3 {font-size: 1.75rem;}
+}
+
+
+.hero-content {
+    display: flex;
+    flex-direction: column;     /* titolo, foto, bottone uno sotto l'altro */
+    align-items: center;        /* tutto centrato */
+    gap: 25px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.btn {
+    flex-shrink: 0;                   /* il pulsante non si restringe */
+    white-space: nowrap;
+}
+
+.btn {
+    display: inline-block;   
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    /* scritta più grande (prima 1.1rem) */
+    font-size: 1.25rem;       /* era 1.4rem */
+    padding: 18px 40px;  
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    background: #c8102e;
+    border-radius: 1010px;
+    transition: transform .1s, box-shadow .1s;
+    margin-top: 30px; 
+}
+.btn:active {                     
+    transform: translateY(5px);
+}
+
+.Minerva {                      
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.social { display: flex; gap: 12px; }
+.social a {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    color: #c8102e;
+    font-size: 1.125rem;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #c8102e;
+    border-radius: 50%;
+    transition: transform .2s;
+}
+
+.topbar {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 20;
+}
+
+/* pulsante hamburger */
+.menu-toggle { display: none; }
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    background: #c8102e(245, 73, 73, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    z-index: 30;
+}
+.menu-btn span {
+    width: 18px;
+    height: 2px;
+    background: #c8102e;;
+    border-radius: 2px;
+    transition: transform .3s, opacity .3s;
+}
+
+/* pannello che scorre da destra */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 90px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: #c8102e(0, 0, 0, 0.55);
+    backdrop-filter: blur(14px);
+    transform: translateX(100%);          /* nascosto fuori schermo */
+    transition: transform .35s ease;
+    z-index: 25;
+}
+.side-menu h3 { margin: 0 0 8px; color: #c8102e; font-size: 2rem; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+.side-menu a {
+    color: #c8102e;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.side-menu a i { width: 24px; margin-right: 8px; }
+.side-menu a:hover { text-decoration: underline; }
+
+/* quando la casella è spuntata: il menu entra */
+.menu-toggle:checked ~ .side-menu { transform: translateX(0); }
+
+/* l'hamburger diventa una X */
+.menu-toggle:checked ~ .menu-btn span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle:checked ~ .menu-btn span:nth-child(2) { opacity: 0; }
+.menu-toggle:checked ~ .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+
+
+.band-inner {
+    max-width: 1000px;
+    margin: 0 auto;           /* contenuto centrato */
+    text-align: center;
+}
+
+.banda-beige{
+    margin: 0;
+background: #e8dcc4; 
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px 50px; 
+}
+
+.banda-beige h2 {
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     Color: #8b3b0c;  
+     font-size: 2rem; 
+     margin-top: 20px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.banda-mattone{
+    margin: 0;
+background: #8b3a2b; 
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px 50px; 
+}
+
+.banda-beige2{
+    margin: 0;
+background: #e8dcc4; 
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px 50px; 
+}
+
+.banda-beige2 h2 {
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     Color: #8b3b0c;   
+     font-size: 2rem; 
+     text-align: center;
+     margin-bottom: 10px;
+}
+
+.chiostri{
+   display: block;
+    width: 85%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 40px auto 0;    /* centrato in orizzontale, con spazio sopra */
+    border: 0;
+    border-radius: 16px;
+    align-self: center; 
+    position: relative; 
+}
+.youtube-video {
+    display: block;
+    width: 85%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 40px auto 0;    /* centrato in orizzontale, con spazio sopra */
+    border: 0;
+    border-radius: 16px;
+    align-self: center; 
+    position: relative;
+}
+
+
+
+.article-box {
+    background: #e8dcc4;
+    color: #333333;
+    padding: 25px;
+    max-width: 350px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;               
+    flex-direction: column;      
+    align-items: center;         
+    text-align: center; 
+}
+
+.article-box h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #8b3a2b;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.50rem;
+}
+
+.article-box p {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0 0 25px 0; /*spazio tra testo e bottone */
+    text-align: center;
+    text-align-last: center;
+}
+
+.article-button {
+    display: inline-block;
+    background: #c8102e;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: auto; /* bottone sempre in fondo al box */
+}
+
+.articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+
+.site-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* tre colonne uguali */
+    margin: 0;
+    min-height: 150px;
+}
+
+.site-footer p{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.footer-red { background: #c8102e; color: #e8dcc4; }
+.footer-brick { background: #8b3a2b; color: #e8dcc4; }
+.footer-beige { background: #e8dcc4; color: #8b3a2b; }

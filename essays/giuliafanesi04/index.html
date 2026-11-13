@@ -5,28 +5,136 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>MA COM</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="mystyle.css">
     </head>
+    
     <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+    <nav class="navbar">
+  <a class="logo-container" href="https://www.unimi.it/en" target="_blank" rel="noopener">
+    <img src="./imgs/minerva-34.png" alt="University of Milan logo">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#discover">Discover more</a></li>
+    <li><a href="#articles">Articles</a></li>
+    <li><a href="#where">Where</a></li>
+    <li><a href="#contacts">Contacts</a></li>
+  </ul>
+</nav>
 
+<header class="header">
+  <div class="header-image">
+    <img src="./imgs/foreground-img1.JPG" alt="Milan Cathedral">
+  </div>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+  <div class="header-info">
+    <div class="surtitle">PUBLIC AND CORPORATE COMMUNICATION (COM)</div>
+    <h1 class="title">Shape your future in communication and marketing.</h1>
+    <a class="popup-open" href="#programme-popup">Explore the programme</a>
+  </div>
+</header>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+<main>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+  <section id="discover" class="discover">
+    <div class="discover-image">
+      <img src="./imgs/discover.jpg" alt="Students of the MA in Corporate Communication">
+    </div>
 
-        <script src="" async defer></script>
-    </body>
-</html>
+    <div class="discover-text">
+      <h2>Discover more about La Statale</h2>
+      <p>A place where knowledge, research and innovation come together.</p>
+      <a class="btn" href="https://www.unimi.it/en" target="_blank" rel="noopener">Discover the University</a>
+    </div>
+  </section>
+
+  
+
+<section id="articles" class="articles">
+  <h2>Latest articles</h2>
+
+  <div class="card">
+    <span class="card-icon">📰</span>
+    <h3><a href="https://lastatalenews.unimi.it/seconda-edizione-agora-psicologia">Article 1</a></h3>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📰</span>
+    <h3><a href="#">Article 2</a></h3>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📰</span>
+    <h3><a href="#">Article 3</a></h3>
+  </div>
+</section>
+
+<section id="where" class="where">
+  <h2>Where to find us</h2>
+
+  <div class="where-info">
+    <h3>University of Milan</h3>
+    <p><i class="bi bi-geo-alt-fill"></i> Via Conservatorio 7, 20122 Milano</p>
+    <p>Department of Social and Political Sciences</p>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Via+Conservatorio+7+Milano" target="_blank" rel="noopener">Get directions</a>
+  </div>
+
+  <div class="where-map">
+    <iframe
+      src="https://www.google.com/maps?q=Via+Conservatorio+7+Milano&output=embed"
+      title="Map of the University of Milan"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+</main>
+
+<footer id="contacts" class="footer">
+  <h2>Stay connected</h2>
+  <p class="social-links">
+  <a href="https://www.instagram.com/unimi_lastatale?vrfl=OTZvenNwNTZsYWJr" target="_blank" rel="noopener" aria-label="Instagram">
+    <i class="bi bi-instagram"></i> Instagram
+  </a>
+  <span>·</span>
+  <a href="https://www.facebook.com/statale?mibextid=wwXIfr&rdid=ZJ1dIGgWzOq2puzb&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F1HjqKz2y5E%252F%253Fmibextid%253DwwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+    <i class="bi bi-facebook"></i> Facebook
+  </a>
+  <span>·</span>
+  <a href="https://github.com/giuliafanesi04" target="_blank" rel="noopener" aria-label="GitHub">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+</p> 
+    <div class="footer-contacts">
+  <p>
+    <i class="bi bi-telephone-fill"></i>
+    <a href="tel:+390250325032">+39 02 5032 5032</a>
+  </p>
+  <p>
+    <i class="bi bi-question-circle-fill"></i>
+    <a href="https://www.unimi.it/en/study/student-services/welcome-desk-informastudenti" target="_blank" rel="noopener">InformaStudenti: ask a question</a>
+  </p>
+    </div>
+</footer> 
+
+<div id="programme-popup" class="popup">
+  <div class="popup-content">
+    <a class="popup-close" href="#" aria-label="Close">&times;</a>
+    <h2>MA in Public and Corporate Communication</h2>
+    <a class="btn" href="https://com.cdl.unimi.it/en/programme/about-com" target="_blank" rel="noopener">Go to the programme page</a>
+  </div>
+</div>
+
+<script>
+document.title = "MA COM - Loaded on: " + new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString();
+</script>
+
+    
+
+</body>
+</html> 
+

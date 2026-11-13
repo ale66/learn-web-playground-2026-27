@@ -1,32 +1,107 @@
 <!DOCTYPE html>
-<!-- Webcomm boilerplate -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corporate Communication - Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+  <header class="meu-hero" id="home">
+    <h1>Corporate Communication</h1>
+    <p>Welcome to the Course</p>
+  </header>
 
+  <nav class="menu-flutuante">
+    <a href="#home">Home</a>
+    <a href="#about">About the Course</a>
+    <a href="#map">Map</a>
+    <a href="https://com.cdl.unimi.it/en" target="_blank">Official Website</a>
+  </nav>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+  <main class="principal">
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+    <article class="artigo">
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+      <section class="secao-about" id="about">
+        <div class="caixa-texto">
+          <h2>About the Course</h2>
+          <p>The MA in COM offers a range of specialisations in the professional fields of public and corporate communications, marketing, advertising and political communications. The educational and cultural project of the course aims to provide an interdisciplinary training with a strong link to the industry and advanced tertiary sectors in the Italian and international contexts, and to public and political organisations.</p>
+          <p class="fonte">Source: <a href="https://com.cdl.unimi.it/en" target="_blank">com.cdl.unimi.it</a></p>
+        </div>
+        <iframe class="video"
+          src="https://www.youtube.com/embed/okfz59wQJnw"
+          title="Video about the course"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </section>
 
-        <script src="" async defer></script>
-    </body>
+      <section class="secao-news" id="news">
+        <h2>News</h2>
+
+        <section class="myyellowbox">
+          <h3>Applications are open</h3>
+          <p class="data">Example news</p>
+          <p>Applications for the next academic year are now open. Check the official website for deadlines and required documents.</p>
+        </section>
+
+        <section class="myyellowbox">
+          <h3>Open day for prospective students</h3>
+          <p class="data">Example news</p>
+          <p>Meet the teaching staff and current students and learn more about the study plan and the career opportunities of the programme.</p>
+        </section>
+
+        <section class="myyellowbox">
+          <h3>Guest lecture on corporate communication</h3>
+          <p class="data">Example news</p>
+          <p>Professionals from the industry share their experience in internal communication, branding and public affairs.</p>
+        </section>
+      </section>
+
+      <section class="secao-info" id="map">
+        <img src="imgs/foto2.jpg.jpeg" alt="Photo of a building of the University of Milan">
+        <iframe
+          src="https://maps.google.com/maps?q=Universit%C3%A0+degli+Studi+di+Milano&output=embed"
+          loading="lazy"
+          title="Location of the University of Milan"></iframe>
+      </section>
+
+    </article>
+
+    <aside class="lateral">
+      <h2>Related links</h2>
+      <ul>
+        <li><a href="https://com.cdl.unimi.it/en" target="_blank">Programme website</a></li>
+        <li><a href="https://www.unimi.it/en" target="_blank">University of Milan</a></li>
+        <li><a href="https://www.unimi.it/en/study" target="_blank">Study at Unimi</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer class="meu-rodape">
+    <div class="rodape-contatos">
+      <h2>Contact</h2>
+      <p><i class="bi bi-geo-alt"></i> Milan, Italy</p>
+  
+    </div>
+
+    <div class="rodape-icones">
+
+      <a href="https://com.cdl.unimi.it/en" target="_blank" title="Official website"><i class="bi bi-globe"></i></a>
+    </div>
+
+    <p class="copyright">&copy; <span id="ano"></span> Created by Iago Araujo</p>
+  </footer>
+
+  <script>
+    console.log("Hello from the console!");
+
+    document.getElementById("ano").textContent = new Date().getFullYear();
+  </script>
+
+</body>
 </html>

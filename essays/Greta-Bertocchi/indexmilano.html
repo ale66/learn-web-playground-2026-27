@@ -1,63 +1,157 @@
 <!DOCTYPE html>
-<!-- Webcomm boilerplate -->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Welcome to COMM faculty</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="mystyle.css">
-        <link rel="stylesheet" href="test-fonts.css">
-    </head>
-    <body>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"> <!--requisite to be responsive to devices and take up all space on smartphone-->
+    <title>Public and Corporate Communication (COM) - Università degli Studi di Milano</title>
+    <link rel="stylesheet" href="milanostyle.css">
+</head>
+<body>
 
-<nav class="floating-menu">
-        <div class="menu-header">
-            <span>Navigation & Links</span>
+
+
+        <!-- HEADER CON LOGO E NAVBAR ORIZZONTALE -->
+<header class="site-header">
+            <div class="logos-container"> <!-- Contenitore per affiancare i due loghi -->
+        <div class="logo-wrapper">
+            <img src="imgs/minerva-34.png" alt="Logo Minerva" title="Logo Minerva" class="minerva-logo">
         </div>
-        <ul>
-            <li><a href="#hero-section">Home</a></li>
-            <li><a href="#overview">Programme Overview</a></li>
-            <li><a href="https://com.cdl.unimi.it/en" target="_blank" rel="noopener">Official COM Site</a></li>
-            <li><a href="https://www.unimi.it" target="_blank" rel="noopener">UniMi Portal</a></li>
-            <li><a href="https://ariel.unimi.it" target="_blank" rel="noopener">Ariel UniMi</a></li>
-        </ul>
-    </nav>
 
-    <!-- LOGO MINERVA -->
-    <img src="imgs/minerva-34.png" alt="Logo Minerva" class="minerva-logo">
+        <div class="spes-logo-wrapper">
+            <img src="spes.png" alt="Logo SPES" title="Logo SPES" class="spes-logo">
+        </div>
+    </div>
 
-<div class="official-text-box">
-  <h3>About the Master Course</h3>
-  <p>The Master's degree in Corporate Communication provides advanced knowledge <br>
-  in the field of corporate communication and strategic management.</p>
-</div>
+ <search class="search-bar">
+    <input type="text" placeholder="Cerca insegnamenti, orari..." aria-label="Cerca">
+    <button type="button" aria-label="Cerca">
+        <img src="imgs/icona-vettore-di-ricerca-simbolo-lente-di-ingrandimento-in-stile-design-moderno-per-sito-web-e-app-mobile-2apd2yk.jpg" alt="Cerca">
+    </button>
+</search>
 
-        <!-- Hero section -->
-        <section id="hero-section">
-            <div class="hero-image">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <h1>Master programme in Public and Corporate Communication</h1>
-                    <h2>Università degli Studi di Milano</h2>
-                    <a href="https://instagram.com" target="_blank" class="instagram-btn">Follow us on Instagram</a>
+    <!-- Nuovo pulsante Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Apri menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+            <nav class="navigation-menu">
+                <ul>
+                    <li><a href="https://com.cdl.unimi.it/it/iscriversi">Iscriversi</a></li>
+                    <li><a href="https://com.cdl.unimi.it/it/insegnamenti">Insegnamenti</a></li>
+                    <li><a href="https://com.cdl.unimi.it/it/dopo-la-laurea">Dopo la laurea</a></li>
+                </ul>
+            </nav>
+        </header>
+
+<!-- 1. HERO SECTION -->
+<section id="hero-section">
+    <div class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-container">
+            <div class="photo-main"> 
+                <img src="imgs/ragazze-fontana.jpg" alt="front-cover">
+            </div>
+
+            <!--aggiungi script per il click:
+            querySelector('.photo-main') dice al browser: "Cerca all'interno della pagina
+             il primo elemento che possiede la classe CSS .photo-main" non uso .getDocumentbyID perchè stiamo richiamando una classe
+             addEventListener: Significa "rimani in attesa di un evento". In questo caso l'evento in ascolto è 'click' 
+             (cioè quando l'utente preme con il tasto sinistro del mouse sull'elemento).
+             function() { ... }: È la funzione, ovvero il "pacchetto di istruzioni" 
+            che verrà eseguito solo nel momento esatto in cui l'utente compie quel click
+             window.location.href = '[https://www.unimi.it/it](https://www.unimi.it/it)';
+    window.location.href: Rappresenta l'indirizzo URL della pagina attuale.
+
+    Assegnandogli un nuovo valore ('[https://www.unimi.it/it](https://www.unimi.it/it)'), stiamo dicendo al browser di reindirizzare immediatamente l'utente verso quel nuovo sito web, esattamente come se avesse cliccato su un normale link <a>
+            .-->
+        <script> 
+                document.querySelector('.photo-main').addEventListener('click', function() {
+                    window.location.href = 'https://www.unimi.it/it';
+                });
+            </script>
+
+            <div class="hero-content">
+
+                <h1 id="myH1" title="Master in Public and Corporate Communication">Master in Public and Corporate Communication</h1>
+                <button class="mybutton" onclick="myFunction()">Click to change the title</button>
+                <script>
+                    function myFunction() {
+                       const element=document.getElementById("myH1");
+                       element.innerHTML="Apply to the best university in Italy!";
+                    }
+                </script>
+
+                <h2>Università degli Studi di Milano</h2>
+                <hr class ="section-divider">
+                <p>Join our master's programme in Public and Corporate Communication and take your career to the next level!</p>
+                <a href="https://instagram.com" target="_blank" class="instagram-btn">Follow us on Instagram</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. CONTENUTI PRINCIPALI (Due colonne) -->
+        <section id="main-wrapper">
+            <!-- COLONNA DI SINISTRA -->
+            <div class="left-column">
+                <div class="official-text-box">
+                    <h3>About the Master Course</h3>
+                    <p>The Master's degree in Corporate Communication provides advanced knowledge in the field of corporate communication and strategic management.</p>
+                </div>
+
+                <div class="official-text-box">
+                    <h3>Programme Overview</h3>
+                    <p>
+                        The Master's degree in <strong>Public and Corporate Communication (COM)</strong> provides advanced training in modern communication strategies, media management, corporate identity, and digital communication tools.
+                    </p>
+                    <span class="badge">In-person programme</span>
                 </div>
             </div>
+
+            <!-- COLONNA DI DESTRA (Media) -->
+            <div class="right-column">
+                <div class="official-text-box media-box">
+                    <h3>Media</h3>
+                    
+                    <div class="video-container">
+                        <p>Watch our introduction video:</p>
+                        <iframe src="https://www.youtube.com/embed/h0i4SaJierE" 
+                        poster="imgs/open-day.jpg"
+                        aria-controls="video-player"
+                        autoplay
+                        loop
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        preload></iframe>
+                    </div>
+
+                    <div class="map-container">
+                        <p>Find us on the map:</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1399.0974797201166!2d9.202049528593903!3d45.46587645927525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a345872de7%3A0xd945a5f1c21cbc74!2sFacolt%C3%A0%20di%20Scienze%20Politiche%2C%20Economiche%20e%20Sociali%20-%20Universit%C3%A0%20degli%20Studi%20di%20Milano!5e0!3m2!1sit!2sit!4v1793608447090!5m2!1sit!2sit" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pulisce i float per chiudere correttamente il contenitore -->
+            <div class="clearfix"></div>
         </section>
 
-   <div class="official-text-box">
-                <h3>Programme Overview</h3>
-                <p>
-                    The Master's degree in <strong>Public and Corporate Communication (COM)</strong> provides advanced training in modern communication strategies, media management, corporate identity, and digital communication tools.
-                </p>
-                <span class="badge">In-person programme</span>
-            </div>
-     <p class="intro-text">
-                Discover what's on in the Italian birthplace of luxury and innovation. Explore the opportunities offered by the Department of Social and Political Sciences (SPeS).
-            </p>
 
-        <section id="floating-links" class="floating-links-section">
+        <audio src="Spring 1 - Recomposed by Max Richter Vivaldi, The Four Seasons.mp3"
+controls
+autoplay
+loop>
+</audio>
+
+        <!-- RISORSE ESSENZIALI  -->
+        <section class="floating-links-section">
             <div class="links-selection">
                 <h3>Essential Resources</h3>
                 <ul class="resource-links">
@@ -69,6 +163,17 @@
             </div>
         </section>
 
-        <script src="" async defer></script>
-    </body>
+    <!-- 4. FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Università degli Studi di Milano</p>
+        <div class="social-media-buttons">
+            <a href="https://www.facebook.com/unimi">
+                <img src="facebook.svg" alt="Facebook icon" height="20" width="20"> </a>
+            <a href="https://twitter.com/unimi" target="_blank" rel="noopener" class="social-button twitter">Twitter</a>
+            <a href="https://www.instagram.com/unimi/">
+                <img src="instagram.svg" alt="Instagram icon" height="20" width="20"> </a>
+        </div>
+    </footer>
+
+</body>
 </html>

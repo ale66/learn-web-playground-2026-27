@@ -5,28 +5,176 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="mystyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
+
     <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+        <div class="hero-img">
+            <img class="minerva" src="./imgs/minerva-34.png" alt="minerva-34">
 
+      <div class="social">
+        <a href="https://www.instagram.com/unimi_lastatale/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/school/university-of-milan/home/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.youtube.com/@UnimiVideo" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.facebook.com/statale?locale=it_IT" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+          <div class="hero-text">
+        <h1><a href="https://com.cdl.unimi.it/it">Make your Message Matter</a></h1>
+        <div class="line"></div>
+        <p class="subtitle">MA COM: Public and Corporate Communication in the heart of Milan</p>
+        </div> 
+        <div class="cta-wrap">
+        <a class="cta" href="https://unimi.it/it/corsi/laurea-magistrale/comunicazione-pubblica-e-dimpresa-com">Find your place at MA COM</a>
+        </div> 
+    </div>
+       
+  <section class="video-section">
+    <a class="video-cover" href="https://www.youtube.com/watch?v=g7FhY_bzT_c" target="_blank" rel="noopener">
+        <img src="./imgs/thumbnail.jpg" alt="Watch the video on YouTube">
+        <span class="play">&#9654;</span>
+    </a>
+  </section>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+    </section>   <!-- fine del video -->
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+  <!-- NUOVO -->
+  <section class="news-section">
+    <h2 class="section-title">Beyond the classroom</h2>
 
-        <script src="" async defer></script>
+    <div class="cards">
+      <article class="card">
+        <h3>Internships: from classroom to workplace</h3>
+        <p>Find out how internships work in the programme and how to start building real-world experience before you graduate.</p>
+        <a class="card-link" href="https://com.cdl.unimi.it/en/study/internship">Find out more &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Study abroad: take your skills further</h3>
+        <p>Explore the exchange opportunities available to MA COM students and see how to apply.</p>
+        <a class="card-link" href="https://com.cdl.unimi.it/en/study/study-abroad">Find out more &rarr;</a>
+      </article>
+
+      <article class="card">
+        <h3>Careers: where MA COM can take you</h3>
+        <p>From press offices to corporate communication: discover the professional paths and the organisations that work with the programme.</p>
+        <a class="card-link" href="https://com.cdl.unimi.it/en/programme/careers-and-stakeholders">Find out more &rarr;</a>
+      </article>
+    </div>
+  </section>
+
+    <!-- NUOVO: testimonianze (ESEMPI: sostituire con testimonianze reali) -->
+  <section class="testimonials-section">
+    <h2 class="section-title">What students say</h2>
+
+    <div class="testimonials">
+      <figure class="testimonial">
+        <blockquote>
+          <p>The labs and group projects felt like working in a real agency. I learned to pitch ideas, not just study theory.</p>
+        </blockquote>
+        <figcaption>
+          <span class="avatar">CB</span>
+          <span class="who"><strong>Camilla B.</strong><br>2nd-year student</span>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial">
+        <blockquote>
+          <p>My internship turned into my first job in corporate communication. The programme gave me both the skills and the network.</p>
+        </blockquote>
+        <figcaption>
+          <span class="avatar">LP</span>
+          <span class="who"><strong>Ludovica P.</strong><br>Alumnus, Communication Specialist</span>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial">
+        <blockquote>
+          <p>Studying in the centre of Milan means companies, events and institutions are always a short walk away.</p>
+        </blockquote>
+        <figcaption>
+          <span class="avatar">FP</span>
+          <span class="who"><strong>Federico P.</strong><br>1st-year student</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="visit-section">
+    <h2 class="section-title">Come and visit us</h2>
+    
+    <div class="visit-content">
+      
+      
+      <div class="visit-visuals">
+        <img class="uni-photo" src="./imgs/conservatorio.jpg" alt="Sede di Via Conservatorio 7">
+        
+        <div class="map-overlay">
+          <iframe src="https://maps.google.com/maps?q=Via%20Conservatorio%207,%20Milano&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    
+      <div class="visit-text">
+        <h3>Find us in the heart of Milan</h3>
+        <p>Via Conservatorio 7 is home to the MA COM programme. Located right in the city centre, our campus is easily accessible and surrounded by the vibrant professional environment of Milan.</p>
+      </div>
+
+    </div>
+  </section>
+<!-- FOOTER -->
+  <footer class="site-footer">
+    <!-- Riga superiore: Link di servizio -->
+    <div class="footer-top">
+      <a href="#">Accessibility Statement</a> <span class="separator">|</span>
+      <a href="#">Privacy e cookie</a> <span class="separator">|</span>
+      <a href="#">Cookie settings</a> <span class="separator">|</span>
+      <a href="#">Legal notices</a> <span class="separator">|</span>
+      <a href="#">contacts and references</a>
+    </div>
+
+    <!-- Corpo principale del footer a 3 colonne -->
+    <div class="footer-main">
+      
+      <!-- Colonna 1: Indirizzo e contatti -->
+      <div class="footer-col address-col">
+        <p>Università degli Studi di Milano</p>
+        <p>Via del Conservatorio 7 - 20122 Milano</p>
+        <p>Tel. <strong>+39 02 5032 5032</strong></p>
+        <p><a href="#" class="pec-link">Posta elettronica certificata</a></p>
+      </div>
+
+      <!-- Colonna 2: Social Media --> 
+      <div class="footer-col social-col">
+        <h4>Follow La Statale on</h4>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/statale?locale=it_IT" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/unimi_lastatale/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@UnimiVideo" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.linkedin.com/school/university-of-milan/home/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Colonna 3: Logo -->
+      <div class="footer-col logo-col">
+        <img class="footer-logo" src="./imgs/logo2.png" alt="Università degli Studi di Milano">
+      </div>
+
+    </div>
+  </footer>
+
+      <script>
+        function personalizzaTitolo() {
+            document.title = "MA COM | " + new Date().toLocaleString("en-GB");
+        }
+
+        personalizzaTitolo();
+    </script>
+</body>
     </body>
+    
+
 </html>

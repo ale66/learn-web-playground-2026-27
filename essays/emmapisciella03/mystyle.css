@@ -1,4 +1,419 @@
-p {
-    text-align-last: left;
+body{
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.hero-image {
+    width: 100%;
+    height: 100vh;
+   background-image:url(./imgs/ragazze-fontana.jpg);
+   background-size:cover;
+   background-position: center;
+   background-color: #777;
+   background-repeat: no-repeat;
+   position: relative;
+   overflow: hidden;
+
 }
 
+header {
+position: absolute;
+top: 25px;
+left: 40px;
+}
+
+.logo{
+width: 100px;
+}
+
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    color: white;
+    text-shadow: 2px 3px 10px rgba(0,0,0,0.7);
+}
+
+h1{
+font-size: 65px;
+color: white;
+text-align: center;
+margin-bottom: 10px;
+}
+
+h2{
+font-size: 25px;
+color: white;
+text-align: center;
+}
+
+nav{
+position:absolute;
+top: 25px;
+right: 40px;
+display:flex;
+gap:10px;
+z-index:20;
+}
+
+nav a {
+color: white;
+background-color: #555;
+padding: 12px 20px;
+text-decoration: none;
+border: radius 5px;
+display: inline-block;
+}
+
+.duomo-card {
+position: absolute;
+top: 0;
+right: 0;
+width: 65%;
+z-index: 2;
+opacity: 1;
+height: 100%;
+overflow: hidden;
+
+
+-webkit-mask-image: linear-gradient(to right, transparent 0%, black 60%);
+
+mask-image: linear-gradient(to right, transparent 0%, black 60%);
+}
+
+.duomo-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: blur(5px);
+}
+header, nav {
+z-index: 20;
+}
+.hero-text h1,
+.hero-text h2 {
+    text-align: center;
+}
+/* SCORRIMENTO DELLA PAGINA */
+
+html {
+scroll-behavior: smooth;
+}
+body {
+margin: 0;
+overflow-x: hidden;
+overflow-y: auto;
+}
+/* PRIMA SCHERMATA */
+
+.hero-image {
+height: 100vh;
+width: 100%;
+position: relative;
+}
+
+/* SECONDA SCHERMATA */
+.servizi {
+min-height: 100vh;
+width: 100%;
+box-sizing: border-box;
+
+background-image: url("./imgs/ragazze-fontana.jpg");
+background-size: cover;
+background-position: center;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+padding: 40px 30px;
+position: relative;
+isolation: isolate;
+}
+
+/* Duomo sfumato sullo sfondo */
+.servizi::before {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+width: 65%;
+height: 100%;
+
+background-image: url("./imgs/Milano-deserta.jpg");
+background-size: cover;
+background-position: center;
+
+-webkit-mask-image: linear-gradient(
+to right, transparent 0%, black 60%
+);
+mask-image: linear-gradient(
+to right, transparent 0%, black 60%
+);
+
+filter: blur(5px);
+z-index: -1;
+}
+
+/* Titolo */
+.servizi h1 {
+font-size: 48px;
+color: white;
+text-shadow: 2px 3px 10px rgba(0,0,0,0.7);
+margin-bottom: 10px;
+}
+
+.servizi > p {
+color: white;
+font-size: 20px;
+text-shadow: 2px 3px 8px rgba(0,0,0,0.7);
+}
+
+/* Tre quadrati al centro */
+.servizi-container {
+display: flex;
+justify-content: center;
+align-items: stretch;
+gap: 25px;
+margin-top: 40px;
+flex-wrap: wrap;
+}
+
+/* Stile dei quadrati */
+.servizio-card {
+width: 220px;
+min-height: 180px;
+padding: 25px;
+box-sizing: border-box;
+
+background: rgba(255,255,255,0.9);
+border-radius: 15px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+transition: transform 0.3s;
+}
+
+.servizio-card:hover {
+transform: translateY(-10px);
+}
+
+.servizio-card h2 {
+font-size: 20px;
+color: #333;
+}
+
+.servizio-card p {
+font-size: 15px;
+color: #555;
+}
+
+/* SFONDO CONTINUO TRA LE DUE SCHERMATE */
+
+body {
+margin: 0;
+overflow-x: hidden;
+background-image: url("./imgs/ragazze-fontana.jpg");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+/* Prima schermata */
+.hero-image {
+background: transparent;
+}
+
+/* Seconda schermata */
+.servizi {
+background: transparent;
+}
+
+/* Duomo fisso sullo sfondo */
+body::before {
+content: "";
+position: fixed;
+top: 0;
+right: 0;
+width: 65%;
+height: 100vh;
+
+background-image: url("./imgs/Milano-deserta.jpg");
+background-size: cover;
+background-position: center;
+
+-webkit-mask-image: linear-gradient(
+to right, transparent 0%, black 60%
+);
+mask-image: linear-gradient(
+to right, transparent 0%, black 60%
+);
+
+filter: blur(5px);
+pointer-events: none;
+z-index: 0;
+}
+
+/* Contenuti sopra lo sfondo */
+.hero-image,
+.servizi,
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-130px);
+}
+
+/* Elimina il Duomo duplicato */
+.duomo-card,
+.servizi::before {
+display: none;
+}
+.social-links {
+display: flex;
+gap: 30px;
+align-items: center;
+margin-top: 0;
+}
+
+.social-links a,
+.social-links a span {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+font-weight: normal;
+text-transform: none;
+color: white;
+text-decoration: none !important;
+}
+
+.social-links i {
+    font-size: 30px;
+    color: white;
+}
+
+.social-links a:hover {
+    color: #dddddd;
+}
+.main-row {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 25px;
+}
+
+.cards-container {
+display: flex;
+gap: 20px;
+}
+.hero-content > p {
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+text-align: center;
+margin-top: 15px;
+margin-bottom: 50px;
+}
+/* FOOTER BLU */
+
+.footer {
+background-color: #001b49;
+color: white;
+padding: 30px 40px;
+width: 100%;
+box-sizing: border-box;
+position: relative;
+z-index: 2;
+font-family: Arial, sans-serif;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 30px;
+}
+
+.footer-left {
+flex: 1;
+font-size: 13px;
+}
+
+.footer-left p {
+margin: 3px 0;
+}
+
+.footer-center {
+flex: 1.5;
+text-align: center;
+}
+
+.footer-social {
+margin-bottom: 15px;
+}
+
+.footer-social a {
+color: white;
+font-size: 18px;
+margin: 0 7px;
+text-decoration: none;
+}
+
+.footer-links {
+margin-bottom: 12px;
+}
+
+.footer-links a {
+color: white;
+text-decoration: none;
+font-size: 12px;
+margin: 0 8px;
+}
+
+.copyright {
+font-size: 10px;
+}
+
+.footer-right {
+flex: 1;
+text-align: right;
+}
+
+.footer-right img {
+width: 130px;
+height: auto;
+}
+
+@media (max-width: 768px) {
+.footer-container {
+flex-direction: column;
+text-align: center;
+}
+
+.footer-right {
+text-align: center;
+}
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+}
+.footer {
+    margin-top: auto;
+}

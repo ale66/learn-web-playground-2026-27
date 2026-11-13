@@ -1,4 +1,277 @@
-p {
-    text-align-last: left;
+*{
+box-sizing:border-box
 }
 
+body {
+    background-color: antiquewhite; /* O un colore scuro/nero a tua scelta */
+    margin: 0;
+    padding: 0;
+}
+p {
+ text-align-last: justify;
+}
+
+h1 {text-align: center;
+color: #f5deb3;
+font-size: 3rem;
+padding-top: 0rem;
+font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
+h2{text-align: center;
+color: brown;
+font-size: 1.5rem;
+}
+
+
+h3{
+   text-align: center;
+   color: brown;
+   font-size: 2rem;
+   font-family: 'Century Gothic', 'Apple Gothic', sans-serif;
+}
+
+h4{
+    text-align: right;
+}
+.hero-image { 
+    width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    height: auto;
+    background-image: url("../2427-ali/imgs/images.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 3em;
+    font-size: 0.6rem;
+    text-align: left;
+    position: relative;
+    float: none;
+overflow: hidden;}
+
+    /* Livello separato solo per l'immagine di sfondo sfocata */
+.hero-image::before { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    background-image: url("../2427-ali/imgs/images.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.1);  /*Serve per evitare bordi sbiaditi/bianchi ai lati */
+    z-index: 1; /* Mette questo livello dietro a tutto il resto (testi e bottoni) */ 
+}
+
+.hero-image > * {
+  position: relative;
+  z-index: 2; /*Deve essere <1 per comparire sullo sfondo */
+}
+.logo{
+width: 175px;
+height: auto;
+text-align-last:left;
+font-style: oblique;
+}
+
+nav{position: absolute;
+    top: 25px;
+    right: 30px;
+    padding-top: 0;
+    z-index: 10;
+    text-align: center;
+}
+nav a{
+    color:brown;
+    background-color: antiquewhite;
+    padding: 15px 15px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-align-last:justify ;
+}
+
+.header-image{
+    float: left;
+    max-width: 500px;
+    width: 100%;
+    height:auto ;
+   margin-top: 3em;
+   padding-right: 3em;
+   text-align: right;
+}
+/*riguarda l'immagine chiamata appelli e cambia la dimensione*/
+.header-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* Contenitore esterno per spaziare il riquadro dal resto della pagina */
+.news-section {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    z-index: 10;
+}
+
+/* news*/
+.news-card {
+    position: relative;
+    width: 320px;               
+    min-height: 320px;          /*tieni cosi se no, non rimane quadrato */
+    background-color: #f5deb3;
+    border-radius: 12px;
+    border: 2px solid antiquewhite;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 15;
+}
+
+/* Effetto al passaggio del mouse */
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Etichetta in alto */
+.news-badge {
+    align-self: flex-start;
+    background-color: brown;
+    color: antiquewhite;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Titolo */
+.news-card h2 {
+    color: brown;
+    font-size: 1.25rem;
+    margin: 15px 0 10px 0;
+    text-align: left; /* Sovrascrive la centratura del tuo h2 generale */
+}
+
+/* Testo */
+.news-card p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+    text-align: left !important;
+}
+
+/* Pulsante */
+.news-btn {
+    display: inline-block;
+    text-align: center;
+    background-color: brown;
+    color: antiquewhite;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: background-color 0.2s ease;
+    align-self: center;
+}
+
+.news-btn:hover {
+    background-color: #5a1515;
+}
+
+
+.box-hamburger {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    z-index: 999999;
+}
+
+#interruttore-menu {
+    display: none;
+}
+
+.tasto-linee {
+    display: block;
+    font-size: 36px;
+    color:#f5deb3;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.tendina-link {
+    display: none; /* Resta chiuso finché non clicchi */
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color:brown;
+    padding: 20px !important;
+    border-radius: 8px;
+    gap: 12px;
+    min-width: 160px;
+    text-align: center;
+    z-index: 1000000;
+}
+
+/* Quando clicchi sulle 3 lineette, si apre la tendina in verticale */
+#interruttore-menu:checked ~ .tendina-link {
+    display: flex;
+}
+
+.tendina-link a {
+    display: block;
+    color: antiquewhite;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 5px 0;
+    font-size: 1rem;
+}
+
+
+.site-footer {
+    width: 100%;
+    background-color:brown; /* Sfondo scuro e semi-trasparente */
+    color: antiquewhite;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px; /* Distanzia il footer dai contenuti sopra */
+    border-top: 2px solid antiquewhite; /* Una linea di separazione elegante */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 100;
+}
+
+.site-footer a {
+    color: antiquewhite;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.site-footer a:hover {
+    color: #fff;
+    opacity: 0.8;
+}

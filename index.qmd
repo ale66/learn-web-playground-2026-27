@@ -152,6 +152,68 @@ git commit -a -m "Wow, this is my initial commit!"
 git push
 ```
 
-8. check your project online at `https://ale66.github.io/in-class-project2627/name.surname/`
+8. check your project online at `https://ale66.github.io/in-class-project2627/essays/name.surname/`
 
 9. check it also on your smartphone
+
+
+# Gallery of projects
+
+---
+
+```{=html}
+<ul id="essays" class="essays-grid"><li>Loading…</li></ul>
+
+<style>
+  .essays-grid { column-count: 3; column-gap: 1.5em; list-style: none; padding: 0; margin: 0; }
+  .essays-grid li { break-inside: avoid; margin: .2em 0; }
+</style>
+
+<script>
+(async () => {
+  const OWNER = 'ale66', REPO = 'learn-web-playground-2026-27';
+  const ul = document.getElementById('essays');
+
+  async function folderNames() {
+    // 1) static list produced by a GitHub Action (no rate limit)
+    try {
+      const r = await fetch('essays/index.json', { cache: 'no-cache' });
+      if (r.ok) return await r.json();
+    } catch (e) {}
+    // 2) fallback: GitHub contents API (60 requests/hour per IP)
+    const r = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/essays`);
+    if (!r.ok) throw new Error('GitHub API ' + r.status);
+    return (await r.json()).filter(f => f.type === 'dir').map(f => f.name);
+  }
+
+  try {
+    const names = (await folderNames())
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
+    // keep only folders that really contain an index.html
+    const ok = await Promise.all(names.map(async n => {
+      try {
+        const r = await fetch(`essays/${encodeURIComponent(n)}/index.html`, { method: 'HEAD' });
+        return r.ok;
+      } catch (e) { return false; }
+    }));
+
+    ul.innerHTML = '';
+    names.filter((_, i) => ok[i]).forEach(n => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `essays/${encodeURIComponent(n)}/`;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = n;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    if (!ul.children.length) ul.innerHTML = '<li>No essays yet.</li>';
+  } catch (err) {
+    ul.innerHTML = '<li>Could not load the list of essays.</li>';
+    console.error(err);
+  }
+})();
+</script>
+```
