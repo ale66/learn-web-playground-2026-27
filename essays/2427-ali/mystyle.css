@@ -18,10 +18,13 @@ font-size: 1.5rem;
 h3{
    text-align: center;
    color: brown;
-   font-size: 1.5rem;
+   font-size: 2rem;
    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
 }
 
+h4{
+    text-align: right;
+}
 .hero-image { 
     width: 100%;
     min-height: 100vh;
@@ -163,7 +166,7 @@ nav a{
 .news-card p {
     color: #444;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.5rem;
     margin-bottom: 15px;
     text-align: left !important;
 }
@@ -187,3 +190,53 @@ nav a{
     background-color: #5a1515;
 }
 
+/* --- MENU AD HAMBURGER (Sempre pronto e visibile) --- */
+
+.box-hamburger {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    z-index: 999999;
+}
+
+#interruttore-menu {
+    display: none !important;
+}
+
+.tasto-linee {
+    display: block !important;
+    font-size: 36px !important;
+    color:antiquewhite !important;
+    cursor: pointer !important;
+    line-height: 1 !important;
+}
+
+.tendina-link {
+    display: none !important; /* Resta chiuso finché non clicchi */
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 45px !important;
+    right: 0 !important;
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    gap: 12px !important;
+    min-width: 160px !important;
+    text-align: center !important;
+    z-index: 1000000;
+}
+
+/* Quando clicchi sulle 3 lineette, si apre la tendina in verticale */
+#interruttore-menu:checked ~ .tendina-link {
+    display: flex !important;
+}
+
+.tendina-link a {
+    display: block !important;
+    color: antiquewhite !important;
+    text-decoration: none !important;
+    background: none !important;
+    border: none !important;
+    padding: 5px 0 !important;
+    font-size: 1rem !important;
+}
