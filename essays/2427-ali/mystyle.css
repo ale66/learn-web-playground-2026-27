@@ -2,12 +2,17 @@
 box-sizing:border-box
 }
 
+body {
+    background-color: antiquewhite; /* O un colore scuro/nero a tua scelta */
+    margin: 0;
+    padding: 0;
+}
 p {
  text-align-last: justify;
 }
 
 h1 {text-align: center;
-color: antiquewhite;
+color: #f5deb3;
 font-size: 3rem;
 padding-top: 0rem;
 font-family: 'Impact', 'Arial Black', sans-serif;
@@ -48,7 +53,7 @@ overflow: hidden;}
     /* Livello separato solo per l'immagine di sfondo sfocata */
 .hero-image::before { 
     content: "";
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -83,7 +88,7 @@ nav{position: absolute;
 nav a{
     color:brown;
     background-color: antiquewhite;
-    padding: 10px 18px;
+    padding: 15px 15px;
     margin-left: 10px;
     text-decoration: none;
     border-radius: 5px;
@@ -127,7 +132,7 @@ nav a{
     position: relative;
     width: 320px;               
     min-height: 320px;          /*tieni cosi se no, non rimane quadrato */
-    background-color: antiquewhite;
+    background-color: #f5deb3;
     border-radius: 12px;
     border: 2px solid antiquewhite;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -209,7 +214,7 @@ nav a{
 .tasto-linee {
     display: block;
     font-size: 36px;
-    color:antiquewhite;
+    color:#f5deb3;
     cursor: pointer;
     line-height: 1;
 }
@@ -242,4 +247,31 @@ nav a{
     border: none;
     padding: 5px 0;
     font-size: 1rem;
+}
+
+
+.site-footer {
+    width: 100%;
+    background-color:brown; /* Sfondo scuro e semi-trasparente */
+    color: antiquewhite;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px; /* Distanzia il footer dai contenuti sopra */
+    border-top: 2px solid antiquewhite; /* Una linea di separazione elegante */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 100;
+}
+
+.site-footer a {
+    color: antiquewhite;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.site-footer a:hover {
+    color: #fff;
+    opacity: 0.8;
 }
