@@ -1,6 +1,6 @@
 body{
    margin: 0;
-   font-family: 'Times New Roman', Times, serif;
+   font-family: Arial, Helvetica, sans-serif;
 }
 .hero-image {
     width: 100%;
@@ -221,7 +221,7 @@ flex-wrap: wrap;
 /* Stile dei quadrati */
 .servizio-card {
 width: 220px;
-min-height: 180px;
+height: 280px;
 padding: 25px;
 box-sizing: border-box;
 
@@ -237,6 +237,10 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 transition: transform 0.3s;
 }
 
+.servizio-card a{
+    color: black;
+    text-decoration: none;
+}
 .servizio-card:hover {
 transform: translateY(-10px);
 }
@@ -249,6 +253,7 @@ color: #333;
 .servizio-card p {
 font-size: 15px;
 color: #555;
+text-align: center;
 }
 
 /* SFONDO CONTINUO TRA LE DUE SCHERMATE */
@@ -431,6 +436,7 @@ color: white;
 flex: 1;
 text-align: right;
 color: white;
+filter: invert(100%);
 }
 
 .footer-right img {
@@ -470,12 +476,14 @@ body {
 }
 .header-links {
     height: 40px;
+    width: 100%;
     background-color: #15528B;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 30px;
-    padding-right: 100px;
+    padding-right: 30px;
+    box-sizing: border-box;
 }
 
 .top-header .logo {
@@ -489,7 +497,7 @@ body {
 .header-links a{
     color: white;
     text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: bold;
     white-space: nowrap;
