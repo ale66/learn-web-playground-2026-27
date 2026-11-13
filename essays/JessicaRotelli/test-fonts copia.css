@@ -1,0 +1,41 @@
+
+
+p {
+    text-align-last: center;
+}
+h1 {
+    color: rgb(125, 151, 221);
+    font-size: 40px;
+    
+}
+h2{color:rgb(125, 151, 221)
+}
+.hero-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../imgs/torrevelasca.jpg");
+    background-position: center center;
+    background-size: cover;
+    text-align: right;
+    padding-right: 35px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    position: relative;
+
+}
+
+.minerva { 
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 250px;
+    height: auto;
+
+
+}
+
+.links {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
