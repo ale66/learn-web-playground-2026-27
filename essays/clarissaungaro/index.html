@@ -1,32 +1,100 @@
 <!DOCTYPE html>
-<!-- Webcomm boilerplate -->
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MA COM - Università degli Studi di Milano</title>
+  
+  <!-- CSS Personalizzato -->
+  <link rel="stylesheet" href="mystyle.css">
+  
+  <!-- Icone Bootstrap per i Social Media, GitHub e Teams -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
+  <!-- NA VIGATION PANEL LATERALE (Menu a tendina / Hamburger) -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label" title="Apri Menu">
+    <i class="bi bi-list"></i>
+  </label>
+
+  <nav class="side-nav">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#testimonials">Articoli & Testimonials</a></li>
+      <li><a href="#footer">Contatti & Social</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION (Immagine di sfondo sfocata + Contenuto in primo piano) -->
+  <header class="hero" id="hero">
+    <div class="hero-bg"></div> <!-- Sfondo sfocato -->
+    <div class="hero-overlay"></div> <!-- Velatura scura per leggibilità -->
+    
+    <div class="hero-content">
+      <!-- Foto in primo piano -->
+<img class="hero-photo" src="imgs/primo-piano.jpg" alt="Foto dell'Università degli Studi di Milano">
+    
+
+      <!-- Scritte principali -->
+      <h1 class="main-title">MA COM</h1>
+      <p class="subtitle">Communication, from the heart of Milan</p>
+      
+      <!-- Link secondari -->
+      <div class="quick-links">
+       <a href="https://www.unimi.it" target="_blank">University of Milan</a>
+<a href="https://spes.unimi.it" target="_blank">SPeS</a>
+<a href="https://www.comune.milano.it" target="_blank">City of Milan</a>
+<a href="https://www.turismo.milano.it" target="_blank">Visit Milan</a>
+      </div>
  
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
+      <!-- Button Cliccabile (CTA) -->
+      <div class="cta-container">
+        <a href="#testimonials" class="btn-primary">Scopri il Corso</a>
+      </div>
+    </div>
+  </header>
 
+  <!-- SEZIONE ARTICOLI / TESTIMONIALS -->
+  <main class="container" id="testimonials">
+    <h2 class="section-title">Articoli e Testimonials</h2>
+    
+    <div class="cards-grid">
+      <article class="card">
+        <h3>Esperienza degli Studenti</h3>
+        <p>"Studiare Web Communication nel cuore di Milano mi ha permesso di unire teoria e pratica in un ambiente dinamico e stimolante."</p>
+        <span class="author">- Marco R., Studente MA COM</span>
+      </article>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+      <article class="card">
+        <h3>Progetti e Laboratori</h3>
+        <p>"I laboratori pratici offrono un contatto diretto con il mondo del lavoro ed i linguaggi moderni del web design."</p>
+        <span class="author">- Prof.ssa Bianchi</span>
+      </article>
+    </div>
+  </main>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+  <!-- FOOTER CON SOCIAL E ICONE -->
+  <footer id="footer">
+    <div class="footer-content">
+      <p>&copy; 2026 MA COM - Università degli Studi di Milano</p>
+      
+      <div class="social-links">
+        <!-- Icona GitHub (Porta al repository) -->
+        <a href="https://github.com/ale66/learn-web-playground-2026-27" target="_blank" aria-label="GitHub Repository">
+          <i class="bi bi-github"></i>
+        </a>
+        
+        <!-- Icona Microsoft Teams (Porta al canale Teams) -->
+         <a href="https://teams.cloud.microsoft" target="_blank" aria-label="Microsoft Teams"></a>
+          <i class="bi bi-microsoft-teams"></i>
+        </a>
+       
+      </div>
+    </div>
+  </footer>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
-
-        <script src="" async defer></script>
-    </body>
+</body>
 </html>

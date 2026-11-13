@@ -1,7 +1,17 @@
 *{
 box-sizing:border-box
+<<<<<<< HEAD
 }
 
+p {
+ text-align-last: justify;
+}
+
+
+=======
+}
+
+>>>>>>> 26e7922a83c172f2f6132d57f5c86a7aeebb323e
 h1 {text-align: center;
 color: antiquewhite;
 font-size: 3rem;

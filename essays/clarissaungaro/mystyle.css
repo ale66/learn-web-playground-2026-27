@@ -1,5 +1,270 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+/* --- COLOR SCHEME & VARIABILI --- */
+:root {
+  --color-dark: #0b1a2b;       /* Gradazione Scura */
+  --color-medium: #1d4ed8;     /* Gradazione Media */
+  --color-light: #f8fafc;      /* Gradazione Chiara */
+  --color-overlay: rgba(11, 26, 43, 0.65);
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- NAVIGATION PANEL (Menu a tre trattini) --- */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 2rem;
+  color: var(--color-light);
+  cursor: pointer;
+  background: var(--color-dark);
+  padding: 5px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 260px;
+  height: 100%;
+  background-color: var(--color-dark);
+  border-left: 2px solid var(--color-medium);
+  padding: 80px 20px 20px 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.side-nav h2 {
+  color: var(--color-light);
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--color-medium);
+  padding-bottom: 5px;
+}
+
+.side-nav ul {
+  list-style: none;
+}
+
+.side-nav li {
+  margin: 15px 0;
+}
+
+.side-nav a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.side-nav a:hover {
+  color: var(--color-medium);
+}
+
+/* Quando il checkbox è selezionato, apri il menu */
+.nav-toggle:checked ~ .side-nav {
+  right: 0;
+}
+
+/* --- HERO SECTION CON SFONDO SFOCATO --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Immagine di Sfondo con Effetto Blur (Sfocato) */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('imgs/sfondo.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* EFFETTO SFOCATO */
+  transform: scale(1.05); /* Evita bordi bianchi causati dal blur */
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-overlay);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+  filter: brightness(0) invert(1); /* Mantiene l'icona bianca/chiara */
+}
+
+.main-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.quick-links a {
+  color: var(--color-light);
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+/* BUTTON CLICCABILE (CTA) */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--color-medium);
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  transform: translateY(-2px);
+}
+
+/* --- SEZIONE TESTIMONIALS / ARTICOLI --- */
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--color-light);
+  border-bottom: 2px solid var(--color-medium);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  color: var(--color-medium);
+  margin-bottom: 12px;
+}
+
+.card .author {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #060e18;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: var(--color-light);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--color-medium);
+}
+
+/* --- FOTO IN PRIMO PIANO --- */
+.hero-photo {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: 280px;
+  object-fit: cover;
+  margin: 0 auto 25px;
+  border-radius: 12px;
+  border: 4px solid var(--color-light);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+}
