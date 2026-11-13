@@ -1,17 +1,11 @@
 *{
 box-sizing:border-box
-<<<<<<< HEAD
 }
 
 p {
  text-align-last: justify;
 }
 
-
-=======
-}
-
->>>>>>> 26e7922a83c172f2f6132d57f5c86a7aeebb323e
 h1 {text-align: center;
 color: antiquewhite;
 font-size: 3rem;
@@ -29,7 +23,7 @@ h3{
    text-align: center;
    color: brown;
    font-size: 2rem;
-   font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+   font-family: 'Century Gothic', 'Apple Gothic', sans-serif;
 }
 
 h4{
@@ -99,7 +93,7 @@ nav a{
 
 .header-image{
     float: left;
-    max-width: 350px;
+    max-width: 500px;
     width: 100%;
     height:auto ;
    margin-top: 3em;
@@ -108,7 +102,7 @@ nav a{
 }
 /*riguarda l'immagine chiamata appelli e cambia la dimensione*/
 .header-image img {
-    width: 400;
+    width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
@@ -200,7 +194,6 @@ nav a{
     background-color: #5a1515;
 }
 
-/* --- MENU AD HAMBURGER (Sempre pronto e visibile) --- */
 
 .box-hamburger {
     position: absolute;
@@ -210,43 +203,43 @@ nav a{
 }
 
 #interruttore-menu {
-    display: none !important;
+    display: none;
 }
 
 .tasto-linee {
-    display: block !important;
-    font-size: 36px !important;
-    color:antiquewhite !important;
-    cursor: pointer !important;
-    line-height: 1 !important;
+    display: block;
+    font-size: 36px;
+    color:antiquewhite;
+    cursor: pointer;
+    line-height: 1;
 }
 
 .tendina-link {
-    display: none !important; /* Resta chiuso finché non clicchi */
-    flex-direction: column !important;
-    position: absolute !important;
-    top: 45px !important;
-    right: 0 !important;
-    background-color: rgba(0, 0, 0, 0.95) !important;
+    display: none; /* Resta chiuso finché non clicchi */
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color:brown;
     padding: 20px !important;
-    border-radius: 8px !important;
-    gap: 12px !important;
-    min-width: 160px !important;
-    text-align: center !important;
+    border-radius: 8px;
+    gap: 12px;
+    min-width: 160px;
+    text-align: center;
     z-index: 1000000;
 }
 
 /* Quando clicchi sulle 3 lineette, si apre la tendina in verticale */
 #interruttore-menu:checked ~ .tendina-link {
-    display: flex !important;
+    display: flex;
 }
 
 .tendina-link a {
-    display: block !important;
-    color: antiquewhite !important;
-    text-decoration: none !important;
-    background: none !important;
-    border: none !important;
-    padding: 5px 0 !important;
-    font-size: 1rem !important;
+    display: block;
+    color: antiquewhite;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 5px 0;
+    font-size: 1rem;
 }
