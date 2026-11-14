@@ -23,10 +23,10 @@
 }
 
 .logo {
-    width: 160px;
+    width: 10rem;
     height: auto;
-    margin-top: 15px;
-    margin-left: 30px;
+    margin-top: 0.94rem;
+    margin-left: 1.9rem;
     float: left;
 }
 
@@ -52,7 +52,7 @@
 .hero-text h1 {
     font-size: 3.2rem;
     margin-bottom: 10px;
-     color: rgba(255, 255, 255, 0.85);
+     color: white;
 }
 
 .hero-text h2 {
@@ -64,7 +64,7 @@
 .header {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
     width: 85%;
     max-width: 1200px;
@@ -94,7 +94,7 @@ width: 50%;
   justify-content: flex-start;
   align-items: flex-start;
     color: rgb(233, 190, 133);
-    margin-top: 30px;
+    margin-top: 0;
 }
 
 .header-info .surtitle {
@@ -159,7 +159,7 @@ nav a:hover {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     width: 90%;
     max-width: 1050px;
@@ -208,7 +208,7 @@ nav a:hover {
     height: 160px;
     border-radius: 12px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #fcfcfc;
     display: flex;
@@ -241,4 +241,98 @@ nav a:hover {
 
 .card-btn:hover {
     background-color: #9e7319; 
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        padding: 20px 15px;
+    }
+}
+
+.site-footer {
+  background-color: #f3e5c8; 
+    color: #3a2e25; 
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 5rem;
+    border-top: 3px solid #bc8b21;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.site-footer p {
+    font-size: 1rem;
+    color: #9e7319; 
+    font-weight: 600;
+    text-shadow: none; 
+    opacity: 1;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #9e7319;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #3a2e25;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+    margin-top: 0.5rem;
+}
+
+.facebook {
+    width: 1.25rem;
+    height: auto;
+    display: inline-block;
+    margin: 0 0.75rem;
+    filter: invert(43%) sepia(74%) saturate(568%) hue-rotate(11deg) brightness(92%) contrast(91%);
+}
+
+.instagram {
+     width: 1.25rem;
+    height: auto;
+    display: inline-block;
+    margin: 0 0.75rem;
+    filter: invert(43%) sepia(74%) saturate(568%) hue-rotate(11deg) brightness(92%) contrast(91%);
+}
+
+.youtube {
+    width: 1.25rem;
+    height: auto;
+    display: inline-block;
+    margin: 0 0.75rem;
+    filter: invert(43%) sepia(74%) saturate(568%) hue-rotate(11deg) brightness(92%) contrast(91%);
+}
+
+.linkedin {
+   width: 1.25rem;
+    height: auto;
+    display: inline-block;
+    margin: 0 0.75rem;
+    filter: invert(43%) sepia(74%) saturate(568%) hue-rotate(11deg) brightness(92%) contrast(91%);
 }
