@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="./mystyle.css">
+  </head>
+
+  <!-- this JS function executes as soon as the browser reads line 13
+      i.e., when the page is still not rendered, which happens at the end
+      of reading the body (line 24)
+  -->
+  <body onload="checkCookie()">
+
+    <div class="instructions" style="display: none;">
+      <h3>Instructions: read me then stop displaying</h3>
+      <ul>
+        <li>
+          In class, the HTML and JS are read line-by-line
+        </li>
+        <li>
+          study and run the JS embedded code; use <code>console.log(...)</code> to follow what JS is doing and to reveal the
+          content of variables
+        </li>
+        <li>
+          think about a new cookie to save some detail about the userm and how we can use the information to change the page at the next visit. 
+          For instance, their fav backroung color</li>
+        <li>
+          in the JS file, copy-paste lines to create the writing of a new cookie
+        </li>
+        <li>
+          now change the JS to make the page change when the cookie is found
+        </li>
+      </ul>
+    </div>
+
+    <!-- JS will assign innerHTML content depending on 
+     whether it's the first visit -->
+    <div id="salutation" class = "salutation">
+      <p>You will never read this writing. Almost.</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -2,18 +2,42 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"> <!--requisite to be responsive to devices and take up all space on smartphone-->
     <title>Public and Corporate Communication (COM) - Università degli Studi di Milano</title>
     <link rel="stylesheet" href="milanostyle.css">
 </head>
 <body>
 
+
+
         <!-- HEADER CON LOGO E NAVBAR ORIZZONTALE -->
-        <header class="site-header">
-            <div class="logo-wrapper">
-                <img src="imgs/minerva-34.png" alt="Logo Minerva" class="minerva-logo">
-            </div>
-           
+<header class="site-header">
+            <div class="logos-container"> <!-- Contenitore per affiancare i due loghi -->
+        <div class="logo-wrapper">
+            <img src="imgs/minerva-34.png" alt="Logo Minerva" title="Logo Minerva" class="minerva-logo">
+        </div>
+
+        <div class="spes-logo-wrapper">
+            <img src="spes.png" alt="Logo SPES" title="Logo SPES" class="spes-logo">
+        </div>
+    </div>
+
+ <search class="search-bar">
+    <input type="text" placeholder="Cerca insegnamenti, orari..." aria-label="Cerca">
+    <button type="button" aria-label="Cerca">
+        <img src="imgs/icona-vettore-di-ricerca-simbolo-lente-di-ingrandimento-in-stile-design-moderno-per-sito-web-e-app-mobile-2apd2yk.jpg" alt="Cerca">
+    </button>
+</search>
+
+    <!-- Nuovo pulsante Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Apri menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
             <nav class="navigation-menu">
                 <ul>
                     <li><a href="https://com.cdl.unimi.it/it/iscriversi">Iscriversi</a></li>
@@ -31,15 +55,43 @@
             <div class="photo-main"> 
                 <img src="imgs/ragazze-fontana.jpg" alt="front-cover">
             </div>
+
+            <!--aggiungi script per il click:
+            querySelector('.photo-main') dice al browser: "Cerca all'interno della pagina
+             il primo elemento che possiede la classe CSS .photo-main" non uso .getDocumentbyID perchè stiamo richiamando una classe
+             addEventListener: Significa "rimani in attesa di un evento". In questo caso l'evento in ascolto è 'click' 
+             (cioè quando l'utente preme con il tasto sinistro del mouse sull'elemento).
+             function() { ... }: È la funzione, ovvero il "pacchetto di istruzioni" 
+            che verrà eseguito solo nel momento esatto in cui l'utente compie quel click
+             window.location.href = '[https://www.unimi.it/it](https://www.unimi.it/it)';
+    window.location.href: Rappresenta l'indirizzo URL della pagina attuale.
+
+    Assegnandogli un nuovo valore ('[https://www.unimi.it/it](https://www.unimi.it/it)'), stiamo dicendo al browser di reindirizzare immediatamente l'utente verso quel nuovo sito web, esattamente come se avesse cliccato su un normale link <a>
+            .-->
+        <script> 
+                document.querySelector('.photo-main').addEventListener('click', function() {
+                    window.location.href = 'https://www.unimi.it/it';
+                });
+            </script>
+
             <div class="hero-content">
-                <h1>Master programme in Public and Corporate Communication</h1>
+
+                <h1 id="myH1" title="Master in Public and Corporate Communication">Master in Public and Corporate Communication</h1>
+                <button class="mybutton" onclick="myFunction()">Click to change the title</button>
+                <script>
+                    function myFunction() {
+                       const element=document.getElementById("myH1");
+                       element.innerHTML="Apply to the best university in Italy!";
+                    }
+                </script>
+
                 <h2>Università degli Studi di Milano</h2>
+                <hr class ="section-divider">
                 <p>Join our master's programme in Public and Corporate Communication and take your career to the next level!</p>
                 <a href="https://instagram.com" target="_blank" class="instagram-btn">Follow us on Instagram</a>
             </div>
             <div class="clearfix"></div>
         </div>
-
     </div>
 </section>
 
@@ -68,7 +120,16 @@
                     
                     <div class="video-container">
                         <p>Watch our introduction video:</p>
-                        <iframe src="https://www.youtube.com/embed/h0i4SaJierE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/h0i4SaJierE" 
+                        poster="imgs/open-day.jpg"
+                        aria-controls="video-player"
+                        autoplay
+                        loop
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        preload></iframe>
                     </div>
 
                     <div class="map-container">
@@ -81,6 +142,13 @@
             <!-- Pulisce i float per chiudere correttamente il contenitore -->
             <div class="clearfix"></div>
         </section>
+
+
+        <audio src="Spring 1 - Recomposed by Max Richter Vivaldi, The Four Seasons.mp3"
+controls
+autoplay
+loop>
+</audio>
 
         <!-- RISORSE ESSENZIALI  -->
         <section class="floating-links-section">
@@ -98,6 +166,13 @@
     <!-- 4. FOOTER -->
     <footer class="site-footer">
         <p>&copy; 2026 Università degli Studi di Milano</p>
+        <div class="social-media-buttons">
+            <a href="https://www.facebook.com/unimi">
+                <img src="facebook.svg" alt="Facebook icon" height="20" width="20"> </a>
+            <a href="https://twitter.com/unimi" target="_blank" rel="noopener" class="social-button twitter">Twitter</a>
+            <a href="https://www.instagram.com/unimi/">
+                <img src="instagram.svg" alt="Instagram icon" height="20" width="20"> </a>
+        </div>
     </footer>
 
 </body>

@@ -1,4 +1,146 @@
-p {
-    text-align-last: left;
+* {
+    box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    color: #ffffff;
+}
+.hero-image {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #333333;
+    background-image: url(imgs/torrevelasca.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo {
+    width: 90px;
+    vertical-align: top;
+}
+.content-box {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 20px;
+    width: 90%;
+    max-width: 650px;
+    margin: 20px auto;
+}
+h1 {
+    font-family: Georgia, serif;
+    font-size: 1.8rem;
+    color: #ffc200;
+    text-align: left;
+    margin-top: 0;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: italic;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: square;
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+a {
+    color: #87cefa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffc200;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #222222; 
+    padding: 30px 20px; 
+    text-align: center; 
+}
+
+
+footer p {
+    font-size: 0.9rem;
+    color: #cccccc; 
+    margin-top: 15px; 
+    margin-bottom: 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+    margin-top: 30px;
+    padding: 0;
+    background-color: transparent; 
+}
+
+.grid-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff; 
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none; 
+
+.grid-card h3 {
+    color: #ffc200; 
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+grid-card p {
+    font-size: 1rem;
+    line-height: 0;
+}
+
+@media (min-width: 768px) {
+    .hero-image {
+        height: auto; 
+        padding: 20px 0; 
+    }
+    .content-box {
+        width: 90%; 
+        max-width: 1000px; 
+        padding: 40px;
+        margin: 40px auto;
+    }
+    h1 {
+        font-size: 2.5rem; 
+    }
+}
+
+.info-grid {
+    grid-template-columns: repeat(3, 1fr); 
+   gap: 25px;
+}
+
+#salutation {
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: inline-block;
+    color: #222222;
+}
+
+#salutation:empty {
+    display: none;
+}
