@@ -1,53 +1,339 @@
-/* 设置背景图（Torre Velasca）全屏覆盖 */
-body {
-    background-image: url("./imgs/torrevelasca.jpg"); /* 如果图片是png或avif，请改成对应的后缀名 */
-    background-size: cover;          /* 图片按比例缩放并铺满屏幕 */
-    background-position: center;     /* 图片居中对齐 */
-    background-repeat: no-repeat;    /* 防止图片重复排列 */
-    background-attachment: fixed;    /* 页面滚动时背景固定 */
-    
-    position: relative;              /* 辅助子元素绝对定位 */
-    margin: 0;
-    padding: 20px;
+
+
+* {
+    box-sizing: border-box;
 }
 
-/* 将校徽固定/绝对定位在左上角 */
+html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #17252c;
+}
+
+
+/* ===================================== */
+/* 2. BACKGROUND IMAGE */
+/* ===================================== */
+
+.page-content {
+    position: relative;
+
+    width: 100%;
+    min-height: 60vh;
+    flex: 1 0 auto;
+
+    background-image: url("./imgs/torrevelasca.jpg");
+
+    /* 显示完整图片，不裁剪 */
+    background-size: contain;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* ===================================== */
+/* 3. UNIVERSITY LOGO */
+/* ===================================== */
+
 .logo {
     width: 160px;
+    max-width: 40%;
     height: auto;
+
     position: absolute;
+
     top: 20px;
     left: 20px;
 }
 
-/* 同时需要给 body 添加内边距，防止页面标题文字被绝对定位的校徽遮挡 */
-body {
-    padding-top: 100px;
-}
+
+/* ===================================== */
+/* 4. FOOTER */
+/* ===================================== */
+
 .simple-footer {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 25px 20px 18px;
+
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+    color: #183b2a;
+
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+
+    flex-shrink: 0;
+
     border-top: 1px solid rgba(228, 214, 159, 0.3);
 }
 
-/* 用 Flex 让 4 个图片横向居中排列 */
+
+/* ===================================== */
+/* 5. FOOTER SMALL TITLE */
+/* ===================================== */
+
+.footer-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #55715e;
+
+    margin: 0 0 8px;
+}
+
+
+/* ===================================== */
+/* 6. UNIVERSITY NAME */
+/* ===================================== */
+
+.simple-footer h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    margin: 0;
+}
+
+
+/* ===================================== */
+/* 7. DECORATIVE LINE */
+/* ===================================== */
+
+.footer-line {
+    display: none;
+}
+
+
+/* ===================================== */
+/* 8. FOOTER SUBTITLE */
+/* ===================================== */
+
+.footer-subtitle {
+    font-size: 12px;
+    color: #6b7e70;
+
+    margin: 8px 0 15px;
+}
+
+
+/* ===================================== */
+/* 9. SOCIAL MEDIA LINKS */
+/* ===================================== */
+
 .svg-social-links {
     display: flex;
+
     justify-content: center;
-    gap: 20px;            /* 图标之间的间距 */
-    margin-top: 15px;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin: 0 0 18px;
 }
 
-/* 控制 SVG 图片的大小与交互 */
+
+/* Social icon containers */
+
+.svg-social-links a {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: #f0f4ef;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Social icon images */
+
 .svg-social-links img {
-    width: 28px;          /* 矢量图显示宽度（按需调整） */
-    height: 28px;         /* 矢量图显示高度 */
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
 
-/* 鼠标悬停时的微动效果 */
+
+/* Hover effects */
+
+.svg-social-links a:hover {
+    background: #dce9d8;
+
+    transform: translateY(-3px);
+}
+
 .svg-social-links a:hover img {
-    transform: scale(1.15); /* 鼠标移上去微放 1.15 倍 */
-    opacity: 0.8;           /* 略微变亮/改变透明度 */
+    transform: scale(1.15);
+
+    opacity: 0.8;
+}
+
+
+/* ===================================== */
+/* 10. COPYRIGHT */
+/* ===================================== */
+
+.footer-bottom {
+    border-top: 1px solid #dce5dc;
+
+    padding-top: 12px;
+
+    font-size: 10px;
+
+    color: #6b7e70;
+
+    line-height: 1.5;
+}
+
+
+/* ===================================== */
+/* 11. TABLET RESPONSIVE DESIGN */
+/* ===================================== */
+
+@media (max-width: 900px) {
+
+    .logo {
+        width: 130px;
+    }
+
+    .simple-footer {
+        padding: 22px 18px;
+    }
+
+}
+
+
+/* ===================================== */
+/* 12. MOBILE RESPONSIVE DESIGN */
+/* ===================================== */
+
+@media (max-width: 600px) {
+
+    /* Background image */
+
+   .page-content {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+    /* University logo */
+
+    .logo {
+        width: 100px;
+
+        top: 15px;
+        left: 15px;
+    }
+
+
+    /* Footer */
+
+    .simple-footer {
+        width: 100%;
+
+        padding: 20px 15px;
+    }
+
+
+    /* University name */
+
+    .simple-footer h2 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+
+    /* Footer subtitle */
+
+    .footer-subtitle {
+        font-size: 12px;
+    }
+
+
+    /* Social media */
+
+    .svg-social-links {
+        gap: 12px;
+    }
+
+    .svg-social-links a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .svg-social-links img {
+        width: 22px;
+        height: 22px;
+    }
+
+
+    /* Copyright */
+
+    .footer-bottom {
+        font-size: 9px;
+    }
+
+}
+
+html,
+body {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-content {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    flex: 1;
+}
+
+.simple-footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    flex-shrink: 0;
 }
