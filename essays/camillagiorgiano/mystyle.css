@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ===== PALETTE (solo 3 colori) ===== */
 :root {
     --primary: #FBF3EA;      /* crema: sfondo pagina, card, titoli hero, testo su fondo scuro */
@@ -516,10 +515,3 @@ body {
         justify-content: center;
     }
 }
-=======
-p {
-    text-align-last: left;
-    text-style: oblique;
-}
-
->>>>>>> 0917340329a658f329707adc0b691d071d98404d
