@@ -5,28 +5,203 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>MA COM</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="mystyle.css">
     </head>
+
     <body>
- 
-        <b>Make this page a mock landing page, with hero image, for MA COM.</b>
 
+    <!-- HERO -->
+    <div class="hero-image">
+        <a href="https://www.unimi.it/en" target="_blank">
+            <img src="./imgs/14-unimi-original.png" alt="Unimi Logo" class="logo">
+        </a>
 
-        <p>Create your own <i>landing page</i> by typing up the following HTML/CSS code in here:</p>
+        <a href="https://www.unimi.it/it/corsi/laurea-magistrale/comunicazione-pubblica-e-dimpresa-com" target="_blank">
+            <h1>Corporate Communication</h1>
+        </a>
 
-        <img src="./imgs/6-hero.png" alt"capture from the textbook">
+        <a href="https://com.cdl.unimi.it/it" target="_blank">
+            <h2>Visit our uni!</h2>
+        </a>
 
-        <ol>
-            <li>if possible, pair up with a colleague</li>
-            <li>edit the page with title, subtitle and a list of 3/4 links: unimi, SPeS, City of Milan etc.</li>
-            <li>edit the CSS to define your stile for title, subtitle etc.</li>
-            <li>put the *Torre Velasca* hero in the background (images are local in the *imgs* folder</li>
-            <li>put the *minerva* image on the upper left part of the page</li>
-        </ol>
+        <div class="hero-uni">
+            <img src="./imgs/uni.jpg" alt="Uni Image" class="uni">
+        </div>
 
-        <script src="" async defer></script>
+        <a href="https://com.cdl.unimi.it/it/il-corso/comunicazione-pubblica-e-dimpresa-com" target="_blank" class="cta">
+            Enter MA COM
+        </a>
+    </div>
+
+    <!-- SEZIONE VIDEO -->
+    <section class="video-section">
+        <h3>Find out more</h3>
+        <a href="https://www.youtube.com/watch?v=U05p8FzkdyU" target="_blank" class="video">
+            <img src="https://img.youtube.com/vi/U05p8FzkdyU/maxresdefault.jpg" alt="Guarda il video su YouTube">
+        </a>
+    </section>
+
+    <!-- SEZIONE ARTICOLI -->
+<section class="articles">
+    <h3>Articles from COM</h3>
+
+    <div class="articles-grid">
+
+        <article class="card">
+            <div class="card-body">
+                <h4>BiblioDOC: improve your information skills</h4>
+                <p>Discover the introductory online course on bibliographic research.</p>
+                <a href="https://com.cdl.unimi.it/it/avviso/avviso-con-dettaglio/bibliodoc-migliora-le-tue-competenze-informative-0" target="_blank" rel="noopener" class="card-link">Read more</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-body">
+                <h4>Questionnaire for collecting student opinions</h4>
+                <p>Express a personal evaluation of the teaching.</p>
+                <a href="https://com.cdl.unimi.it/it/studiare/appelli-esame/questionario-la-raccolta-delle-opinioni-degli-studenti" target="_blank" rel="noopener" class="card-link">Read more</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-body">
+                <h4>The internship at COM</h4>
+                <p>COSP manages the procedures for activating internships at public and private organisations and companies for enrolled students, graduates and diploma holders.</p>
+                <a href="https://com.cdl.unimi.it/it/studiare/stage-e-tirocini" target="_blank" rel="noopener" class="card-link">Read more</a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- SEZIONE MAPPA -->
+<section class="map-section">
+    <h3>Where we are</h3>
+
+    <div class="map-layout">
+
+        <!-- Info sul campus (a sinistra) -->
+        <div class="map-info">
+            <h4>Address</h4>
+            <p>Via Conservatorio 7<br>20122 Milano (MI)</p>
+
+            <h4>By metro</h4>
+            <p>
+                <strong>M1 – Red line</strong>, San Babila<br>
+                <strong>M4 – Blue line</strong>, San Babila<br>
+                About 5 minutes on foot.
+            </p>
+
+            <h4>By bus</h4>
+            <p>Lines 54 and 61 (Via Mascagni / Corso Monforte), line 96-97 (Via Visconti di Modrone).</p>
+
+            <h4>From Linate airport</h4>
+            <p>Take the M4 (blue line) directly to San Babila.</p>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=Via+Conservatorio+7+20122+Milano" target="_blank" rel="noopener" class="map-link">
+                Open in Google Maps
+            </a>
+        </div>
+
+        <!-- Mappa (a destra) -->
+        <div class="map-wrapper">
+            <iframe
+                src="https://maps.google.com/maps?q=Via+Conservatorio+7,+20122+Milano&z=16&output=embed"
+                title="Mappa della sede universitaria in Via Conservatorio 7, Milano"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </div>
+</section>
+
+<!-- SEZIONE TESTIMONIAL -->
+<section class="testimonials">
+    <h3> What students say about us</h3>
+
+    <div class="testimonials-grid">
+
+        <div class="testimonial">
+            <p class="testimonial-text">Studying at COM gave me the skills and the confidence to start working in communication even before graduating.</p>
+            <span class="testimonial-author">– Giulia R.</span>
+        </div>
+
+        <div class="testimonial">
+            <p class="testimonial-text">The internship program and the professors' real-world experience made every lesson feel useful and connected to the job market.</p>
+            <span class="testimonial-author">– Marco T.</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <!-- Link in alto -->
+    <nav class="footer-links">
+        <a href="https://www.unimi.it/it/ateneo/normative/privacy" target="_blank" rel="noopener">Privacy and cookie</a>
+        <span>|</span>
+        <a href="https://www.unimi.it/it" target="_blank" rel="noopener">Legal notes</a>
+        <span>|</span>
+        <a href="https://com.cdl.unimi.it/it" target="_blank" rel="noopener">Contacts</a>
+    </nav>
+
+    <div class="footer-bottom">
+
+        <!-- Contatti (a sinistra) -->
+        <div class="footer-contacts">
+            <p>
+                Università degli Studi di Milano<br>
+                Via Festa del Perdono 7 - 20122 Milano<br>
+                Tel. <a href="tel:+390250325032"><strong>+39 02 5032 5032</strong></a><br>
+                <a href="mailto:unimi@postecert.it"><strong>Certified email (PEC)</strong></a>
+            </p>
+        </div>
+
+        <!-- Social (al centro) -->
+        <div class="footer-social">
+            <p>Follow La Statale on</p>
+            <div class="social-icons">
+
+                <a href="https://www.instagram.com/lastatale_milano_official/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"></circle>
+                    </svg>
+                </a>
+
+                <a href="https://www.facebook.com/LaStatale" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+
+                <a href="https://www.linkedin.com/school/universita-degli-studi-di-milano/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Logo università (in basso a destra, cliccabile) -->
+        <div class="footer-logo">
+            <a href="https://www.unimi.it/en" target="_blank" rel="noopener">
+                <img src="./imgs/14-unimi-original.png" alt="Unimi Logo">
+            </a>
+        </div>
+
+    </div>
+</footer>
+
     </body>
 </html>

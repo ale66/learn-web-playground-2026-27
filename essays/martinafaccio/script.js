@@ -5,3 +5,4 @@ const config = {
 
 document.querySelector(".hero-bg").style.backgroundImage = `url("${config.background}")`;
 document.getElementById("uni").src = config.uni;
+
