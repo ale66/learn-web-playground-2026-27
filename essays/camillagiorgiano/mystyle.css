@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ===== PALETTE (solo 3 colori) ===== */
 :root {
     --primary: #FBF3EA;      /* crema: sfondo pagina, card, titoli hero, testo su fondo scuro */
@@ -497,11 +506,74 @@ body {
 
 /* ===== TELEFONO ===== */
 @media (max-width: 800px) {
+
+    /* --- HERO: da posizionamento assoluto a colonna --- */
+    .hero-image {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 2rem 5%;
+        text-align: center;
+    }
+
+    /* position: relative li tiene sopra lo sfondo sfocato */
+    .logo,
+    .hero-uni,
+    .hero-image h1,
+    .hero-image h2,
+    .cta {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+    }
+
+    .logo {
+        width: 7.5rem;
+    }
+
+    .hero-uni {
+        width: 55%;
+        max-width: 13rem;
+    }
+
+    .hero-image h1 {
+        width: auto;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-image h2 {
+        width: auto;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .cta {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    /* --- MAPPA: una colonna --- */
+    .map-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .map-wrapper {
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* --- le tue regole già esistenti --- */
     .articles-grid {
         grid-template-columns: 1fr;
-    }
-    .map-wrapper {
-        aspect-ratio: 4 / 3;
     }
     .testimonials-grid {
         grid-template-columns: 1fr;
