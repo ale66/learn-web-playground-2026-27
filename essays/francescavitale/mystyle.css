@@ -1,5 +1,88 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+
+.hero {
+    position: relative;
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('imgs/torrevelasca.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.logo-minerva {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 70px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.links-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #111111;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 8px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    margin-bottom: 12px;
+}
+
+.nav-links a {
+    display: block;
+    padding: 12px 18px;
+    background-color: #ffffff;
+    color: #0056b3;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    border-color: #0056b3;
+}
