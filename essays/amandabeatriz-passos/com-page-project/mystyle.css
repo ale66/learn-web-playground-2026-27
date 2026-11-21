@@ -1,5 +1,245 @@
-p {
-    text-align-last: left;
-    text-style: oblique;
+
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    padding: 20px;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("./imgs/citymilan.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.uni-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 100px auto 30px;
+    gap: 20px;
+}
+
+.header-image {
+    width: 30%;
+}
+
+.header-info {
+    width: 65%;
+    color: #FFFFFF;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #333333;
+    background-color: #FFFFFF;
+    text-decoration: none;
+}
+
+.articles-section {
+    padding: 40px 20px;
+    background-color: #E9EDF0;
+}
+
+.section-heading {
+    text-align: center;
+    color: #263B4A;
+}
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.articles-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.myyellowbox {
+    width: 30%;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-top: 4px solid #C49A59;
+}
+
+.myyellowbox img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navigation-item {
+    display: block;
+    width: 100%;
+    color: #263B4A;
+    text-decoration: none;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.myyellowbox h2 {
+    color: #263B4A;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.section-intro {
+    font-size: 1rem;
+}
+
+.myyellowbox h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.myyellowbox p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.media-section {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.media-section iframe {
+    max-width: 100%;
+    border: 0;
+}
+
+.youtube-video {
+    width: 560px;
+    height: 315px;
+}
+
+.location-section {
+    margin-top: 40px;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+}
+
+.footer {
+    padding: 30px 20px;
+    color: #FFFFFF;
+    background-color: #263B4A;
+    text-align: center;
+}
+
+.footer-info h2 {
+    color: #FFFFFF;
+}
+
+.footer-info a {
+    color: #FFFFFF;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+    .uni-logo {
+        width: 100px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .header-image {
+        width: 80%;
+        max-width: 250px;
+        margin: auto;
+    }
+
+    .header-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigation-section,
+    .articles-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-item {
+        width: 85%;
+    }
+
+    .myyellowbox {
+        width: 100%;
+    }
+
+    .youtube-video {
+        width: 100%;
+        height: 220px;
+    }
+
+    .map-container iframe {
+        height: 250px;
+    }
+}

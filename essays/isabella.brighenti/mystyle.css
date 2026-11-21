@@ -1,5 +1,11 @@
 p {
-    text-align-last: left;
+    text-align-last: center;
     font-style: oblique;
 }
 
+h1{text-align: center;} 
+span {
+    font-family: Optima, Verdana, sans-serif;
+    font-size: 3em;
+    color: black;
+}

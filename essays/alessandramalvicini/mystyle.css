@@ -1,4 +1,175 @@
-p {
-    text-align-last: left;
+* {
+box-sizing: border-box;
 }
 
+html, body{
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -8px;
+    background-image: url("Unimi.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.logo {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    z-index: 2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.logo img {
+    width: clamp(5rem, 10vw, 8rem);
+    height: auto;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    padding: 8rem clamp(1.5rem, 4vw, 4rem) 2.5rem;
+    gap: 2.5rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    width: 100%;
+}
+
+.header-image, .header-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.header-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    margin: 0 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+.extra-info {
+    margin-top: 0.625rem;
+    text-align: center;
+    width: 100%;
+}
+.subtitle {
+    font-size: clamp(2rem, 5vw, 5rem);
+    margin: 0 0 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color:#f1f1f1fe
+}
+
+.intro {
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    line-height: 1.6;
+    font-family: 'Times New Roman', Times, serif;
+    color:#ffffffc2
+}
+
+.button {
+    display: inline-block;
+    padding: 0.875rem 1.625rem;
+    background-color: #2a7a3b;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    background-color: #ffffffc2;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+@media (max-width: 48rem) {
+
+    .content {
+        padding-top: 7rem;
+        gap: 2rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-image,
+    .header-info {
+        width: 100%;
+        flex: none;
+    }
+
+    .header-info {
+        text-align: center;
+    }
+
+    .title {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+
+    .subtitle {
+        font-size: clamp(2rem, 7vw, 3.5rem);
+    }
+
+    .intro {
+        font-size: 1.25rem;
+    }
+}
+
+/* SCHERMI MOLTO PICCOLI */
+@media (max-width: 30rem) {
+
+    .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}

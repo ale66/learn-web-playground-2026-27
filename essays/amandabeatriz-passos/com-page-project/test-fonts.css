@@ -1,7 +1,72 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-family: 'Times New Roman', Times, serif;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(174, 126, 81);
-    color:aqua
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.surtitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.intro {
+    font-size: 1rem;
+}
+
+.navigation-item {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.myyellowbox h2 {
+    font-size: 1.3rem;
+}
+
+.myyellowbox p {
+    font-size: 1rem;
+}
+
+
+.explore-button {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.footer {
+    font-size: 0.9rem;
+}
+
+.copyright {
+    font-size: 0.8rem;
 }

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
     --primary: #12355B;
     --secondary: #F5F1E8;
@@ -478,4 +482,69 @@ a{
     max-width: 240px; 
     height: auto;     
     display: block;
+}
+
+/* =========================================
+   MEDIA QUERIES (Organises the page on mobile devices)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* --- HERO SECTION --- */
+    .hero-text h1 {
+        font-size: 42px; /* Riduce il titolo gigante per farlo stare nello schermo */
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .line {
+        width: 100%; /* FIX FONDAMENTALE: toglie gli 800px fissi */
+        max-width: 300px; /* Evita che diventi troppo lunga */
+    }
+
+    /* Rimpicciolisce loghi e icone social per non sovrapporli al titolo */
+    .minerva {
+        width: 120px;
+    }
+
+    .social {
+        top: 25px;
+        right: 20px;
+        gap: 12px;
+    }
+
+    .social a {
+        font-size: 20px;
+    }
+
+    /* --- VISIT SECTION --- */
+    .visit-content {
+        gap: 40px; /* Riduce lo spazio vuoto enorme tra foto e testo */
+    }
+
+    .visit-visuals {
+        margin-right: 15px; /* Evita che la mappa esca dallo schermo destro */
+        margin-bottom: 30px;
+    }
+
+    .map-overlay {
+        width: 150px; /* Rimpicciolisce la mappa */
+        height: 200px;
+        bottom: -20px;
+        right: -15px;
+    }
+
+    /* --- FOOTER --- */
+    .footer-main {
+        gap: 30px;
+    }
+
+    .address-col {
+        text-align: center; /* Centra l'indirizzo su telefono */
+    }
+
+    .logo-col {
+        justify-content: center; /* Centra il logo (che prima era forzato a destra) */
+    }
 }
