@@ -9,6 +9,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="test-fonts.css">
+        <script src="script2.js" defer></script>
     </head>
     <body>
         <div class="head">
@@ -19,16 +20,16 @@
             <img src="./imgs/minerva-34.png" alt="logo unimi" class="minerva-34"; >
         
            <h1 id="demo">COMUNICAZIONE PUBBLICA E D'IMPRESA</h1>
-             <a href="#primo">per saperne di più</a>
+             <a id="link-primo" href="#primo">per saperne di più</a>
         </div>
 
         <div class= main>
         <h2>WELCOME!<br></h2>
-            <a href="https://www.unimi.it/it/corsi/laurea-magistrale/comunicazione-pubblica-e-dimpresa-com">CLICCA QUI PER IL CATALOGO DEI CORSI<br></a>
+            <a href="https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/web-communication-0">CLICCA QUI PER LA PRESENTAZIONE DEL CORSO<br></a>
 
-            <h3>Venite a trovarci! Il 10 ottobre si terrà il welcome day di Corporate Communication </h3>
-             <div id="primo"> non ve ne pentirete!</div>
-            <a href="https://youtu.be/LfyxQecu5WI?list=RDLfyxQecu5WI">Per goderti la pausa in università<br></a>
+            <h3> Scopri il mondo della Web Communication! Un percorso per comprendere il linguaggio del web e imparare a progettare e sviluppare contenuti digitali.</h3>
+             <div id="primo">Il primo passo nel mondo del web!</div>
+            <a href="https://www.w3schools.com/"> Dalla teoria alla pratica! È il momento di sperimentare con HTML e CSS. <br></a>
             
         
            
@@ -36,14 +37,16 @@
      <html>
 <head></head>
 <body>
-  <h1 id="greeting">Dove si terranno le lezioni?</h1>
+<div class="html-box">
+  <h1 id="greeting">Un piccolo assaggio del linguaggio HTML </h1>
 
   <button onclick="changeGreeting()">Click Me</button>
+  </div>
 
   <script>
     function changeGreeting() {
       document.getElementById('greeting').textContent = 
-        'In via conservatorio 7 presso il dipartimento di scienze economiche politiche e sociali';
+        'HTML (HyperText Markup Language) è un linguaggio di markup utilizzato per creare e strutturare i contenuti e gli elementi di una pagina web.';
     }
   </script>
 </body>
