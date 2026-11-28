@@ -241,6 +241,69 @@ a {
   color: #bbbbbb;
 }
 
+/* Greeting and interest buttons */
+.saudacao {
+  background-color: var(--destaque);
+  color: #111;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.saudacao:empty {
+  display: none;
+}
+
+.saudacao a {
+  color: var(--principal);
+}
+
+.secao-interesse {
+  background-color: var(--secundaria);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  text-align: center;
+  scroll-margin-top: 70px;
+}
+
+.secao-interesse h2 {
+  margin-top: 0;
+}
+
+.botao-interesse {
+  background-color: var(--principal);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin: 4px;
+  border-radius: 6px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.botao-interesse:hover {
+  background-color: var(--destaque);
+  color: #111;
+}
+
+.aviso {
+  font-size: 0.8rem;
+  color: #bbbbbb;
+  margin: 14px 0 8px 0;
+}
+
+.botao-esquecer {
+  background: none;
+  border: 1px solid #bbbbbb;
+  color: #bbbbbb;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-family: inherit;
+  cursor: pointer;
+}
 /* Telas pequenas (celular) */
 @media (max-width: 800px) {
   .principal {

@@ -35,7 +35,7 @@
                     <li><a href="https://www.comune.milano.it/">City of Milan (Comune di Milano)</a></li>
                 </ul>
                 <section class="info-grid">
-               <div class="grid-card">
+            <div class="grid-card">
                 <h3>Corporate Communication</h3>
                 <p>Develop strategic communication plans for businesses and global brands.</p>
             </div>
@@ -48,9 +48,29 @@
                 <p>Master digital media, responsive design, and online user experiences.</p>
             </div>
         </section>
-           </div>
 
+        <div id="feedback-section" style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 8px; margin-top: 30px; color: #333333; max-width: 500px;">
+                    <h3 style="color: #004b87; margin-top: 0;">Do you like this page?</h3>
+                    
+                    <p id="persuasion-message" style="display: none; color: #d9534f; font-weight: bold; font-style: italic;"></p>
+                
+                    <input type="radio" id="like" name="page_feedback" value="like">
+                    <label for="like">I like it</label><br><br>
+                    
+                    <input type="radio" id="dislike" name="page_feedback" value="dislike">
+                    <label for="dislike">I don't like it</label><br><br>
+                    
+                    <input type="radio" id="unknown" name="page_feedback" value="unknown">
+                    <label for="unknown">I still don't know</label><br><br>
+                    
+                    <button onclick="submitFeedback()" style="background-color: #004b87; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+                </div>
+
+        <div id="feedback-section" style="background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 8px; margin-top: 30px; color: #333333; max-width: 500px;">
+            <label for="user-comment" style="display: block; font-weight: bold; margin-bottom: 8px;">Your feedback or suggestions (optional):</label>
+            <textarea id="user-comment" rows="3" placeholder="Write your thoughts here..." style="width: 100%; padding: 8px; border: 1px solid #cccccc; border-radius: 4px; box-sizing: border-box; font-family: inherit; margin-bottom: 15px;"></textarea>
     
+            <button onclick="submitFeedback()" style="background-color: #004b87; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
         </div>
    </main>
 
@@ -78,7 +98,7 @@
             function setCookie(cookie_name, cookie_value, cookie_validity_days) {
                 const d = new Date();
                 let now = d.getTime();
-                d.setTime(now + (cookie_validity_in_days * 24 * 60 * 60 * 1000));
+                d.setTime(now + (cookie_validity_days * 24 * 60 * 60 * 1000));
                 let expires = "expires=" + d.toUTCString();
                 document.cookie = cookie_name + "=" + cookie_value + ";" + expires + ";path=/";
                 console.log("ok,I'm setting:", cookie_name, "=", cookie_value);
@@ -104,7 +124,7 @@
                 let user = getCookie("username");
                 
                 if (user != "") {
-                    document.getElementById("salutation").innerHTML = 'Hello' + user + ', good to see you again!';
+                    document.getElementById("salutation").innerHTML = 'Hello, ' + user + ', good to see you again!';
                     document.getElementById("salutation").style.backgroundColor = "antiqueWhite";
                 } else {
                     user = prompt("Thanks for visiting! Please enter your name:", "");
@@ -114,12 +134,44 @@
                         setCookie("last_self_localised_at", their_location, 0.5);
                         document.getElementById("salutation").innerHTML = 'Hello, ' + user + ', welcome to webcomm!';
                         document.getElementById("salutation").style.backgroundColor = "antiqueWhite";
-
                     }
                 }
             }
 
-            window.onload = checkCookie;
+            function submitFeedback() {
+                let selectedOption = document.querySelector('input[name="page_feedback"]:checked');
+                
+                if (selectedOption != null) {
+                    let userChoice = selectedOption.value; 
+                    setCookie("user_feedback", userChoice, 30);
+                    
+                    if (userChoice === "like") {
+                        alert("Thank you! We're glad you like it. You won't see this question again.");
+                        document.getElementById("feedback-section").style.display = "none";
+                    } else {
+                        alert("Thanks for your feedback! We will keep improving.");
+                    }
+                } else {
+                    alert("Please select an option first!"); 
+                }
+            }
+
+            function checkFeedbackCookie() {
+                let feedback = getCookie("user_feedback");
+                
+                if (feedback === "like") {
+                    document.getElementById("feedback-section").style.display = "none";
+                } else if (feedback === "dislike") {
+                    let msgElement = document.getElementById("persuasion-message");
+                    msgElement.innerHTML = "We noticed you weren't fully satisfied last time. We've made some layout improvements, please give us another look!";
+                    msgElement.style.display = "block"; 
+                }
+            }
+
+            window.onload = function() {
+                checkCookie();          
+                checkFeedbackCookie();  
+            };
         </script>
     </body>
 </html>

@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --principal-color: rgb(95, 0, 0);
+    --secondary-color: white;
+    --accent-color: rgb(255, 214, 124);
+}
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -5,11 +13,14 @@ body {
 p {
     text-align-last: left;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 .hero-image {
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     text-align: center;
-    background-size: cover;
     position:relative;
     overflow: hidden;
     isolation: isolate;
@@ -21,19 +32,20 @@ p {
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background-image: url(./imgs/dipartimento\ SPES.jpg);
+    background-image: url(./imgs/dipartimento\ SPES\ new.jpg);
     background-position: center center;
     background-size: cover;
-    filter: blur(5px);
+    filter: blur(9px);
     z-index: -1;
 }
 .hero-image h1   {
-    text-align: center;
+    text-align: left;
     position: relative;
-    top: 250px;
-    font-size: 32px;
+    top: 200px;
+    left: 20px;
+    font-size: 28px;
     font-weight: bolder;
-    color: rgb(95, 0, 0);
+    color: white;
 }  
 .hero-image h2 {
     position: absolute;
@@ -71,52 +83,97 @@ p {
 .links a:hover {
     color: rgb(95, 0, 0);
 }
+.course-bar {
+    width: 100%;
+    background-color: var(--principal-color);
+    padding: 8px 20px;
+    text-align: center;
+}
+.course-bar p {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+.services-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 10px 20px 0;
+    position: relative;
+    z-index: 2;
+}
+.announcements,
 .photo {
     width: 220px;
     height: 150px;
+    flex-shrink: 0;
     border-radius: 10px;
     overflow: hidden;
-    position: absolute;
-    left: 20px;
-    top:100%;
-    margin-top: 60px;
-}
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
 .announcements {
-    background-color: rgba(255, 214, 124, 0.97);
+    background-color:var(--accent-color);
     padding: 5px 20px 20px;
-    margin: -80px 20px;
-    width: 180px;
-    border-radius: 10px;
     text-align: left;
-    position:relative;
 }
 .announcements h2 {
-    color: rgb(95, 0, 0);
+    color: var(--principal-color);
     font-size: 20px;
 }
 .announcements a {
-    color: rgb(95, 0, 0);
+    color: var(--principal-color);
     font-size: 14px;
 }
 .announcements a:hover {
-    color: rgb(222, 23, 23);
+    color:white;
 }
-.map {
-    width: 400px;
-    height: 200px;
-    margin: 30px 0 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-}
+.photo img,
 .map iframe {
     width: 100%;
     height: 100%;
+    display: block;
     border: 0;
+    object-fit: cover;
+}
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 20px;
+    margin-top: 50px;
+    background-color: var(--principal-color);
+}
+footer .map {
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-left: auto;
+}
+.social-icons a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+.footer-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+}
+.footer-links a {
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: var(--accent-color);
 }

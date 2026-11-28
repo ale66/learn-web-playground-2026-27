@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="mystyle.css">
 </head>
-<body>
+<body onload="checkCookie()">
 
   <header class="meu-hero" id="home">
     <h1>Corporate Communication</h1>
@@ -25,7 +25,16 @@
   <main class="principal">
 
     <article class="artigo">
+      <div id="saudacao" class="saudacao"></div>
 
+      <section class="secao-interesse" id="interesse">
+        <h2>What interests you most?</h2>
+        <button class="botao-interesse" data-interesse="Corporate Communication">Corporate Communication</button>
+        <button class="botao-interesse" data-interesse="Marketing and Advertising">Marketing and Advertising</button>
+        <button class="botao-interesse" data-interesse="Political Communication">Political Communication</button>
+        <p class="aviso">This page saves your name and your choice in a cookie in your browser.</p>
+        <button id="esquecer" class="botao-esquecer">Forget me</button>
+      </section>
       <section class="secao-about" id="about">
         <div class="caixa-texto">
           <h2>About the Course</h2>
@@ -102,6 +111,6 @@
 
     document.getElementById("ano").textContent = new Date().getFullYear();
   </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
