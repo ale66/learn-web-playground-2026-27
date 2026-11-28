@@ -1,0 +1,494 @@
+body {
+    margin: 0;
+}
+
+:root {
+    --accent: #E0B12F;
+    --secondary:#2F4A3C;
+    --light: #F4EBDD;
+}
+
+/* HERO PRINCIPALE */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* SFONDO TORRE VELASCA SFOCATO */
+.hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("imgs/arco-della-pace.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(6px);
+    transform: scale(1.03);
+
+    z-index: 0;
+}
+
+/* TITOLO MA COM */
+.hero-image h1 {
+    position: absolute;
+    top: 15%;
+    left: 80%;
+    transform: translateX(-50%);
+
+    color: rgb(214, 174, 52);
+    font-size: 30px;
+    margin: 0;
+
+    z-index: 2;
+}
+
+/* SOTTOTITOLO VISIT OUR UNI! */
+.hero-image h2 {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    transform: translateX(-50%);
+
+    color: rgb(214, 174, 52);
+    font-size: 18px;
+    margin: 0;
+
+    z-index: 2;
+}
+
+/* LOGO UNIVERSITÀ */
+.Minerva {
+    width: 150px;
+    height: auto;
+
+    position: absolute;
+    top: 20px;
+    left: 10px;
+
+    z-index: 2;
+}
+
+/* LINK DEL LOGO */
+.hero-image a {
+    position: relative;
+    z-index: 2;
+}
+
+.pip-image {
+    position: absolute;
+    width: 320px;
+    height: 420px;
+    object-fit: cover;
+
+    top: 250px;
+    left: 100px;
+
+    z-index: 3;
+
+    border-radius: 12px;
+    border: 3px solid white;
+}
+
+ .hero-image .main-title {
+    position: absolute;
+    top: 300px;
+    left: 770px;
+
+    color: var(--accent);
+    font-size: 48px;
+    margin: 0;
+
+     text-shadow:
+        -1px -1px 0 var(--secondary),
+         1px -1px 0 var(--secondary),
+        -1px  1px 0 var(--secondary),
+         1px  1px 0 var(--secondary);
+
+    z-index: 3;
+}
+.cta-button {
+    position: absolute;
+    top: 430px;
+    left: 730px;
+
+    background-color: var(--accent);
+    color: var (--secondary);
+
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+
+    z-index: 3;
+}
+
+.cta-button:visited {
+    color: var(--secondary);
+}
+
+.about-section {
+    background-color: var(--light);
+    color: var(--secondary);
+
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.video-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 12px;
+}
+
+.about-section {
+    background-color: var(--light);
+    color: var(--secondary);
+
+    padding: 80px 8%;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 42px;
+    margin: 0 0 50px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.instagram-wrapper {
+    width: 360px;
+    flex-shrink: 0;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.instagram-wrapper .instagram-media {
+    margin: 0 !important;
+    min-width: 100% !important;
+}
+
+.about-text {
+    max-width: 520px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 22px 0;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.articles-section {
+    background-color: var(--secondary);
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.articles-section h2 {
+    color: var(--light);
+    font-size: 42px;
+    margin-bottom: 50px;
+}
+
+.articles-grid {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.article-card {
+    width: 260px;
+    height: 420px;
+
+    background-color: var(--light);
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    text-decoration: none;
+    color: var(--secondary);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease;
+}
+
+.article-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.article-card h3 {
+    padding: 20px;
+    margin: 0;
+
+    font-size: 20px;
+}
+
+.article-card:hover {
+    transform: translateY(-8px);
+}
+
+.location-section {
+    background-color: var(--light);
+    color: var(--secondary);
+
+    padding: 80px 8%;
+}
+
+.location-section h2 {
+    text-align: center;
+    font-size: 42px;
+    margin: 0 0 50px 0;
+}
+
+.location-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 70px;
+}
+
+.map-wrapper {
+    width: 520px;
+
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 380px;
+    display: block;
+}
+
+.location-info {
+    max-width: 400px;
+}
+
+.location-info h3 {
+    color: var(--accent);
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.location-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.map-button {
+    display: inline-block;
+
+    background-color: var(--accent);
+    color: var(--secondary);
+
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.map-button:visited {
+    color: var(--secondary);
+}
+
+.map-button:hover {
+    transform: translateY(-2px);
+}
+
+.students-section {
+    background-color: var(--secondary);
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.students-section h2 {
+    color: var(--light);
+    font-size: 42px;
+    margin: 0 0 50px 0;
+}
+
+.students-grid {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.student-card {
+    width: 280px;
+    min-height: 320px;
+
+    background-color: var(--light);
+    color: var(--secondary);
+
+    border-radius: 18px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.student-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0 0 30px 0;
+}
+
+.student-card h3 {
+    color: var(--accent);
+    font-size: 22px;
+    margin: 0 0 5px 0;
+}
+
+.student-card span {
+    font-size: 15px;
+}
+
+.site-footer {
+    background-color: var(--light);
+    color: var(--secondary);
+
+    padding: 55px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 50px;
+}
+
+
+/* LOGO */
+
+.footer-logo img {
+    width: 180px;
+    height: auto;
+}
+
+
+/* TITOLI FOOTER */
+
+.footer-contact h3,
+.footer-links h3,
+.footer-social h3 {
+    color: var(--accent);
+
+    font-size: 20px;
+    margin: 0 0 18px 0;
+}
+
+
+/* CONTATTI */
+
+.footer-contact p {
+    font-size: 16px;
+    line-height: 1.6;
+
+    margin: 0 0 12px 0;
+}
+
+
+/* LINK */
+
+.footer-contact a,
+.footer-links a {
+    color: var(--secondary);
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer-contact a:visited,
+.footer-links a:visited {
+    color: var(--secondary);
+}
+
+.footer-contact a:hover,
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+
+/* SOCIAL */
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background-color: var(--secondary);
+    color: var(--light);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.social-icons a:visited {
+    color: var(--light);
+}
+
+.social-icons a:hover {
+    background-color: var(--accent);
+    color: var(--secondary);
+    transform: translateY(-3px);
+}
