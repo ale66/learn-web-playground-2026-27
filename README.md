@@ -67,7 +67,7 @@ Create your own web profile and portfolio!
 
 Prepare your profile for assessment.
 
-a. In your `github.com/<your-id>` use the menus on the right to:
+a. In your `github.com/<your-id>` click on 'edit profile on the left to:
  
   - put your actual name and a profile picture; 
   
