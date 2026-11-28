@@ -75,11 +75,11 @@ b. Create a new repo for your exam submission, follow the guidelines in `learn-w
 
 c. Now go to your public profile repo, `<your-id>.github.io`, and link, with some description for each:
 
-    - the class repo, `github.com/ale66/learn-web`
-    - the class playground, `github.com/ale66/learn-web-playground-2026-27` 
-    - your own refactoring project, `github.com/ale66/learn-web-playground-2026-27/essays/<your-id>`
+  - the class repo, `github.com/ale66/learn-web`
+  - the class playground, `github.com/ale66/learn-web-playground-2026-27` 
+  - your own refactoring project, `github.com/ale66/learn-web-playground-2026-27/essays/<your-id>`.
 
-d. Include at least one picture of the *Conservatorio* campus or the surroundings (no recognisable people please please, unless it's you)
+d. Include at least one picture of the *Conservatorio* campus or the surroundings (no recognisable people please, unless it's you)
 
 e. [discretionary: make the MA COM refactoring a stand-alone repo, e.g., `<your-id>.github.io/ma-com-new`]
 
