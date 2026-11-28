@@ -11,7 +11,10 @@ p {
 }
 
 hr{
-    color:#8b3a2b;
+    border: none;
+    height: 1px;
+    background-color: midnightblue;
+    width: 100%;
 }
 
 .hero-image {
@@ -35,21 +38,21 @@ hr{
   z-index: -1;                  /* dietro al contenuto */
 }
 
-.studenti {
+.frase {
     display: block;
     width: 700px;
     max-width: 100%;
     height: auto;
-    border-radius: 2%;
+    border-radius: 1010px;
     box-shadow: 0 0.6% 1.7% rgba(0, 0, 0, 0.4);
     }
 
 .title-block h1 {
     margin: 0;
-    font-size: 9rem;
+    font-size: 7.5rem;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.35);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgba(255, 255, 255, 0.48);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     -webkit-text-stroke: 2px rgba(195, 190, 190, 0.95);
     text-shadow: 0 4px 24px rgba(155, 155, 155, 0.6);
     text-align: center;         /* era left */
@@ -123,7 +126,7 @@ hr{
 
 .btn {
     display: inline-block;   
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    /* scritta più grande (prima 1.1rem) */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.25rem;       /* era 1.4rem */
     padding: 18px 40px;  
     font-weight: 600;
@@ -132,7 +135,8 @@ hr{
     background: #c8102e;
     border-radius: 1010px;
     transition: transform .1s, box-shadow .1s;
-    margin-top: 30px; 
+    margin-top: 20px;
+    margin-bottom: 50px; 
 }
 .btn:active {                     
     transform: translateY(5px);
@@ -212,12 +216,12 @@ hr{
     transition: transform .35s ease;
     z-index: 25;
 }
-.side-menu h3 { margin: 0 0 8px; color: #c8102e; font-size: 2rem; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+.side-menu h3 { margin: 0 0 8px; color: #c8102e; font-size: 2rem; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 .side-menu a {
     color: #c8102e;
     text-decoration: none;
     font-size: 1.1rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .side-menu a i { width: 24px; margin-right: 8px; }
 .side-menu a:hover { text-decoration: underline; }
@@ -240,15 +244,15 @@ hr{
 
 .banda-beige{
     margin: 0;
-background: #e8dcc4; 
- font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background:#C5C6CB; 
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 40px 20px 50px; 
 }
 
 .banda-beige h2 {
-     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     Color: #8b3b0c;  
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     color:midnightblue;  
      font-size: 2rem; 
      margin-top: 20px;
     margin-left: 5px;
@@ -256,23 +260,23 @@ background: #e8dcc4;
 
 .banda-mattone{
     margin: 0;
-background: #8b3a2b; 
- font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background:midnightblue; 
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 40px 20px 50px; 
 }
 
 .banda-beige2{
     margin: 0;
-background: #e8dcc4; 
- font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background:#C5C6CB; 
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 40px 20px 50px; 
 }
 
 .banda-beige2 h2 {
-     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     Color: #8b3b0c;   
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     Color: midnightblue;   
      font-size: 2rem; 
      text-align: center;
 }
@@ -288,7 +292,7 @@ background: #e8dcc4;
 }
 
 .ateneo-left h2 {
-    color: #8b3b0c;
+    color: midnightblue;
     font-size: 2rem;
 }
 
@@ -300,12 +304,13 @@ background: #e8dcc4;
     flex: 0 0 30%;
     box-sizing: border-box;
     padding: 3%;
-    background: #8b3a2b;
-    color: #e8dcc4;
+    background: #c8102e;
+    color: #fff;;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 16px;
 }
 .ateneo-aside h3 {
     font-size: 1.6rem;
@@ -345,20 +350,21 @@ background: #e8dcc4;
 
 
 .article-box {
-    background: #e8dcc4;
+    background: #C5C6CB;;
     color: #333333;
     padding: 25px;
     max-width: 350px;
     margin: 30px auto;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.article-box h3 {
+.article-box h2 {
     margin-top: 0;
-    color: #8b3a2b;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c8102e;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 .article-box p {
@@ -394,8 +400,9 @@ background: #e8dcc4;
 .site-footer p{
     margin-top: 20px;
     margin-left: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.footer-red { background: #c8102e; color: #e8dcc4; }
-.footer-brick { background: #8b3a2b; color: #e8dcc4; }
-.footer-beige { background: #e8dcc4; color: #8b3a2b; }
+.footer-blue1 { background: midnightblue; color: #AAB6AD; }
+.footer-blue2 { background: midnightblue; color: #AAB6AD; }
+.footer-blue3 { background: midnightblue; color: #AAB6AD;  }
