@@ -6,6 +6,10 @@
     font-size: 100%;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 p {
     text-align-last: left;
 }
@@ -60,52 +64,74 @@ hr{
     padding-top: 6%;       /* tolti padding-left/right e il padding-top di 85px */
 }
 
-@media (max-width: 700px) {
-    .ateneo-layout { flex-direction: column; }
-    .ateneo-aside { flex: none; }
+@media (max-width: 750px) {
+
+    .topbar .social {
+        display: none; /* Nasconde i social nella barra in alto per pulire lo schermo (restano nel menu) */
+    }
+
+    .Minerva {
+        display: block;
+        width: 13rem;
+        margin: 1rem auto; 
+        padding-top: 2.5rem;
+    }
+
     .title-block h1 {
-        font-size: 3.5rem;
-        -webkit-text-stroke: 1px rgba(195, 190, 190, 0.95); 
+        font-size: 2.5rem;
+        padding-top: 1rem;
+        -webkit-text-stroke: 1px rgba(195, 190, 190, 0.95);
     }
-    .btn{
-        font-size: 0.9rem;
+
+    .articles-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 5%;
     }
-    .social a {
-        font-size: 0.85rem;
-    }
-    .side-menu h3 {
-        font-size: 1.4rem;
-    }
-    .side-menu a {
-        font-size: 0.9rem;
-    }
-    .banda-beige h2,
-    .banda-beige2 h2 {
-        font-size: 1.5rem;
-    }
+
     .article-box {
-        font-size: 0.85rem;
-    }
-    .article-box h3 {
-        font-size: 1.1rem;
+        max-width: 100%;
     }
 
-    .article-button {
-        font-size: 0.85rem;
-    }
-    .ateneo-aside h3 {
-        font-size: 1.2rem;
-    }
-
-    .ateneo-aside p {
-        font-size: 0.85rem;
-    }
     .site-footer {
-        font-size: 0.8rem;
+        grid-template-columns: 1fr;
+        padding-bottom: 1.5rem;
     }
 
     .site-footer p {
-        font-size: 0.8rem;
+        margin-left: 5%;
+        font-size: 0.85rem;
+    }
+
+    .ateneo-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .ateneo-left {
+        padding: 3% 0;
+    }
+
+    .ateneo-aside {
+        flex: none;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .ateneo-aside h3 {
+        font-size: 1.3rem;
+    }
+
+    .ateneo-aside p {
+        font-size: 0.9rem;
+    }
+
+    .youtube-video {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.9rem 2rem;
     }
 }
 
@@ -148,6 +174,7 @@ hr{
     max-width: 100%;
     margin-top: 20px;
     margin-left: 30px;
+    display: block;
 }
 
 .social { display: flex; gap: 12px; }
